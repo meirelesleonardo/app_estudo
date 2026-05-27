@@ -36,7 +36,7 @@ def _build_note() -> LogicalAnkiNote:
 
 class AnkiConnectClientTests(unittest.TestCase):
     def test_reconcile_duplicates_dry_run(self) -> None:
-        client = AnkiConnectClient()
+        client = AnkiConnectClient(history_enabled=False)
 
         cards = [100, 101, 102]
         cards_info = [
@@ -59,7 +59,7 @@ class AnkiConnectClientTests(unittest.TestCase):
         self.assertEqual(report["groups"][0]["canonical_note_id"], 10)
 
     def test_reconcile_duplicates_apply_calls_delete_notes(self) -> None:
-        client = AnkiConnectClient()
+        client = AnkiConnectClient(history_enabled=False)
 
         cards = [100, 101]
         cards_info = [
@@ -82,7 +82,7 @@ class AnkiConnectClientTests(unittest.TestCase):
         self.assertEqual(invoke_mock.call_count, 4)
 
     def test_ensure_model_exists_creates_model_when_missing(self) -> None:
-        client = AnkiConnectClient(model_name="AppEstudoListening")
+        client = AnkiConnectClient(model_name="AppEstudoListening", history_enabled=False)
 
         with patch.object(client, "_invoke", side_effect=[[], None]) as invoke_mock:
             client._ensure_model_exists()
@@ -90,7 +90,7 @@ class AnkiConnectClientTests(unittest.TestCase):
         self.assertEqual(invoke_mock.call_count, 2)
 
     def test_ensure_deck_exists_calls_create_deck(self) -> None:
-        client = AnkiConnectClient()
+        client = AnkiConnectClient(history_enabled=False)
 
         with patch.object(client, "_invoke", return_value=1) as invoke_mock:
             client._ensure_deck_exists("Ingles::Listening::B1")
@@ -98,7 +98,7 @@ class AnkiConnectClientTests(unittest.TestCase):
         invoke_mock.assert_called_once_with("createDeck", {"deck": "Ingles::Listening::B1"})
 
     def test_sync_creates_note_when_not_found(self) -> None:
-        client = AnkiConnectClient()
+        client = AnkiConnectClient(history_enabled=False)
         note = _build_note()
 
         with patch.object(client, "_ensure_model_exists", return_value=None):
@@ -112,7 +112,7 @@ class AnkiConnectClientTests(unittest.TestCase):
         self.assertEqual(invoke_mock.call_count, 2)
 
     def test_sync_updates_existing_note(self) -> None:
-        client = AnkiConnectClient()
+        client = AnkiConnectClient(history_enabled=False)
         note = _build_note()
 
         with patch.object(client, "_ensure_model_exists", return_value=None):
@@ -125,7 +125,7 @@ class AnkiConnectClientTests(unittest.TestCase):
         self.assertEqual(result.note_id, 88)
 
     def test_sync_returns_conflict_when_multiple_notes_are_found(self) -> None:
-        client = AnkiConnectClient()
+        client = AnkiConnectClient(history_enabled=False)
 
         with patch.object(client, "_ensure_model_exists", return_value=None):
             with patch.object(client, "_ensure_deck_exists", return_value=None):
@@ -136,7 +136,7 @@ class AnkiConnectClientTests(unittest.TestCase):
         self.assertEqual(result.error_type, "conflict")
 
     def test_sync_returns_pending_on_connectivity_failure(self) -> None:
-        client = AnkiConnectClient()
+        client = AnkiConnectClient(history_enabled=False)
 
         with patch.object(client, "_ensure_model_exists", return_value=None):
             with patch.object(client, "_ensure_deck_exists", return_value=None):
@@ -147,7 +147,7 @@ class AnkiConnectClientTests(unittest.TestCase):
         self.assertEqual(result.error_type, "connectivity")
 
     def test_sync_returns_blocked_on_validation_error(self) -> None:
-        client = AnkiConnectClient()
+        client = AnkiConnectClient(history_enabled=False)
         note = _build_note()
         note.fields.pop("source_id")
 

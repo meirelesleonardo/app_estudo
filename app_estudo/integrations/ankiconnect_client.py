@@ -5,8 +5,10 @@ from __future__ import annotations
 import json
 import re
 from dataclasses import dataclass
+from pathlib import Path
 from urllib import error, request
 
+from .item_history import JsonlItemHistoryStore, new_event
 from .anki_reconciliation import ReconciliationReport, build_duplicate_groups
 from .anki_mapping import LogicalAnkiNote
 from .ankiconnect_healthcheck import DEFAULT_ANKI_ENDPOINT
@@ -79,10 +81,16 @@ class AnkiConnectClient:
         endpoint: str = DEFAULT_ANKI_ENDPOINT,
         timeout: float = 3.0,
         model_name: str = "Basic",
+        history_enabled: bool = True,
+        history_file_path: str | None = None,
     ) -> None:
         self.endpoint = endpoint
         self.timeout = timeout
         self.model_name = model_name
+        self.history_enabled = history_enabled
+        if history_file_path is None:
+            history_file_path = str(Path("data") / "audit" / "anki_item_events.jsonl")
+        self.history_store = JsonlItemHistoryStore(history_file_path)
 
     def version(self) -> int:
         result = self._invoke("version", {})
@@ -91,11 +99,32 @@ class AnkiConnectClient:
         return result
 
     def sync_logical_note(self, note: LogicalAnkiNote) -> AnkiSyncResult:
+        self._record_event(
+            event_type="sync",
+            item_key=note.note_unique_id,
+            state="started",
+            action="sync_logical_note",
+            note_id=None,
+            error_type=None,
+            error_message=None,
+            metadata={"deck": note.deck_name},
+        )
+
         try:
             self._validate_note(note)
             self._ensure_model_exists()
             self._ensure_deck_exists(note.deck_name)
         except AnkiConnectValidationError as exc:
+            self._record_event(
+                event_type="sync",
+                item_key=note.note_unique_id,
+                state="blocked",
+                action="validation",
+                note_id=None,
+                error_type="validation",
+                error_message=str(exc),
+                metadata={"deck": note.deck_name},
+            )
             return AnkiSyncResult(
                 state="blocked",
                 action="validation",
@@ -104,6 +133,16 @@ class AnkiConnectClient:
                 error_message=str(exc),
             )
         except AnkiConnectConnectivityError as exc:
+            self._record_event(
+                event_type="sync",
+                item_key=note.note_unique_id,
+                state="pending",
+                action="setup_check",
+                note_id=None,
+                error_type="connectivity",
+                error_message=str(exc),
+                metadata={"deck": note.deck_name},
+            )
             return AnkiSyncResult(
                 state="pending",
                 action="setup_check",
@@ -112,6 +151,16 @@ class AnkiConnectClient:
                 error_message=str(exc),
             )
         except AnkiConnectRemoteError as exc:
+            self._record_event(
+                event_type="sync",
+                item_key=note.note_unique_id,
+                state="blocked",
+                action="setup_check",
+                note_id=None,
+                error_type="remote",
+                error_message=str(exc),
+                metadata={"deck": note.deck_name},
+            )
             return AnkiSyncResult(
                 state="blocked",
                 action="setup_check",
@@ -215,6 +264,21 @@ class AnkiConnectClient:
             notes_marked_for_delete=notes_marked_for_delete,
         )
 
+        self._record_event(
+            event_type="reconcile",
+            item_key=f"deck:{deck_name}",
+            state="processed",
+            action="dry_run" if dry_run else "apply",
+            note_id=None,
+            error_type=None,
+            error_message=None,
+            metadata={
+                "strategy": strategy,
+                "groups_found": len(groups),
+                "notes_marked_for_delete": notes_marked_for_delete,
+            },
+        )
+
         return {
             "deck_name": report.deck_name,
             "strategy": report.strategy,
@@ -236,6 +300,16 @@ class AnkiConnectClient:
     def _create_new_note(self, note: LogicalAnkiNote) -> AnkiSyncResult:
         try:
             note_id = self._add_note(note)
+            self._record_event(
+                event_type="sync",
+                item_key=note.note_unique_id,
+                state="synced",
+                action="created",
+                note_id=note_id,
+                error_type=None,
+                error_message=None,
+                metadata={"deck": note.deck_name},
+            )
             return AnkiSyncResult(
                 state="synced",
                 action="created",
@@ -244,6 +318,16 @@ class AnkiConnectClient:
                 error_message=None,
             )
         except AnkiConnectConnectivityError as exc:
+            self._record_event(
+                event_type="sync",
+                item_key=note.note_unique_id,
+                state="pending",
+                action="created",
+                note_id=None,
+                error_type="connectivity",
+                error_message=str(exc),
+                metadata={"deck": note.deck_name},
+            )
             return AnkiSyncResult(
                 state="pending",
                 action="created",
@@ -255,6 +339,16 @@ class AnkiConnectClient:
             message = str(exc).lower()
             state = "conflict" if "duplicate" in message else "blocked"
             error_type = "conflict" if state == "conflict" else "remote"
+            self._record_event(
+                event_type="sync",
+                item_key=note.note_unique_id,
+                state=state,
+                action="created",
+                note_id=None,
+                error_type=error_type,
+                error_message=str(exc),
+                metadata={"deck": note.deck_name},
+            )
             return AnkiSyncResult(
                 state=state,
                 action="created",
@@ -295,6 +389,16 @@ class AnkiConnectClient:
         try:
             self._update_note_fields(note_id, note)
             self._add_tags(note_id, note.tags)
+            self._record_event(
+                event_type="sync",
+                item_key=note.note_unique_id,
+                state="updated",
+                action="updated",
+                note_id=note_id,
+                error_type=None,
+                error_message=None,
+                metadata={"deck": note.deck_name},
+            )
             return AnkiSyncResult(
                 state="updated",
                 action="updated",
@@ -303,6 +407,16 @@ class AnkiConnectClient:
                 error_message=None,
             )
         except AnkiConnectConnectivityError as exc:
+            self._record_event(
+                event_type="sync",
+                item_key=note.note_unique_id,
+                state="pending",
+                action="updated",
+                note_id=note_id,
+                error_type="connectivity",
+                error_message=str(exc),
+                metadata={"deck": note.deck_name},
+            )
             return AnkiSyncResult(
                 state="pending",
                 action="updated",
@@ -311,6 +425,16 @@ class AnkiConnectClient:
                 error_message=str(exc),
             )
         except AnkiConnectRemoteError as exc:
+            self._record_event(
+                event_type="sync",
+                item_key=note.note_unique_id,
+                state="blocked",
+                action="updated",
+                note_id=note_id,
+                error_type="remote",
+                error_message=str(exc),
+                metadata={"deck": note.deck_name},
+            )
             return AnkiSyncResult(
                 state="blocked",
                 action="updated",
@@ -318,6 +442,32 @@ class AnkiConnectClient:
                 error_type="remote",
                 error_message=str(exc),
             )
+
+    def _record_event(
+        self,
+        event_type: str,
+        item_key: str,
+        state: str,
+        action: str,
+        note_id: int | None,
+        error_type: str | None,
+        error_message: str | None,
+        metadata: dict[str, object],
+    ) -> None:
+        if not self.history_enabled:
+            return
+
+        event = new_event(
+            event_type=event_type,
+            item_key=item_key,
+            state=state,
+            action=action,
+            note_id=note_id,
+            error_type=error_type,
+            error_message=error_message,
+            metadata=metadata,
+        )
+        self.history_store.append(event)
 
     def _add_note(self, note: LogicalAnkiNote) -> int:
         result = self._invoke("addNote", {"note": self._build_anki_note_payload(note)})

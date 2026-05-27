@@ -47,6 +47,7 @@ Um candidato so vira SPEC quando:
 | CSP-002 | SPEC-E5-S2-002 | Em implementacao | Matriz de listening com score e classificacao + testes unitarios |
 | CSP-003 | SPEC-E5-S2-003 | Em implementacao | Mapeamento para nota logica Anki + testes unitarios |
 | CSP-004 | SPEC-E5-S2-004 | Em implementacao | Reconciliacao de duplicatas por source_id com dry-run/apply + testes unitarios |
+| CSP-005 | SPEC-E5-S2-005 | Em implementacao | Trilha de historico por item em JSONL + consulta por filtro |
 
 ## Rastreabilidade
 

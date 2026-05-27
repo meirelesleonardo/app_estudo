@@ -4,6 +4,7 @@ from .ankiconnect_healthcheck import AnkiHealthcheckResult, check_ankiconnect
 from .anki_mapping import LogicalAnkiNote, map_to_anki_logical_note
 from .ankiconnect_client import AnkiConnectClient, AnkiSyncResult
 from .anki_reconciliation import DuplicateGroup, ReconciliationReport, build_duplicate_groups
+from .item_history import ItemHistoryEvent, JsonlItemHistoryStore, new_event
 
 __all__ = [
 	"LogicalAnkiNote",
@@ -15,4 +16,7 @@ __all__ = [
 	"DuplicateGroup",
 	"ReconciliationReport",
 	"build_duplicate_groups",
+	"ItemHistoryEvent",
+	"JsonlItemHistoryStore",
+	"new_event",
 ]

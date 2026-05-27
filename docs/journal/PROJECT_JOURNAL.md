@@ -147,3 +147,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: implementar reconciliacao de duplicatas por source_id com estrategias keep_oldest/keep_newest e execucao dry-run/apply
 - Riscos identificados: reconciliacao automatica ainda depende de revisao humana em casos sem source_id confiavel
 - Proximo passo: evoluir CSP-005 com trilha de historico de alteracoes por item
+
+## Decima sexta entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E5.S2
+- Itens de backlog trabalhados: BLG-0017 (CSP-005)
+- Decisoes tomadas: implementar store JSONL de historico por item, integrar registro automatico no cliente Anki e validar consulta por script
+- Riscos identificados: definir politica de retencao/rotacao do historico local para crescimento de longo prazo
+- Proximo passo: iniciar CSP-006 com lote piloto e criterios de aceite do MVP

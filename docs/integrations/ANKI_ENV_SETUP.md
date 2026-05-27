@@ -285,6 +285,20 @@ Aplicar reconciliacao:
 /home/suporte/Projetos/app_estudo/.venv/bin/python scripts/reconcile_anki_duplicates.py --deck Ingles::Listening::B1 --apply
 ```
 
+### Historico por item (CSP-005)
+
+Consultar ultimos eventos:
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/show_item_history.py --limit 20
+```
+
+Filtrar por item:
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/show_item_history.py --item-key "deck:Ingles::Listening::B1"
+```
+
 ## Estrutura inicial do projeto
 
 ### Criar pasta do projeto

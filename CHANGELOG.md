@@ -51,6 +51,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Quarta SPEC de implementacao: SPEC-E5-S2-004 (CSP-004).
 - Modulo de reconciliacao de duplicatas por source_id com estrategias keep_oldest/keep_newest.
 - Script CLI de reconciliacao com modo dry-run e modo apply.
+- Quinta SPEC de implementacao: SPEC-E5-S2-005 (CSP-005).
+- Modulo de historico por item em arquivo JSONL para eventos de sync e reconciliacao.
+- Script de consulta do historico com filtros por item, tipo de evento e limite.
 - Guia de instalacao e preparacao do Anki/AnkiConnect ampliado com passo a passo para Linux Mint e Windows 11.
 - Guia de usabilidade do app com jornada operacional, checklist e boas praticas de execucao.
 - Guia rapido de onboarding (Quick Start) para validacao minima do ambiente e execucao inicial.
