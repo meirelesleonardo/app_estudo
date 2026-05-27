@@ -78,6 +78,7 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - ADR-0001 publicada definindo YouTube como fonte oficial inicial de ingestao em E2.S4.
 - Matriz de rastreabilidade unificada de E2.S4 conectando BLGs, CSPs, artefatos, gates e evidencias.
 - Tres SPECs iniciais de implementacao da E2.S4 criadas para gate pre-SPEC: SPEC-E2-S4-001, SPEC-E2-S4-002 e SPEC-E2-S4-003.
+- Gate pre-SPEC unificado de E2.S4 publicado com decisao GO para SPEC-E2-S4-001, SPEC-E2-S4-002 e SPEC-E2-S4-003.
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.
