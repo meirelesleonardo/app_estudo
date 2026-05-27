@@ -39,3 +39,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: instituir rubrica e limiar de aprovacao para legenda/transcricao
 - Riscos identificados: divergencia entre audio e texto em fontes sem revisao periodica
 - Proximo passo: iniciar E3 (modelo de entidades de rastreabilidade)
+
+## Quarta entrada
+
+- Data: 2026-05-26
+- Etapa/Subetapa: E3
+- Itens de backlog trabalhados: BLG-0012, BLG-0013, BLG-0014
+- Decisoes tomadas: formalizar entidades, matriz de vinculo e politica de auditoria como base obrigatoria para SPECs futuras
+- Riscos identificados: crescimento documental sem consistencia de vinculos entre artefatos
+- Proximo passo: iniciar E4 com arquitetura logica de Anki

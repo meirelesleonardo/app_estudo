@@ -42,3 +42,9 @@ Garantir que toda decisao, requisito e item de backlog possam ser rastreados de 
 3. Refinar e aprovar SPEC-E2-S1-001.
 4. Registrar ADR caso haja decisao de criterio.
 5. Atualizar changelog no fechamento.
+
+## Expansao em E3
+
+- Modelo de entidades: [E3_ENTITY_MODEL.md](E3_ENTITY_MODEL.md)
+- Regras de vinculo: [E3_ARTIFACT_LINKING_RULES.md](E3_ARTIFACT_LINKING_RULES.md)
+- Auditoria e historico: [E3_AUDIT_AND_HISTORY.md](E3_AUDIT_AND_HISTORY.md)
