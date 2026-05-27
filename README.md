@@ -4,7 +4,7 @@ Projeto open source para planejamento e futura implementacao incremental de uma 
 
 ## Estado Atual
 
-Fase: Arquitetura documental (sem codigo)
+Fase: Transicao para implementacao incremental (primeira SPEC em execucao)
 
 Neste momento, o repositorio esta focado em:
 - arquitetura macro;
@@ -12,7 +12,8 @@ Neste momento, o repositorio esta focado em:
 - roadmap incremental;
 - backlog inicial;
 - estrategia de rastreabilidade;
-- planejamento de integracoes futuras.
+- planejamento de integracoes futuras;
+- implementacao inicial do dominio (CSP-001 / SPEC-E5-S2-001).
 
 ## Objetivos
 

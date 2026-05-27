@@ -39,6 +39,12 @@ Um candidato so vira SPEC quando:
 - tiver risco e dependencia explicitados;
 - tiver criterio de conclusao objetivo.
 
+## SPECs aprovadas
+
+| Candidato | SPEC | Status | Evidencia |
+|---|---|---|---|
+| CSP-001 | SPEC-E5-S2-001 | Em implementacao | Entidade CuratedStudyItem + testes unitarios |
+
 ## Rastreabilidade
 
 - Etapa/Subetapa: E5.S2

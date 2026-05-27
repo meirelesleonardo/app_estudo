@@ -75,3 +75,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: iniciar E6 com macroplano e detalhar S1-S3 mantendo incremento controlado
 - Riscos identificados: expansao ampla sem priorizacao por edital e sem limiares objetivos de adaptatividade
 - Proximo passo: fechar pendencias de S1-S3 e preparar criterios de conclusao de E6
+
+## Oitava entrada
+
+- Data: 2026-05-26
+- Etapa/Subetapa: E5.S2
+- Itens de backlog trabalhados: BLG-0017 (CSP-001)
+- Decisoes tomadas: aprovar SPEC-E5-S2-001 e iniciar implementacao da entidade de item curado com validacoes minimas
+- Riscos identificados: validar taxonomia inicial de tags antes de escalar volume de itens
+- Proximo passo: implementar CSP-002 com aplicacao da matriz de avaliacao de listening
