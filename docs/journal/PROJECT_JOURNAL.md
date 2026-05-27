@@ -48,3 +48,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: formalizar entidades, matriz de vinculo e politica de auditoria como base obrigatoria para SPECs futuras
 - Riscos identificados: crescimento documental sem consistencia de vinculos entre artefatos
 - Proximo passo: iniciar E4 com arquitetura logica de Anki
+
+## Quinta entrada
+
+- Data: 2026-05-26
+- Etapa/Subetapa: E4
+- Itens de backlog trabalhados: BLG-0010, BLG-0015, BLG-0016
+- Decisoes tomadas: separar integracao Anki em modelo logico, fluxos de sincronizacao e tratamento explicito de excecoes
+- Riscos identificados: duplicidade, conflito de tags e perda de rastreabilidade em falhas de sincronizacao
+- Proximo passo: iniciar E5 com definicao do MVP implementavel

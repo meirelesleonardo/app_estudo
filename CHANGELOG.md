@@ -16,8 +16,12 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Modelo de entidades de rastreabilidade (E3.S1).
 - Regras de vinculo entre artefatos (E3.S2).
 - Politica de auditoria e historico de mudancas (E3.S3).
+- Modelo logico de integracao com Anki (E4.S1).
+- Fluxos logicos de sincronizacao com Anki (E4.S2).
+- Tratamento de excecoes e divergencias da integracao (E4.S3).
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.
 - BLG-0009 marcado como concluido no backlog inicial.
 - Status de E3 atualizado para concluida no roadmap.
+- Status de E4 atualizado para concluida no roadmap.

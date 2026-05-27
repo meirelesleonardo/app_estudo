@@ -53,3 +53,9 @@ Documentar a arquitetura logica da integracao com Anki sem implementar ainda.
 - modelo de dados e rastreabilidade definidos;
 - curadoria validada;
 - escopo do MVP consolidado.
+
+## Expansao em E4
+
+- Modelo logico: [E4_LOGICAL_MODEL.md](E4_LOGICAL_MODEL.md)
+- Fluxos de sincronizacao: [E4_SYNC_FLOWS.md](E4_SYNC_FLOWS.md)
+- Tratamento de excecoes: [E4_EXCEPTION_HANDLING.md](E4_EXCEPTION_HANDLING.md)

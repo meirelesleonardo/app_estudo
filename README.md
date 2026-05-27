@@ -55,6 +55,9 @@ Detalhes completos em [ROADMAP.md](ROADMAP.md).
 - [docs/english/E2_SUBTITLE_TRANSCRIPT_VALIDATION.md](docs/english/E2_SUBTITLE_TRANSCRIPT_VALIDATION.md)
 - [docs/english/SOURCE_CURATION_STRATEGY.md](docs/english/SOURCE_CURATION_STRATEGY.md)
 - [docs/integrations/ANKI_INTEGRATION_STRATEGY.md](docs/integrations/ANKI_INTEGRATION_STRATEGY.md)
+- [docs/integrations/E4_LOGICAL_MODEL.md](docs/integrations/E4_LOGICAL_MODEL.md)
+- [docs/integrations/E4_SYNC_FLOWS.md](docs/integrations/E4_SYNC_FLOWS.md)
+- [docs/integrations/E4_EXCEPTION_HANDLING.md](docs/integrations/E4_EXCEPTION_HANDLING.md)
 - [docs/specs/SPEC_WORKFLOW.md](docs/specs/SPEC_WORKFLOW.md)
 - [docs/backlog/INITIAL_BACKLOG.md](docs/backlog/INITIAL_BACKLOG.md)
 

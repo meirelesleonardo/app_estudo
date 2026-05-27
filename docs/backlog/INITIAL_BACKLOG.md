@@ -22,5 +22,7 @@
 | BLG-0012 | Definir modelo de entidades de rastreabilidade | E3.S1 | Alta | Done | Entidades e atributos minimos publicados |
 | BLG-0013 | Definir regras de vinculo entre artefatos | E3.S2 | Alta | Done | Matriz de vinculo obrigatorio publicada |
 | BLG-0014 | Definir politica de auditoria e historico | E3.S3 | Media | Done | Eventos, evidencias e checklist de auditoria publicados |
-| BLG-0010 | Definir arquitetura logica de Anki | E4.S1 | Media | Todo | Modelo deck/nota/tag documentado |
+| BLG-0010 | Definir arquitetura logica de Anki | E4.S1 | Media | Done | Modelo deck/nota/tag documentado |
+| BLG-0015 | Definir fluxos logicos de sincronizacao | E4.S2 | Media | Done | Fluxos de criacao, atualizacao e reconciliacao publicados |
+| BLG-0016 | Definir tratamento de excecoes da integracao | E4.S3 | Media | Done | Classes de falha e politica de resposta publicadas |
 | BLG-0011 | Definir plano de MVP implementavel | E5.S1 | Alta | Todo | Escopo minimo e dependencias fechados |
