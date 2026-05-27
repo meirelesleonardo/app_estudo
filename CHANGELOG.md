@@ -74,6 +74,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Reforco do modelo de rastreabilidade para separacao raw/curated e evidencia minima de lineage.
 - Complemento de vinculo arquitetural no backlog tecnico E5.S2 sem alteracao de CSPs aprovadas.
 - Fortalecimento do padrao ADR com template expandido e indice de decisoes.
+- Plano semanal de execucao de E2.S4 com gates e evidencias por backlog (BLG-0023 a BLG-0032).
+- ADR-0001 publicada definindo YouTube como fonte oficial inicial de ingestao em E2.S4.
+- Matriz de rastreabilidade unificada de E2.S4 conectando BLGs, CSPs, artefatos, gates e evidencias.
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.

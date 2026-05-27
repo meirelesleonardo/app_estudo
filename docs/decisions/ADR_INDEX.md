@@ -22,7 +22,7 @@ etapas, backlog e SPECs.
 
 | ID | Titulo | Status | Etapa/Subetapa | Backlog relacionado | SPEC relacionada | Data |
 |---|---|---|---|---|---|---|
-| ADR-0001 | Reservado para primeira decisao formal desta fase | Draft | E2.S4 | BLG-0023, BLG-0030 | N/A | 2026-05-27 |
+| ADR-0001 | YouTube como fonte oficial inicial de ingestao | Approved | E2.S4 | BLG-0023, BLG-0025, BLG-0030 | CSP-E2-S4-001 a CSP-E2-S4-007 | 2026-05-27 |
 
 ## Regras minimas
 
