@@ -47,3 +47,14 @@ Desenvolver capacidade de listening em fala natural, especialmente:
 - trilhas por dificuldade;
 - criterios de sucesso por subetapa;
 - backlog priorizado de refinamento.
+
+## Evolucao incremental planejada em E2
+
+- E2.S1 Curadoria de fontes por tipo e nivel;
+- E2.S2 Matriz de avaliacao de listening;
+- E2.S3 Validacao de legenda/transcricao;
+- E2.S4 Ingestao e processamento de midia.
+
+Observacao:
+- E2.S4 expande o modulo com pipeline de ingestao/extracao/normalizacao/segmentacao,
+  mantendo E2.S1-E2.S3 como base consolidada e sem regressao documental.

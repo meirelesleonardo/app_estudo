@@ -32,3 +32,13 @@
 | BLG-0020 | Curadoria tecnica por edital e disciplina | E6.S1 | Alta | Done | Taxonomia inicial e criterios de fonte definidos |
 | BLG-0021 | Definir blueprint de questoes e simulados | E6.S2 | Alta | Done | Estrutura de questoes/simulados e metricas definidas |
 | BLG-0022 | Definir trilhas adaptativas e laboratorios | E6.S3 | Media | Done | Regras de priorizacao e limiares de adaptatividade definidos |
+| BLG-0023 | Formalizar arquitetura da subetapa E2.S4 | E2.S4 | Alta | Todo | Documento arquitetural E2.S4 publicado com escopo, limites e fluxo ponta a ponta |
+| BLG-0024 | Definir modelagem de entidades de midia e transcricao | E2.S4 | Alta | Todo | Entidades SourceMedia, RawTranscript, CuratedTranscript, StudySegment, NormalizedSentence e SourceMetadata documentadas |
+| BLG-0025 | Formalizar YouTube como fonte oficial de ingestao inicial | E2.S4 | Alta | Todo | Contrato de origem, metadados minimos e regras de rastreio de fonte publicados |
+| BLG-0026 | Definir pipeline de normalizacao textual | E2.S4 | Alta | Todo | Regras de limpeza, tratamento de ruido e saida normalizada por sentenca documentadas |
+| BLG-0027 | Definir estrategia de segmentacao pedagogica de midia | E2.S4 | Alta | Todo | Criterios de chunking por segmento/frase/unidade pedagogica com limites operacionais publicados |
+| BLG-0028 | Definir estrategia de persistencia de midia e metadados | E2.S4 | Alta | Todo | Politica de armazenamento para URLs, ids externos, timestamps, hashes, versoes e status definida |
+| BLG-0029 | Definir politica de versionamento e reprocessamento | E2.S4 | Media | Todo | Regras de atualizacao, substituicao, reconciliacao, invalidacao e reprocessamento formalizadas |
+| BLG-0030 | Formalizar lifecycle documental e operacional | E0 | Alta | Todo | Estados, gates, criterios de transicao e evidencias obrigatorias consolidados na governanca |
+| BLG-0031 | Fortalecer auditoria de origem e linhagem do conteudo | E3.S3 | Media | Todo | Trilha de lineage raw-curated com eventos obrigatorios e pontos de controle definida |
+| BLG-0032 | Estruturar backlog tecnico incremental de E2.S4 | E5.S2 | Alta | Todo | Candidatos a SPEC de E2.S4 registrados com dependencias, riscos e criterio de conclusao |

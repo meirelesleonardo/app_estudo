@@ -14,6 +14,16 @@ Iniciar curadoria pratica de fontes para listening, com classificacao inicial po
 - qualidade de legenda/transcricao;
 - naturalidade.
 
+## Extensao de criterios para E2.S4
+
+No refinamento arquitetural de E2.S4, os criterios passam a incluir tambem:
+
+- tipo de legenda (oficial, auto, hibrida);
+- ruido de fundo;
+- contexto de uso (educacional, jornalistico, espontaneo);
+- categoria pedagogica;
+- estabilidade da origem (persistencia de URL e id externo).
+
 ## Lista inicial priorizada
 
 | ID | Tipo | Fonte | Nivel sugerido | Sotaque predominante | Observacao de uso |
@@ -33,6 +43,26 @@ Iniciar curadoria pratica de fontes para listening, com classificacao inicial po
 2. Introduzir variacao de sotaque a partir de B1.
 3. Revisar mensalmente fontes com baixa aderencia pedagogica.
 
+## Fonte oficial de ingestao inicial
+
+- YouTube definido como primeira fonte oficial de ingestao em E2.S4;
+- uso condicionado a metadados minimos de origem e rastreabilidade;
+- classificacao por tipo de midia deve seguir taxonomia formal de E2.S4.
+
+## Tipos de midia (taxonomia formal)
+
+- podcast;
+- entrevista;
+- TED Talk;
+- serie;
+- filme;
+- gameplay;
+- documentario;
+- aula;
+- noticia;
+- vlog;
+- conversa espontanea.
+
 ## Pendencias da etapa E2
 
 - aplicar matriz de score completa em cada fonte;
@@ -43,3 +73,4 @@ Iniciar curadoria pratica de fontes para listening, com classificacao inicial po
 
 - Etapa/Subetapa: E2.S1
 - Backlog: BLG-0007
+- Complemento arquitetural: E2.S4 / BLG-0023, BLG-0025

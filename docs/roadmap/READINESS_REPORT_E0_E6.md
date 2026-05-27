@@ -78,3 +78,13 @@ Condicao recomendada:
 1. Fechar formalmente E0 (governanca base).
 2. Normalizar ordenacao do diario do projeto.
 3. Definir marco operacional de ciclo continuo (v0.x).
+
+## Expansao incremental planejada (sem regressao)
+
+Frente adicionada para novo ciclo documental:
+- E2.S4 - Ingestao e Processamento de Midia.
+
+Observacoes:
+- a adicao de E2.S4 nao invalida o fechamento historico de E2.S1-E2.S3;
+- o status de prontidao deste relatorio permanece como fotografia da data de referencia;
+- novos itens de backlog para E2.S4 devem evoluir por lifecycle formal antes de implementacao.

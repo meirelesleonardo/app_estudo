@@ -28,6 +28,23 @@ Garantir que toda decisao, requisito e item de backlog possam ser rastreados de 
 - SPEC -> ADR (quando houver decisao relevante)
 - Backlog -> Changelog (quando concluido)
 
+## Regras complementares para ingestao de midia (E2.S4)
+
+1. Todo artefato de origem deve manter identificador externo e hash de referencia.
+2. Conteudo bruto (raw) e conteudo curado (curated) devem existir em entidades separadas.
+3. Toda transformacao textual deve registrar versao de regra e timestamp de processamento.
+4. Segmentos pedagogicos devem manter vinculo ao transcript curado e ao source de origem.
+5. Nenhum artefato pode mudar para estado Operational sem evidencia minima de lineage.
+
+## Evidencias minimas de lineage
+
+- source_media_id e external_id preenchidos;
+- referencia ao raw_transcript_id de origem;
+- referencia ao curated_transcript_id (quando existir);
+- hash do artefato atual;
+- versao de normalizacao/curadoria;
+- evento de auditoria com data e tipo de mudanca.
+
 ## Criterios de qualidade da rastreabilidade
 
 - completude: links obrigatorios preenchidos;

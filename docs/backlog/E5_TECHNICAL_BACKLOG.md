@@ -54,3 +54,13 @@ Um candidato so vira SPEC quando:
 
 - Etapa/Subetapa: E5.S2
 - Backlog: BLG-0017
+
+## Vinculos arquiteturais complementares (pos-MVP)
+
+Esta secao nao altera os CSPs aprovados de E5.S2. O objetivo e explicitar
+dependencias de evolucao para a frente E2.S4.
+
+- Frente relacionada: E2.S4 - Ingestao e Processamento de Midia;
+- Backlog relacionado: BLG-0023, BLG-0024, BLG-0025, BLG-0026, BLG-0027, BLG-0028, BLG-0029, BLG-0032;
+- Impacto esperado em E5.S2: novos candidatos a SPEC para fortalecer qualidade de entrada antes do mapeamento logico Anki;
+- Restricao: nenhum CSP aprovado em E5.S2 deve ser renomeado, removido ou reclassificado neste refinamento.

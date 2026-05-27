@@ -66,6 +66,14 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Guia rapido de onboarding (Quick Start) para validacao minima do ambiente e execucao inicial.
 - Padronizacao dos docs de integracao no template comum: Objetivo, Pre-requisitos, Passos, Validacao, Troubleshooting e Rastreabilidade.
 - Template reutilizavel para novas docs de integracao em docs/integrations/INTEGRATION_DOC_TEMPLATE.md.
+- Nova subetapa E2.S4 (Ingestao e Processamento de Midia) adicionada ao roadmap com formalizacao arquitetural incremental.
+- Documento arquitetural de E2.S4 com pipeline Source Media -> Sync Pipeline, modelagem de entidades de midia/transcricao e estrategia de versionamento.
+- Backlog incremental BLG-0023 a BLG-0032 para formalizar ingestao, modelagem, normalizacao, segmentacao, persistencia, lifecycle e auditoria de lineage.
+- Backlog tecnico incremental de E2.S4 com candidatos a SPEC (CSP-E2-S4-001 a CSP-E2-S4-007).
+- Reforco da governanca com lifecycle oficial (Draft a Deprecated), gates e evidencias obrigatorias.
+- Reforco do modelo de rastreabilidade para separacao raw/curated e evidencia minima de lineage.
+- Complemento de vinculo arquitetural no backlog tecnico E5.S2 sem alteracao de CSPs aprovadas.
+- Fortalecimento do padrao ADR com template expandido e indice de decisoes.
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.

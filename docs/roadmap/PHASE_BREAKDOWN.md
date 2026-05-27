@@ -17,6 +17,7 @@
 - E2.S1 Curadoria por tipo de fonte
 - E2.S2 Matriz de avaliacao de listening
 - E2.S3 Validacao de legenda/transcricao
+- E2.S4 Ingestao e processamento de midia
 
 ## E3 - Dados e rastreabilidade avancada
 

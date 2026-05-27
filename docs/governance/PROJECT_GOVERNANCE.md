@@ -70,3 +70,34 @@ Uma etapa so pode iniciar codigo se:
 - SPEC aprovada;
 - riscos principais mitigados;
 - metricas de sucesso definidas.
+
+## Lifecycle documental e operacional
+
+Estados oficiais de lifecycle:
+- Draft;
+- Refining;
+- Approved;
+- Implementing;
+- Validating;
+- Operational;
+- Deprecated.
+
+Criterios de transicao (resumo):
+- Draft -> Refining: escopo inicial registrado com etapa/subetapa e backlog vinculado.
+- Refining -> Approved: criterios de conclusao definidos, dependencias declaradas e riscos explicitados.
+- Approved -> Implementing: gate pre-SPEC aprovado e checklist de pronto para implementacao atendido.
+- Implementing -> Validating: evidencia minima de entrega produzida (doc/testes/artefato conforme tipo).
+- Validating -> Operational: criterios de aceite atendidos e rastreabilidade atualizada.
+- Operational -> Deprecated: substituicao formal aprovada com ADR ou decisao equivalente.
+
+Gates minimos por estado:
+- gate de definicao: objetivo, escopo e fora de escopo claros;
+- gate de rastreabilidade: vinculo Etapa/Subetapa/Backlog e impactos declarados;
+- gate de risco: riscos e mitigacoes documentados;
+- gate de evidencia: criterio observavel de conclusao e evidencia verificavel.
+
+Evidencias obrigatorias:
+- link para backlog;
+- link para artefato principal (doc/SPEC/ADR);
+- criterio de conclusao observavel;
+- registro de dependencia e impacto.
