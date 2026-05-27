@@ -120,3 +120,21 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: ajustar cliente para criar modelo e deck automaticamente antes do sync e executar smoke test real com create/update bem sucedido
 - Riscos identificados: manter padrao de nomes de deck e modelo para evitar proliferacao de estruturas no Anki
 - Proximo passo: implementar CSP-004 para deduplicacao e reconciliacao de conflitos
+
+## Decima terceira entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E4.S2
+- Itens de backlog trabalhados: BLG-0015
+- Decisoes tomadas: migrar deck legacy English para padrao Ingles::Listening::B1 reaproveitando notas adaptaveis e removendo estrutura antiga vazia
+- Riscos identificados: revisar qualidade pedagogica das notas migradas legacy antes de consolidar ciclos de revisao
+- Proximo passo: executar saneamento qualitativo das notas legacy e iniciar CSP-004
+
+## Decima quarta entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E4.S2
+- Itens de backlog trabalhados: BLG-0015
+- Decisoes tomadas: executar saneamento qualitativo automatico em 45 notas de Ingles::Listening::B1 removendo tags legacy e normalizando metadados para pending_review
+- Riscos identificados: ainda ha necessidade de curadoria manual pontual de explicacoes para maximizar retencao
+- Proximo passo: iniciar CSP-004 com politica de deduplicacao e reconciliacao
