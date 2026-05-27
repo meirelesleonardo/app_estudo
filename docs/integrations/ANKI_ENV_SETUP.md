@@ -299,6 +299,20 @@ Filtrar por item:
 /home/suporte/Projetos/app_estudo/.venv/bin/python scripts/show_item_history.py --item-key "deck:Ingles::Listening::B1"
 ```
 
+### Validacao do lote piloto MVP (CSP-006)
+
+Executar validacao com thresholds padrao:
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/validate_mvp_pilot.py --deck Ingles::Listening::B1
+```
+
+Executar validacao com thresholds customizados:
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/validate_mvp_pilot.py --deck Ingles::Listening::B1 --min-items 20 --traceability-threshold 95 --duplicate-rate-threshold 2 --classification-threshold 100
+```
+
 ## Estrutura inicial do projeto
 
 ### Criar pasta do projeto

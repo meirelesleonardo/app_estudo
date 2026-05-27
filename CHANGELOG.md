@@ -54,6 +54,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Quinta SPEC de implementacao: SPEC-E5-S2-005 (CSP-005).
 - Modulo de historico por item em arquivo JSONL para eventos de sync e reconciliacao.
 - Script de consulta do historico com filtros por item, tipo de evento e limite.
+- Sexta SPEC de implementacao: SPEC-E5-S2-006 (CSP-006).
+- Modulo de validacao de lote piloto com metricas de aceite do MVP.
+- Script operacional para validar lote piloto diretamente no deck alvo.
 - Guia de instalacao e preparacao do Anki/AnkiConnect ampliado com passo a passo para Linux Mint e Windows 11.
 - Guia de usabilidade do app com jornada operacional, checklist e boas praticas de execucao.
 - Guia rapido de onboarding (Quick Start) para validacao minima do ambiente e execucao inicial.

@@ -11,6 +11,7 @@ from urllib import error, request
 from .item_history import JsonlItemHistoryStore, new_event
 from .anki_reconciliation import ReconciliationReport, build_duplicate_groups
 from .anki_mapping import LogicalAnkiNote
+from .pilot_validation import validate_pilot_notes
 from .ankiconnect_healthcheck import DEFAULT_ANKI_ENDPOINT
 
 _ANKI_API_VERSION = 6
@@ -356,6 +357,64 @@ class AnkiConnectClient:
                 error_type=error_type,
                 error_message=str(exc),
             )
+
+    def validate_mvp_pilot(
+        self,
+        deck_name: str,
+        min_items: int = 20,
+        traceability_threshold: float = 95.0,
+        duplicate_rate_threshold: float = 2.0,
+        classification_threshold: float = 100.0,
+    ) -> dict[str, object]:
+        """Valida lote piloto do MVP com criterios de aceite objetivos."""
+
+        cards = self._invoke("findCards", {"query": f"deck:{deck_name}"})
+        if not isinstance(cards, list):
+            raise AnkiConnectRemoteError("findCards retornou formato invalido")
+
+        cards_info = self._invoke("cardsInfo", {"cards": cards}) if cards else []
+        if not isinstance(cards_info, list):
+            raise AnkiConnectRemoteError("cardsInfo retornou formato invalido")
+
+        note_ids = sorted({card.get("note") for card in cards_info if isinstance(card.get("note"), int)})
+        notes_info = self._invoke("notesInfo", {"notes": note_ids}) if note_ids else []
+        if not isinstance(notes_info, list):
+            raise AnkiConnectRemoteError("notesInfo retornou formato invalido")
+
+        report = validate_pilot_notes(
+            notes_info=notes_info,
+            min_items=min_items,
+            traceability_threshold=traceability_threshold,
+            duplicate_rate_threshold=duplicate_rate_threshold,
+            classification_threshold=classification_threshold,
+        )
+
+        status = str(report.get("status", "needs_review"))
+        metrics = report.get("metrics", {})
+        metadata = {
+            "min_items": min_items,
+            "criteria": report.get("criteria", {}),
+            "failed_criteria": report.get("failed_criteria", []),
+            "metrics": metrics,
+        }
+        self._record_event(
+            event_type="pilot_validation",
+            item_key=f"deck:{deck_name}",
+            state=status,
+            action="evaluate",
+            note_id=None,
+            error_type=None,
+            error_message=None,
+            metadata=metadata,
+        )
+
+        return {
+            "deck_name": deck_name,
+            "status": status,
+            "criteria": report.get("criteria", {}),
+            "failed_criteria": report.get("failed_criteria", []),
+            "metrics": metrics,
+        }
 
     def _merge_tags_from_duplicates(
         self,

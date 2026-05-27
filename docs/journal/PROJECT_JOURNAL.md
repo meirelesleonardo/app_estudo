@@ -156,3 +156,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: implementar store JSONL de historico por item, integrar registro automatico no cliente Anki e validar consulta por script
 - Riscos identificados: definir politica de retencao/rotacao do historico local para crescimento de longo prazo
 - Proximo passo: iniciar CSP-006 com lote piloto e criterios de aceite do MVP
+
+## Decima setima entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E5.S2
+- Itens de backlog trabalhados: BLG-0017 (CSP-006)
+- Decisoes tomadas: iniciar validacao automatizada do lote piloto com thresholds explicitos de rastreabilidade, duplicidade e classificacao pedagogica
+- Riscos identificados: lote pequeno pode distorcer metricas e gerar aprovacao estatisticamente fraca
+- Proximo passo: executar validacao no deck real e tratar lacunas ate status approved consistente

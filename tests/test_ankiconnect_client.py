@@ -35,6 +35,66 @@ def _build_note() -> LogicalAnkiNote:
 
 
 class AnkiConnectClientTests(unittest.TestCase):
+    def test_validate_mvp_pilot_generates_report_and_history_event(self) -> None:
+        client = AnkiConnectClient(history_enabled=True)
+
+        cards = [100, 101]
+        cards_info = [
+            {"note": 10, "cardId": 100},
+            {"note": 11, "cardId": 101},
+        ]
+        notes_info = [
+            {
+                "noteId": 10,
+                "fields": {
+                    "source_id": {"value": "src-1"},
+                    "source_type": {"value": "podcast"},
+                    "title": {"value": "Title 1"},
+                    "transcript_excerpt": {"value": "text"},
+                    "target_expression": {"value": "gotta"},
+                    "explanation_ptbr": {"value": "exp"},
+                    "listening_context": {"value": "ctx"},
+                    "level": {"value": "B1"},
+                    "accent": {"value": "american"},
+                    "audio_reference": {"value": "https://example.org/a.mp3"},
+                    "created_from_stage": {"value": "E5.S2"},
+                    "logical_key": {"value": "src-1|gotta|reduction|B1"},
+                    "evaluation_score": {"value": "4.2"},
+                    "evaluation_classification": {"value": "recommended"},
+                },
+            },
+            {
+                "noteId": 11,
+                "fields": {
+                    "source_id": {"value": "src-2"},
+                    "source_type": {"value": "podcast"},
+                    "title": {"value": "Title 2"},
+                    "transcript_excerpt": {"value": "text"},
+                    "target_expression": {"value": "gotta"},
+                    "explanation_ptbr": {"value": "exp"},
+                    "listening_context": {"value": "ctx"},
+                    "level": {"value": "B1"},
+                    "accent": {"value": "american"},
+                    "audio_reference": {"value": "https://example.org/a.mp3"},
+                    "created_from_stage": {"value": "E5.S2"},
+                    "logical_key": {"value": "src-2|gotta|reduction|B1"},
+                    "evaluation_score": {"value": "4.0"},
+                    "evaluation_classification": {"value": "recommended"},
+                },
+            },
+        ]
+
+        with patch.object(client, "_record_event", return_value=None) as record_mock:
+            with patch.object(client, "_invoke", side_effect=[cards, cards_info, notes_info]):
+                report = client.validate_mvp_pilot(deck_name="Ingles::Listening::B1", min_items=2)
+
+        self.assertEqual(report["deck_name"], "Ingles::Listening::B1")
+        self.assertEqual(report["status"], "approved")
+        record_mock.assert_called_once()
+        event_kwargs = record_mock.call_args.kwargs
+        self.assertEqual(event_kwargs["event_type"], "pilot_validation")
+        self.assertEqual(event_kwargs["item_key"], "deck:Ingles::Listening::B1")
+
     def test_reconcile_duplicates_dry_run(self) -> None:
         client = AnkiConnectClient(history_enabled=False)
 
