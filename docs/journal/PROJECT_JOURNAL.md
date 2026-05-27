@@ -84,3 +84,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: aprovar SPEC-E5-S2-001 e iniciar implementacao da entidade de item curado com validacoes minimas
 - Riscos identificados: validar taxonomia inicial de tags antes de escalar volume de itens
 - Proximo passo: implementar CSP-002 com aplicacao da matriz de avaliacao de listening
+
+## Nona entrada
+
+- Data: 2026-05-26
+- Etapa/Subetapa: E5.S2
+- Itens de backlog trabalhados: BLG-0017 (CSP-002)
+- Decisoes tomadas: aprovar SPEC-E5-S2-002 e implementar calculo ponderado com faixas oficiais de classificacao
+- Riscos identificados: variacao de avaliacao manual por criterio sem calibracao entre ciclos
+- Proximo passo: implementar CSP-003 para mapear item e avaliacao para nota logica Anki

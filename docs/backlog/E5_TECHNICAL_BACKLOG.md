@@ -44,6 +44,7 @@ Um candidato so vira SPEC quando:
 | Candidato | SPEC | Status | Evidencia |
 |---|---|---|---|
 | CSP-001 | SPEC-E5-S2-001 | Em implementacao | Entidade CuratedStudyItem + testes unitarios |
+| CSP-002 | SPEC-E5-S2-002 | Em implementacao | Matriz de listening com score e classificacao + testes unitarios |
 
 ## Rastreabilidade
 
