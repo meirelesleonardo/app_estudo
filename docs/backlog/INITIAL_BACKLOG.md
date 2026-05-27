@@ -42,3 +42,15 @@
 | BLG-0030 | Formalizar lifecycle documental e operacional | E0 | Alta | Todo | Estados, gates, criterios de transicao e evidencias obrigatorias consolidados na governanca |
 | BLG-0031 | Fortalecer auditoria de origem e linhagem do conteudo | E3.S3 | Media | Todo | Trilha de lineage raw-curated com eventos obrigatorios e pontos de controle definida |
 | BLG-0032 | Estruturar backlog tecnico incremental de E2.S4 | E5.S2 | Alta | Todo | Candidatos a SPEC de E2.S4 registrados com dependencias, riscos e criterio de conclusao |
+| BLG-0033 | Formalizar E2.S5 Governanca e Curadoria de Fontes | E2.S5 | Alta | Todo | Documento arquitetural de governanca de fontes publicado com classificacao, confiabilidade e politicas de uso por IA |
+| BLG-0034 | Estruturar registro Trusted Knowledge Sources | E2.S5 | Alta | Todo | Estrutura docs/sources criada com catalogo inicial por dominio e atributos obrigatorios de fonte |
+| BLG-0035 | Definir politicas de Knowledge Governance | E2.S5 | Alta | Todo | Politicas de revisao, expiracao, versionamento, auditoria e status de curadoria formalizadas |
+| BLG-0036 | Formalizar regras de consumo por IA | E2.S5 | Alta | Todo | Matriz de autorizacao de uso por confiabilidade definida para cards, simulados e laboratorios |
+| BLG-0037 | Consolidar pipeline confiavel Trusted Source -> Sync Pipeline | E2.S5 | Alta | Todo | Fluxo arquitetural consolidado com gates de qualidade e separacao bruto-curado validada |
+| BLG-0038 | Definir governanca de YouTube para ingestao audiovisual | E2.S5 | Alta | Todo | Pipeline de curadoria YouTube com criterios de legenda, naturalidade, densidade pedagogica e ruido publicado |
+| BLG-0039 | Formalizar fontes oficiais prioritarias de cybersec | E6.S1 | Alta | Todo | Catalogo de frameworks/normativas oficiais (OWASP, NIST, CIS, MITRE, CISA, RFC, Linux Foundation e cloud docs) publicado |
+| BLG-0040 | Expandir concursos com modelo de banca e recorrencia | E6.S1 | Alta | Todo | Estrutura de CompetitionSource com estilo textual, densidade, pegadinhas e recorrencia por banca formalizada |
+| BLG-0041 | Definir E6.S4 Motor Inteligente de Questoes | E6.S4 | Alta | Todo | Documento de S4 com geracao/revisao adaptativa, simulados, troubleshooting e cenarios tecnicos publicado |
+| BLG-0042 | Definir E6.S5 Taxonomia e Ontologia de Cyber Seguranca | E6.S5 | Alta | Todo | Taxonomia de dominios/subdominios, dependencias, prerequisitos e relacoes semanticas publicada |
+| BLG-0043 | Estruturar entidades de conhecimento para RAG pedagogico | E6.S5 | Alta | Todo | Entidades KnowledgeNode, StudyTopic, QuestionBlueprint e AdaptiveReviewProfile com relacoes e riscos formalizadas |
+| BLG-0044 | Publicar matriz de rastreabilidade de E2.S5, E6.S4 e E6.S5 | E3.S2 | Media | Todo | Matriz unificada conectando backlog, artefatos, candidatos a SPEC, gates e evidencias publicada |

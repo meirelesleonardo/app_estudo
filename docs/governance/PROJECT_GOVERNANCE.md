@@ -55,6 +55,49 @@ Toda decisao relevante deve:
 - declarar impactos e trade-offs;
 - apontar itens de backlog afetados.
 
+## Trusted Knowledge Sources e Knowledge Governance
+
+Principios obrigatorios:
+- IA so pode operar sobre fontes aprovadas, rastreaveis, classificadas, auditaveis e versionadas;
+- nenhuma fonte comunitaria ou experimental entra em automacao sem curadoria formal;
+- toda fonte deve ter dono (mantenedor), data de revisao e data de expiracao.
+
+Classificacao oficial de fonte:
+- oficial;
+- normativa;
+- operacional;
+- pedagogica;
+- comunitaria;
+- experimental;
+- laboratorio;
+- audiovisual;
+- documental.
+
+Niveis de confiabilidade:
+- alta;
+- media;
+- baixa;
+- experimental.
+
+Atributos minimos de governanca por fonte:
+- source_id unico;
+- categoria e subcategoria;
+- nivel de confiabilidade;
+- origem oficial;
+- data de revisao e data de expiracao;
+- idioma e formato;
+- estrategia de uso por IA;
+- risco e observacoes;
+- status e versao;
+- mantenedor responsavel.
+
+Politica de uso pela IA:
+- card automatico: somente fonte oficial/normativa/pedagogica com confiabilidade alta e curadoria aprovada;
+- card com revisao humana: fonte operacional/comunitaria ou confiabilidade media;
+- simulados: fonte normativa, oficial e banco historico curado por banca;
+- laboratorios: fonte operacional e laboratorio com checklist de seguranca e evidencia;
+- proibido sem validacao: fonte experimental, baixa confiabilidade, expirada ou sem mantenedor.
+
 ## Definicao de pronto (documental)
 
 Um item documental esta pronto quando:
@@ -90,6 +133,12 @@ Criterios de transicao (resumo):
 - Validating -> Operational: criterios de aceite atendidos e rastreabilidade atualizada.
 - Operational -> Deprecated: substituicao formal aprovada com ADR ou decisao equivalente.
 
+Criterio de rollback (obrigatorio):
+- qualquer estado pode retroceder para o estado anterior quando houver risco nao mitigado,
+  evidencia inconsistente ou quebra de rastreabilidade;
+- rollback deve registrar motivo, impacto e plano corretivo no mesmo ciclo documental;
+- rollback de Operational exige referencia explicita de substituicao ou congelamento controlado.
+
 Gates minimos por estado:
 - gate de definicao: objetivo, escopo e fora de escopo claros;
 - gate de rastreabilidade: vinculo Etapa/Subetapa/Backlog e impactos declarados;
@@ -101,3 +150,9 @@ Evidencias obrigatorias:
 - link para artefato principal (doc/SPEC/ADR);
 - criterio de conclusao observavel;
 - registro de dependencia e impacto.
+
+Evidencias adicionais para Knowledge Governance:
+- classificacao de fonte e nivel de confiabilidade registrados;
+- data de revisao e expiracao preenchidas;
+- politica de uso por IA declarada (automatico, revisao humana, proibido);
+- status de curadoria e versao rastreaveis.

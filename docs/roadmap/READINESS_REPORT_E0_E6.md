@@ -83,8 +83,14 @@ Condicao recomendada:
 
 Frente adicionada para novo ciclo documental:
 - E2.S4 - Ingestao e Processamento de Midia.
+- E2.S5 - Governanca e Curadoria de Fontes.
+- E6.S4 - Motor Inteligente de Questoes.
+- E6.S5 - Taxonomia e Ontologia de Cyber Seguranca.
 
 Observacoes:
 - a adicao de E2.S4 nao invalida o fechamento historico de E2.S1-E2.S3;
+- a adicao de E2.S5 complementa E2.S1-E2.S4 sem reestruturar backlog ou IDs existentes;
+- a adicao de E6.S4-E6.S5 expande E6.S1-E6.S3 sem quebrar o modulo de ingles;
 - o status de prontidao deste relatorio permanece como fotografia da data de referencia;
 - novos itens de backlog para E2.S4 devem evoluir por lifecycle formal antes de implementacao.
+- novos itens de backlog para E2.S5, E6.S4 e E6.S5 devem evoluir pelo mesmo lifecycle com gates e rollback formal.

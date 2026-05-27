@@ -10,6 +10,7 @@ etapas, backlog e SPECs.
 - IDs sequenciais: ADR-0001, ADR-0002, ...
 - Um arquivo por ADR em `docs/decisions/`.
 - Toda ADR deve usar o template oficial.
+- Estrutura minima obrigatoria: contexto, decisao, motivacao, consequencias, alternativas e impactos futuros.
 
 ## Estados de lifecycle
 

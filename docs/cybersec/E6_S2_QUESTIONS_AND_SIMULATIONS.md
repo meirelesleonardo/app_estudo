@@ -96,3 +96,9 @@ Cada erro deve retornar:
 
 - Etapa/Subetapa: E6.S2
 - Backlog: BLG-0021
+
+## Expansao incremental vinculada
+
+Este artefato e base para:
+- E6.S4 (motor inteligente de questoes);
+- E6.S5 (taxonomia e ontologia para cobertura semantica por topico e banca).

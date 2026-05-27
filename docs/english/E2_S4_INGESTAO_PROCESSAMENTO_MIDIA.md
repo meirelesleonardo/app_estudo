@@ -50,6 +50,10 @@ YouTube e a primeira fonte oficial de ingestao e deve ter:
 - evidencia da origem (canal, titulo, idioma, duracao);
 - hash de referencia para detectar alteracoes na origem.
 
+Regra complementar de governanca:
+- YouTube e fonte primaria audiovisual, mas nao e automaticamente confiavel;
+- toda entrada deve passar por curadoria e classificacao de confiabilidade antes de uso por IA.
+
 ## Entidades arquiteturais
 
 ### 1) SourceMedia
@@ -294,6 +298,7 @@ Dependencias:
 - E2.S1 (curadoria de fonte);
 - E2.S2 (matriz de avaliacao);
 - E2.S3 (validacao de transcricao);
+- E2.S5 (governanca e curadoria de fontes);
 - E3.S1-E3.S3 (entidades, vinculos e auditoria);
 - E4.S1-E4.S2 (consumo por nota logica/sync).
 

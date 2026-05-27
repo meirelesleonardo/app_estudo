@@ -36,6 +36,14 @@ Garantir que toda decisao, requisito e item de backlog possam ser rastreados de 
 4. Segmentos pedagogicos devem manter vinculo ao transcript curado e ao source de origem.
 5. Nenhum artefato pode mudar para estado Operational sem evidencia minima de lineage.
 
+## Regras complementares para Trusted Knowledge Sources (E2.S5)
+
+1. Toda fonte deve possuir classificacao, confiabilidade, revisao, expiracao e mantenedor.
+2. Fonte sem status approved ou review_required nao pode gerar automacao de IA.
+3. Fonte experimental deve permanecer separada da base oficial de conhecimento.
+4. Toda politica de uso por IA deve estar vinculada a criterio de risco observavel.
+5. Mudanca de confiabilidade deve gerar evento de auditoria e nova versao.
+
 ## Evidencias minimas de lineage
 
 - source_media_id e external_id preenchidos;
@@ -65,3 +73,5 @@ Garantir que toda decisao, requisito e item de backlog possam ser rastreados de 
 - Modelo de entidades: [E3_ENTITY_MODEL.md](E3_ENTITY_MODEL.md)
 - Regras de vinculo: [E3_ARTIFACT_LINKING_RULES.md](E3_ARTIFACT_LINKING_RULES.md)
 - Auditoria e historico: [E3_AUDIT_AND_HISTORY.md](E3_AUDIT_AND_HISTORY.md)
+- Matriz E2.S4: [E2_S4_TRACEABILITY_MATRIX.md](E2_S4_TRACEABILITY_MATRIX.md)
+- Matriz E2.S5/E6: [E2_S5_E6_TRACEABILITY_MATRIX.md](E2_S5_E6_TRACEABILITY_MATRIX.md)

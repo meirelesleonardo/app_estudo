@@ -18,6 +18,7 @@
 - E2.S2 Matriz de avaliacao de listening
 - E2.S3 Validacao de legenda/transcricao
 - E2.S4 Ingestao e processamento de midia
+- E2.S5 Governanca e curadoria de fontes
 
 ## E3 - Dados e rastreabilidade avancada
 
@@ -42,3 +43,5 @@
 - E6.S1 Curadoria de conteudo tecnico
 - E6.S2 Estrategia de questoes e simulados
 - E6.S3 Trilhas adaptativas de revisao
+- E6.S4 Motor inteligente de questoes
+- E6.S5 Taxonomia e ontologia de Cyber Seguranca

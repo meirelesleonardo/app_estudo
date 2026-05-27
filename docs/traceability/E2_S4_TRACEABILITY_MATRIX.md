@@ -31,6 +31,7 @@ artefatos, gates e evidencias esperadas para E2.S4.
 |---|---|---|
 | Lifecycle | docs/governance/PROJECT_GOVERNANCE.md | Estados, gates e evidencias obrigatorias para transicao |
 | Decisao arquitetural | docs/decisions/ADR-0001.md | Fonte oficial inicial de ingestao |
+| Governanca de fontes | docs/sources/governance/SOURCE_GOVERNANCE_POLICY.md | Classificacao de confiabilidade e politica de uso por IA para fonte audiovisual |
 | Rastreabilidade base | docs/traceability/TRACEABILITY_MODEL.md | Regras de lineage e separacao raw-curated |
 | Backlog operacional | docs/backlog/INITIAL_BACKLOG.md | IDs e criterios de conclusao dos itens BLG |
 | Backlog tecnico | docs/backlog/E2_S4_TECHNICAL_BACKLOG.md | Decomposicao em candidatos a SPEC |

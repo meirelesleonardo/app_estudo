@@ -9,15 +9,17 @@
 
 ## Contexto
 
-## Motivacao
-
-## Problema
-
-## Alternativas consideradas
-
 ## Decisao
 
+## Motivacao
+
 ## Consequencias
+
+## Alternativas
+
+## Impactos futuros
+
+## Problema
 
 ## Trade-offs
 

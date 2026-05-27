@@ -34,6 +34,33 @@ Definir como selecionar, classificar e validar conteudo de concursos com foco em
 - possibilidade de derivar questoes e revisoes;
 - confiabilidade da fonte.
 
+## Fontes oficiais prioritarias de Cyber Security
+
+- OWASP;
+- NIST;
+- CIS Benchmarks;
+- MITRE ATT&CK;
+- CISA;
+- RFC Editor;
+- Linux Foundation;
+- documentacoes oficiais de protocolos;
+- documentacoes oficiais de cloud providers.
+
+## Categorias operacionais complementares
+
+- laboratorios;
+- walkthroughs;
+- writeups;
+- simulacoes;
+- ambientes locais;
+- conteudo tecnico audiovisual;
+- Linux;
+- networking;
+- web security;
+- malware analysis;
+- SOC;
+- SIEM.
+
 ## Classificacao sugerida
 
 - prioridade: alta, media, baixa;
@@ -92,4 +119,4 @@ Definir como selecionar, classificar e validar conteudo de concursos com foco em
 ## Rastreabilidade
 
 - Etapa/Subetapa: E6.S1
-- Backlog: BLG-0020
+- Backlog: BLG-0020, BLG-0039, BLG-0040

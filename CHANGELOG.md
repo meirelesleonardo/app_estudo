@@ -79,6 +79,18 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Matriz de rastreabilidade unificada de E2.S4 conectando BLGs, CSPs, artefatos, gates e evidencias.
 - Tres SPECs iniciais de implementacao da E2.S4 criadas para gate pre-SPEC: SPEC-E2-S4-001, SPEC-E2-S4-002 e SPEC-E2-S4-003.
 - Gate pre-SPEC unificado de E2.S4 publicado com decisao GO para SPEC-E2-S4-001, SPEC-E2-S4-002 e SPEC-E2-S4-003.
+- Nova subetapa E2.S5 (Governanca e Curadoria de Fontes) formalizada para fortalecer Trusted Knowledge Sources e Knowledge Governance.
+- Estrutura documental docs/sources criada com dominios english, cybersec, concursos, frameworks, labs, operational, experimental e governance.
+- Politica formal de governanca de fontes publicada com classificacao oficial, niveis de confiabilidade, atributos obrigatorios e matriz de uso por IA.
+- Pipeline confiavel Trusted Source -> Sync Pipeline formalizado com gates de qualidade e separacao bruto-curado.
+- Modelagem arquitetural de entidades de conhecimento publicada: SourceProvider, KnowledgeSource, TrustedSource, SourceGovernancePolicy, KnowledgeNode, CompetitionSource, StudyTopic, QuestionBlueprint e AdaptiveReviewProfile.
+- Politica de curadoria do YouTube publicada como fonte primaria audiovisual sem confiabilidade automatica.
+- Catalogo de fontes oficiais prioritarias de Cyber Security formalizado (OWASP, NIST, CIS, MITRE ATT&CK, CISA, RFC Editor, Linux Foundation e cloud docs).
+- Politica de fontes de concursos formalizada com diferencas por banca (Cebraspe, FGV, FCC, Cesgranrio e Vunesp).
+- Expansao de E6 com novas subetapas E6.S4 (Motor Inteligente de Questoes) e E6.S5 (Taxonomia e Ontologia de Cyber Seguranca).
+- Backlog incremental ampliado com BLG-0033 a BLG-0044 para governanca de fontes, base confiavel de IA, expansao de concursos e rastreabilidade unificada.
+- Backlogs tecnicos incrementais publicados para E2.S5 e E6.S4/E6.S5 com candidatos a SPEC.
+- Matriz de rastreabilidade unificada publicada para E2.S5, E6.S4 e E6.S5 conectando BLGs, candidatos a SPEC, gates e evidencias.
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.
@@ -87,3 +99,5 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Status de E4 atualizado para concluida no roadmap.
 - Status de E5 atualizado para concluida no roadmap.
 - Status de E6 atualizado para concluida no roadmap.
+- Roadmap atualizado com E2.S5, E6.S4 e E6.S5 sem alteracao de IDs existentes.
+- Governanca ampliada com criterio formal de rollback e evidencias especificas de Knowledge Governance.

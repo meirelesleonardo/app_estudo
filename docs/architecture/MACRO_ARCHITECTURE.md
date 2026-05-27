@@ -28,6 +28,16 @@ Definir os blocos arquiteturais principais, seus limites e relacoes para guiar o
 - classificacao por dificuldade e naturalidade;
 - controle de qualidade de transcricao.
 
+1.1. Trusted Knowledge Sources
+- registro de fontes oficiais, normativas, operacionais, pedagogicas e experimentais;
+- classificacao de confiabilidade (alta, media, baixa, experimental);
+- versionamento, expiracao e status de uso por IA.
+
+1.2. Knowledge Governance
+- politicas de curadoria, auditoria, revisao e expurgo controlado;
+- gates para promover fonte de experimental para aprovada;
+- regra de bloqueio para automacao quando faltar evidencia de confiabilidade.
+
 2. Camada de Estrategia Pedagogica
 - trilhas de listening por nivel;
 - ciclos ouvir-entender-conferir-repetir;
@@ -48,11 +58,18 @@ Definir os blocos arquiteturais principais, seus limites e relacoes para guiar o
 - historico de decisoes;
 - trilha de evolucao e auditoria.
 
+6. Camada de Base Oficial para IA (futura)
+- consolidacao de conteudo validado para RAG pedagogico rastreavel;
+- separacao entre base confiavel e base experimental;
+- contrato de consumo por perfil (cards, simulados, laboratorios).
+
 ## Dependencias Macro
 
 - Curadoria valida e pre-requisito para estrategia pedagogica.
 - Estrategia pedagogica define requisitos para IA e Anki.
 - Rastreamento e governanca sao transversais desde o inicio.
+- Trusted Knowledge Sources e pre-requisito para qualquer automacao orientada por IA.
+- Knowledge Governance controla passagem de conteudo bruto para conteudo utilizavel.
 
 ## Riscos
 
@@ -72,6 +89,28 @@ Definir os blocos arquiteturais principais, seus limites e relacoes para guiar o
 - mapa de blocos arquiteturais;
 - dependencias entre etapas;
 - criterio de evolucao arquitetural incremental.
+
+## Pipeline de conhecimento confiavel (referencia)
+
+```txt
+Trusted Source
+	-> Curated Source
+	-> Validated Content
+	-> Normalized Content
+	-> Knowledge Unit
+	-> AI Processing
+	-> Study Asset
+	-> Anki Logical Note
+	-> Sync Pipeline
+```
+
+## Contrato de separacao bruto x curado
+
+- RawTranscript: conteudo bruto capturado sem ajuste pedagogico;
+- CuratedTranscript: versao curada validada por politica de fonte;
+- NormalizedSentence: unidade textual com regra de normalizacao versionada;
+- StudySegment: recorte didatico com contexto minimo preservado;
+- CuratedStudyItem: unidade de estudo pronta para avaliacao e mapeamento logico.
 
 ## Proximos passos
 

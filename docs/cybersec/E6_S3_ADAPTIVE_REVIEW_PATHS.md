@@ -89,3 +89,9 @@ Saidas:
 
 - Etapa/Subetapa: E6.S3
 - Backlog: BLG-0022
+
+## Expansao incremental vinculada
+
+Este artefato alimenta:
+- E6.S4 para regras de revisao adaptativa em questoes e simulados;
+- E6.S5 para relacoes de prerequisito entre topicos e clusters.
