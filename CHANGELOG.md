@@ -39,6 +39,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Testes unitarios para contrato de mapeamento item+avaliacao para payload logico Anki.
 - Modulo de healthcheck de AnkiConnect para validar endpoint local e versao.
 - Script CLI para verificar prontidao de conexao com AnkiConnect.
+- SPEC-E4-S2-001 para cliente base de sincronizacao com AnkiConnect.
+- Cliente AnkiConnect com fluxo basico de sync (create/update) e estados logicos de retorno.
+- Testes unitarios do cliente para cenarios de synced, updated, conflict, pending e blocked.
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.

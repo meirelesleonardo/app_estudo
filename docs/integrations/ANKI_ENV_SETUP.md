@@ -32,6 +32,12 @@ Comando sugerido no repositorio:
 - AnkiConnect responde no endpoint local.
 - Deck de teste pode ser listado por chamada de consulta (quando habilitarmos o cliente).
 
+## Validacao tecnica apos preparo
+
+- Executar healthcheck local.
+- Em seguida, usar o cliente de integracao para fluxo create/update com nota de teste.
+- Modulo do cliente: app_estudo/integrations/ankiconnect_client.py
+
 ## Riscos operacionais
 
 - firewall local bloqueando porta 8765;

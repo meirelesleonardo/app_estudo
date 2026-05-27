@@ -102,3 +102,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: aprovar SPEC-E5-S2-003 e implementar mapeamento logico de item+avaliacao para nota Anki com deck, fields, tags e midia
 - Riscos identificados: variacao de taxonomia de tags pode causar divergencia entre lotes se nao houver controle de versao
 - Proximo passo: preparar cliente de conectividade e healthcheck para iniciar chamadas AnkiConnect
+
+## Decima primeira entrada
+
+- Data: 2026-05-26
+- Etapa/Subetapa: E4.S2
+- Itens de backlog trabalhados: BLG-0015
+- Decisoes tomadas: implementar cliente base de AnkiConnect com sync create/update e mapeamento de estados pending, synced, updated, conflict e blocked
+- Riscos identificados: sem politica formal de deduplicacao completa, conflitos multiplos permanecem dependentes do proximo incremento
+- Proximo passo: evoluir para politica de deduplicacao e reconciliacao (CSP-004)
