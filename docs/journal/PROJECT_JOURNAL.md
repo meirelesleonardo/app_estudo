@@ -93,3 +93,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: aprovar SPEC-E5-S2-002 e implementar calculo ponderado com faixas oficiais de classificacao
 - Riscos identificados: variacao de avaliacao manual por criterio sem calibracao entre ciclos
 - Proximo passo: implementar CSP-003 para mapear item e avaliacao para nota logica Anki
+
+## Decima entrada
+
+- Data: 2026-05-26
+- Etapa/Subetapa: E5.S2
+- Itens de backlog trabalhados: BLG-0017 (CSP-003)
+- Decisoes tomadas: aprovar SPEC-E5-S2-003 e implementar mapeamento logico de item+avaliacao para nota Anki com deck, fields, tags e midia
+- Riscos identificados: variacao de taxonomia de tags pode causar divergencia entre lotes se nao houver controle de versao
+- Proximo passo: preparar cliente de conectividade e healthcheck para iniciar chamadas AnkiConnect

@@ -33,6 +33,12 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Segunda SPEC de implementacao: SPEC-E5-S2-002 (CSP-002).
 - Matriz de avaliacao de listening com pesos oficiais, score final e classificacao por faixa.
 - Testes unitarios para validacao de criterios obrigatorios, faixa de notas e classificacao final.
+- Terceira SPEC de implementacao: SPEC-E5-S2-003 (CSP-003).
+- Mapeador logico para nota Anki com deck, campos minimos, tags compostas e metadados de midia.
+- Guia de preparacao do ambiente local para AnkiConnect.
+- Testes unitarios para contrato de mapeamento item+avaliacao para payload logico Anki.
+- Modulo de healthcheck de AnkiConnect para validar endpoint local e versao.
+- Script CLI para verificar prontidao de conexao com AnkiConnect.
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.
