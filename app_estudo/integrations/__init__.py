@@ -6,6 +6,7 @@ from .ankiconnect_client import AnkiConnectClient, AnkiSyncResult
 from .anki_reconciliation import DuplicateGroup, ReconciliationReport, build_duplicate_groups
 from .item_history import ItemHistoryEvent, JsonlItemHistoryStore, new_event
 from .pilot_validation import validate_pilot_notes
+from .pilot_backfill import plan_backfill_updates
 
 __all__ = [
 	"LogicalAnkiNote",
@@ -21,4 +22,5 @@ __all__ = [
 	"JsonlItemHistoryStore",
 	"new_event",
 	"validate_pilot_notes",
+	"plan_backfill_updates",
 ]

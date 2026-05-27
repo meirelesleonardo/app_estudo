@@ -57,6 +57,8 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Sexta SPEC de implementacao: SPEC-E5-S2-006 (CSP-006).
 - Modulo de validacao de lote piloto com metricas de aceite do MVP.
 - Script operacional para validar lote piloto diretamente no deck alvo.
+- Backfill operacional de campos faltantes do lote piloto (evaluation_score e audio_reference) com script dedicado.
+- Validacao real do lote Ingles::Listening::B1 com status final approved e criterios de aceite atendidos.
 - Guia de instalacao e preparacao do Anki/AnkiConnect ampliado com passo a passo para Linux Mint e Windows 11.
 - Guia de usabilidade do app com jornada operacional, checklist e boas praticas de execucao.
 - Guia rapido de onboarding (Quick Start) para validacao minima do ambiente e execucao inicial.

@@ -165,3 +165,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: iniciar validacao automatizada do lote piloto com thresholds explicitos de rastreabilidade, duplicidade e classificacao pedagogica
 - Riscos identificados: lote pequeno pode distorcer metricas e gerar aprovacao estatisticamente fraca
 - Proximo passo: executar validacao no deck real e tratar lacunas ate status approved consistente
+
+## Decima oitava entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E5.S2
+- Itens de backlog trabalhados: BLG-0017 (CSP-006)
+- Decisoes tomadas: aplicar backfill controlado de evaluation_score e audio_reference, mantendo tag explicita para referencias de audio pendentes
+- Riscos identificados: valores preenchidos como placeholders exigem curadoria posterior para substituicao por links reais de audio
+- Proximo passo: consolidar gate final do MVP com plano de substituicao gradual dos placeholders de audio

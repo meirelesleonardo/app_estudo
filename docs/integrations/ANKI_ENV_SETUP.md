@@ -301,6 +301,18 @@ Filtrar por item:
 
 ### Validacao do lote piloto MVP (CSP-006)
 
+Backfill de campos faltantes (auditoria):
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/backfill_pilot_fields.py --deck Ingles::Listening::B1
+```
+
+Backfill de campos faltantes (aplicar):
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/backfill_pilot_fields.py --deck Ingles::Listening::B1 --apply
+```
+
 Executar validacao com thresholds padrao:
 
 ```bash
