@@ -35,6 +35,52 @@ def _build_note() -> LogicalAnkiNote:
 
 
 class AnkiConnectClientTests(unittest.TestCase):
+    def test_reconcile_duplicates_dry_run(self) -> None:
+        client = AnkiConnectClient()
+
+        cards = [100, 101, 102]
+        cards_info = [
+            {"note": 10, "cardId": 100},
+            {"note": 11, "cardId": 101},
+            {"note": 20, "cardId": 102},
+        ]
+        notes_info = [
+            {"noteId": 10, "fields": {"source_id": {"value": "dup-a"}}, "tags": []},
+            {"noteId": 11, "fields": {"source_id": {"value": "dup-a"}}, "tags": []},
+            {"noteId": 20, "fields": {"source_id": {"value": "unique"}}, "tags": []},
+        ]
+
+        with patch.object(client, "_invoke", side_effect=[cards, cards_info, notes_info]):
+            report = client.reconcile_duplicates_in_deck("Ingles::Listening::B1", dry_run=True)
+
+        self.assertTrue(report["dry_run"])
+        self.assertEqual(report["groups_found"], 1)
+        self.assertEqual(report["notes_marked_for_delete"], 1)
+        self.assertEqual(report["groups"][0]["canonical_note_id"], 10)
+
+    def test_reconcile_duplicates_apply_calls_delete_notes(self) -> None:
+        client = AnkiConnectClient()
+
+        cards = [100, 101]
+        cards_info = [
+            {"note": 10, "cardId": 100},
+            {"note": 11, "cardId": 101},
+        ]
+        notes_info = [
+            {"noteId": 10, "fields": {"source_id": {"value": "dup-a"}}, "tags": []},
+            {"noteId": 11, "fields": {"source_id": {"value": "dup-a"}}, "tags": []},
+        ]
+
+        with patch.object(client, "_merge_tags_from_duplicates", return_value=None) as merge_mock:
+            with patch.object(client, "_invoke", side_effect=[cards, cards_info, notes_info, None]) as invoke_mock:
+                report = client.reconcile_duplicates_in_deck("Ingles::Listening::B1", dry_run=False)
+
+        self.assertFalse(report["dry_run"])
+        self.assertEqual(report["groups_found"], 1)
+        self.assertEqual(report["notes_marked_for_delete"], 1)
+        merge_mock.assert_called_once_with(canonical_note_id=10, duplicate_note_ids=[11])
+        self.assertEqual(invoke_mock.call_count, 4)
+
     def test_ensure_model_exists_creates_model_when_missing(self) -> None:
         client = AnkiConnectClient(model_name="AppEstudoListening")
 

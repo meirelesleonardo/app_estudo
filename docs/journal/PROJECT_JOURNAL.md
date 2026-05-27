@@ -138,3 +138,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: executar saneamento qualitativo automatico em 45 notas de Ingles::Listening::B1 removendo tags legacy e normalizando metadados para pending_review
 - Riscos identificados: ainda ha necessidade de curadoria manual pontual de explicacoes para maximizar retencao
 - Proximo passo: iniciar CSP-004 com politica de deduplicacao e reconciliacao
+
+## Decima quinta entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E5.S2
+- Itens de backlog trabalhados: BLG-0017 (CSP-004)
+- Decisoes tomadas: implementar reconciliacao de duplicatas por source_id com estrategias keep_oldest/keep_newest e execucao dry-run/apply
+- Riscos identificados: reconciliacao automatica ainda depende de revisao humana em casos sem source_id confiavel
+- Proximo passo: evoluir CSP-005 com trilha de historico de alteracoes por item

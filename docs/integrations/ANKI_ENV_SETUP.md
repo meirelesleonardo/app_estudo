@@ -235,6 +235,56 @@ Resposta esperada:
 {"result":5,"error":null}
 ```
 
+## Operacao no Projeto
+
+### Healthcheck local
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/check_ankiconnect.py
+```
+
+### Padronizacao de deck legado
+
+Auditar sem alterar:
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/standardize_anki_deck.py
+```
+
+Aplicar padronizacao segura (somente candidatos com assinatura do projeto):
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/standardize_anki_deck.py --apply
+```
+
+### Saneamento qualitativo
+
+Auditar sem alterar:
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/sanitize_anki_quality.py
+```
+
+Aplicar saneamento:
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/sanitize_anki_quality.py --apply
+```
+
+### Reconciliacao de duplicatas (CSP-004)
+
+Dry-run (nao altera):
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/reconcile_anki_duplicates.py --deck Ingles::Listening::B1
+```
+
+Aplicar reconciliacao:
+
+```bash
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/reconcile_anki_duplicates.py --deck Ingles::Listening::B1 --apply
+```
+
 ## Estrutura inicial do projeto
 
 ### Criar pasta do projeto

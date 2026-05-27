@@ -48,6 +48,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Migracao aplicada no deck English com consolidacao dos cards em Ingles::Listening::B1 e remocao do deck vazio.
 - Script de saneamento qualitativo para normalizar tags e metadados das notas migradas.
 - Saneamento aplicado em 45 notas com remocao de marcadores legacy e padrao pending_review.
+- Quarta SPEC de implementacao: SPEC-E5-S2-004 (CSP-004).
+- Modulo de reconciliacao de duplicatas por source_id com estrategias keep_oldest/keep_newest.
+- Script CLI de reconciliacao com modo dry-run e modo apply.
 - Guia de instalacao e preparacao do Anki/AnkiConnect ampliado com passo a passo para Linux Mint e Windows 11.
 - Guia de usabilidade do app com jornada operacional, checklist e boas praticas de execucao.
 - Guia rapido de onboarding (Quick Start) para validacao minima do ambiente e execucao inicial.

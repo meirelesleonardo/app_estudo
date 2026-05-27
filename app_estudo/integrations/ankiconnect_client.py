@@ -7,6 +7,7 @@ import re
 from dataclasses import dataclass
 from urllib import error, request
 
+from .anki_reconciliation import ReconciliationReport, build_duplicate_groups
 from .anki_mapping import LogicalAnkiNote
 from .ankiconnect_healthcheck import DEFAULT_ANKI_ENDPOINT
 
@@ -162,6 +163,76 @@ class AnkiConnectClient:
 
         return result
 
+    def reconcile_duplicates_in_deck(
+        self,
+        deck_name: str,
+        strategy: str = "keep_oldest",
+        dry_run: bool = True,
+    ) -> dict[str, object]:
+        """Reconcilia notas duplicadas por source_id em um deck."""
+
+        cards = self._invoke("findCards", {"query": f"deck:{deck_name}"})
+        if not isinstance(cards, list):
+            raise AnkiConnectRemoteError("findCards retornou formato invalido")
+
+        cards_info = self._invoke("cardsInfo", {"cards": cards}) if cards else []
+        if not isinstance(cards_info, list):
+            raise AnkiConnectRemoteError("cardsInfo retornou formato invalido")
+
+        note_ids = sorted({card.get("note") for card in cards_info if isinstance(card.get("note"), int)})
+        notes_info = self._invoke("notesInfo", {"notes": note_ids}) if note_ids else []
+        if not isinstance(notes_info, list):
+            raise AnkiConnectRemoteError("notesInfo retornou formato invalido")
+
+        groups = build_duplicate_groups(notes_info, strategy=strategy)
+
+        groups_processed = 0
+        notes_marked_for_delete = 0
+        deleted_note_ids: list[int] = []
+
+        for group in groups:
+            groups_processed += 1
+            notes_marked_for_delete += len(group.duplicate_note_ids)
+
+            if dry_run:
+                continue
+
+            self._merge_tags_from_duplicates(
+                canonical_note_id=group.canonical_note_id,
+                duplicate_note_ids=list(group.duplicate_note_ids),
+            )
+            deleted_note_ids.extend(group.duplicate_note_ids)
+
+        if not dry_run and deleted_note_ids:
+            self._invoke("deleteNotes", {"notes": sorted(set(deleted_note_ids))})
+
+        report = ReconciliationReport(
+            deck_name=deck_name,
+            strategy=strategy,
+            dry_run=dry_run,
+            groups_found=len(groups),
+            groups_processed=groups_processed,
+            notes_marked_for_delete=notes_marked_for_delete,
+        )
+
+        return {
+            "deck_name": report.deck_name,
+            "strategy": report.strategy,
+            "dry_run": report.dry_run,
+            "groups_found": report.groups_found,
+            "groups_processed": report.groups_processed,
+            "notes_marked_for_delete": report.notes_marked_for_delete,
+            "groups": [
+                {
+                    "source_id": group.source_id,
+                    "note_ids": list(group.note_ids),
+                    "canonical_note_id": group.canonical_note_id,
+                    "duplicate_note_ids": list(group.duplicate_note_ids),
+                }
+                for group in groups
+            ],
+        }
+
     def _create_new_note(self, note: LogicalAnkiNote) -> AnkiSyncResult:
         try:
             note_id = self._add_note(note)
@@ -190,6 +261,34 @@ class AnkiConnectClient:
                 note_id=None,
                 error_type=error_type,
                 error_message=str(exc),
+            )
+
+    def _merge_tags_from_duplicates(
+        self,
+        canonical_note_id: int,
+        duplicate_note_ids: list[int],
+    ) -> None:
+        if not duplicate_note_ids:
+            return
+
+        dup_notes = self._invoke("notesInfo", {"notes": duplicate_note_ids})
+        if not isinstance(dup_notes, list):
+            raise AnkiConnectRemoteError("notesInfo retornou formato invalido para duplicatas")
+
+        merged_tags: set[str] = set()
+        for note in dup_notes:
+            if isinstance(note, dict):
+                merged_tags.update(note.get("tags", []))
+
+        merged_tags.add("status:reconciled")
+
+        if merged_tags:
+            self._invoke(
+                "addTags",
+                {
+                    "notes": [canonical_note_id],
+                    "tags": " ".join(sorted(merged_tags)),
+                },
             )
 
     def _update_existing_note(self, note_id: int, note: LogicalAnkiNote) -> AnkiSyncResult:
