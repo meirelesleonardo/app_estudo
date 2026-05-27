@@ -43,12 +43,12 @@ Um candidato so vira SPEC quando:
 
 | Candidato | SPEC | Status | Evidencia |
 |---|---|---|---|
-| CSP-001 | SPEC-E5-S2-001 | Em implementacao | Entidade CuratedStudyItem + testes unitarios |
-| CSP-002 | SPEC-E5-S2-002 | Em implementacao | Matriz de listening com score e classificacao + testes unitarios |
-| CSP-003 | SPEC-E5-S2-003 | Em implementacao | Mapeamento para nota logica Anki + testes unitarios |
-| CSP-004 | SPEC-E5-S2-004 | Em implementacao | Reconciliacao de duplicatas por source_id com dry-run/apply + testes unitarios |
-| CSP-005 | SPEC-E5-S2-005 | Em implementacao | Trilha de historico por item em JSONL + consulta por filtro |
-| CSP-006 | SPEC-E5-S2-006 | Em implementacao | Validacao automatizada de lote piloto com criterios de aceite do MVP |
+| CSP-001 | SPEC-E5-S2-001 | Concluido | Entidade CuratedStudyItem + testes unitarios |
+| CSP-002 | SPEC-E5-S2-002 | Concluido | Matriz de listening com score e classificacao + testes unitarios |
+| CSP-003 | SPEC-E5-S2-003 | Concluido | Mapeamento para nota logica Anki + testes unitarios |
+| CSP-004 | SPEC-E5-S2-004 | Concluido | Reconciliacao de duplicatas por source_id com dry-run/apply + testes unitarios |
+| CSP-005 | SPEC-E5-S2-005 | Concluido | Trilha de historico por item em JSONL + consulta por filtro |
+| CSP-006 | SPEC-E5-S2-006 | Concluido | Validacao automatizada de lote piloto com criterios de aceite do MVP |
 
 ## Rastreabilidade
 

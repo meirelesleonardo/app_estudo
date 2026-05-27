@@ -60,6 +60,7 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Script operacional para validar lote piloto diretamente no deck alvo.
 - Backfill operacional de campos faltantes do lote piloto (evaluation_score e audio_reference) com script dedicado.
 - Validacao real do lote Ingles::Listening::B1 com status final approved e criterios de aceite atendidos.
+- Fechamento do gate final do MVP com checklist de aceite marcado e consolidacao de evidencias CSP-001 a CSP-006.
 - Guia de instalacao e preparacao do Anki/AnkiConnect ampliado com passo a passo para Linux Mint e Windows 11.
 - Guia de usabilidade do app com jornada operacional, checklist e boas praticas de execucao.
 - Guia rapido de onboarding (Quick Start) para validacao minima do ambiente e execucao inicial.
@@ -72,5 +73,4 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Status de E3 atualizado para concluida no roadmap.
 - Status de E4 atualizado para concluida no roadmap.
 - Status de E5 atualizado para concluida no roadmap.
-- Status de E6 atualizado para em andamento no roadmap.
 - Status de E6 atualizado para concluida no roadmap.
