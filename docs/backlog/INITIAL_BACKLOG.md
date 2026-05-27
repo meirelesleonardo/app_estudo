@@ -25,4 +25,6 @@
 | BLG-0010 | Definir arquitetura logica de Anki | E4.S1 | Media | Done | Modelo deck/nota/tag documentado |
 | BLG-0015 | Definir fluxos logicos de sincronizacao | E4.S2 | Media | Done | Fluxos de criacao, atualizacao e reconciliacao publicados |
 | BLG-0016 | Definir tratamento de excecoes da integracao | E4.S3 | Media | Done | Classes de falha e politica de resposta publicadas |
-| BLG-0011 | Definir plano de MVP implementavel | E5.S1 | Alta | Todo | Escopo minimo e dependencias fechados |
+| BLG-0011 | Definir plano de MVP implementavel | E5.S1 | Alta | Done | Escopo minimo e dependencias fechados |
+| BLG-0017 | Quebrar backlog tecnico em incrementos pequenos | E5.S2 | Alta | Done | Candidatos a SPEC priorizados e rastreaveis |
+| BLG-0018 | Definir criterio de pronto para implementacao | E5.S3 | Alta | Done | Checklist formal de autorizacao publicado |

@@ -57,3 +57,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: separar integracao Anki em modelo logico, fluxos de sincronizacao e tratamento explicito de excecoes
 - Riscos identificados: duplicidade, conflito de tags e perda de rastreabilidade em falhas de sincronizacao
 - Proximo passo: iniciar E5 com definicao do MVP implementavel
+
+## Sexta entrada
+
+- Data: 2026-05-26
+- Etapa/Subetapa: E5
+- Itens de backlog trabalhados: BLG-0011, BLG-0017, BLG-0018
+- Decisoes tomadas: definir recorte minimo do MVP, quebrar em candidatos a SPEC e formalizar criterio de pronto para implementacao
+- Riscos identificados: iniciar desenvolvimento sem gate aprovado e sem recorte incremental
+- Proximo passo: planejar transicao de foco para E6

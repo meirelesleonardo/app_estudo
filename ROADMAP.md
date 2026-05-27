@@ -13,7 +13,7 @@ Este roadmap organiza a evolucao do projeto em etapas controladas, com foco em q
 | E2 | Estrategia de fontes e avaliacao de conteudo | Concluida | Alta | E1 | Matriz de avaliacao e criterio de selecao prontos |
 | E3 | Arquitetura de dados e rastreabilidade | Concluida | Alta | E0, E1, E2 | Modelo de entidades e trilha de decisao aprovados |
 | E4 | Planejamento de integracao AnkiConnect | Concluida | Media | E3 | Contratos logicos e estrategia de tags revisados |
-| E5 | Planejamento do MVP implementavel | Planejada | Alta | E1-E4 | Backlog de implementacao priorizado e refinado |
+| E5 | Planejamento do MVP implementavel | Concluida | Alta | E1-E4 | Backlog de implementacao priorizado e refinado |
 | E6 | Expansao para concursos e cybersec | Futuro | Media | E5 | Macroescopo do novo modulo consolidado |
 
 ## Backlog Macro por Etapa
@@ -56,8 +56,8 @@ Este roadmap organiza a evolucao do projeto em etapas controladas, com foco em q
 ## Proximos 30 dias (planejamento)
 
 1. Consolidar fechamento formal de E0.
-2. Consolidar E4 como base para E5.
-3. Iniciar definicao do MVP implementavel (E5).
+2. Consolidar gate de pronto para implementacao do MVP.
+3. Planejar transicao controlada para E6 (concursos/cybersec).
 
 ## Criterio de Avanco entre Etapas
 
