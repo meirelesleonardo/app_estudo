@@ -1,5 +1,9 @@
 # SPEC Template
 
+## Observacao
+
+Para documentos de integracao (nao-SPEC), usar o template: ../integrations/INTEGRATION_DOC_TEMPLATE.md
+
 ## Identificacao
 
 - ID: SPEC-<ETAPA>-<SUBETAPA>-<SEQ>

@@ -4,6 +4,16 @@
 
 Definir como a futura integracao deve reagir a falhas, inconsistencias e conflitos sem perder rastreabilidade.
 
+## Pre-requisitos
+
+- modelo logico e fluxos de sincronizacao definidos (E4.S1 e E4.S2);
+- estrategia de rastreabilidade de E3 ativa;
+- taxonomia inicial de tags documentada.
+
+## Passos
+
+### 1. Classificar excecoes
+
 ## Classes de excecao
 
 ### 1. Excecoes de conectividade
@@ -51,20 +61,47 @@ Resposta esperada:
 - exigir ADR quando impacto for estrutural;
 - planejar migracao antes de alteracao ampla.
 
-## Politica de resposta
+### 2. Aplicar politica de resposta
 
 1. Falha nunca deve ser silenciosa.
 2. Excecao deve gerar estado identificavel.
 3. Toda recuperacao precisa preservar rastreabilidade.
 4. Mudanca estrutural relevante deve ser registrada em ADR.
 
-## Evidencia minima por erro futuro
+### 3. Registrar evidencia minima por erro
 
 - data/hora;
 - tipo de excecao;
 - artefato afetado;
 - causa provavel;
 - acao recomendada.
+
+## Validacao
+
+- classes de excecao mapeadas por tipo de falha;
+- resposta esperada definida para cada classe;
+- politica de resposta com regra de nao-silenciamento;
+- evidencia minima padronizada para auditoria.
+
+## Troubleshooting
+
+### Problema: falhas sem contexto para reprocessar
+
+Acao recomendada:
+
+- garantir registro completo da evidencia minima antes de encerrar o fluxo.
+
+### Problema: conflitos sendo sobrescritos
+
+Acao recomendada:
+
+- bloquear merge silencioso e forcar estado conflict com trilha de decisao.
+
+### Problema: mudancas estruturais sem governanca
+
+Acao recomendada:
+
+- abrir ADR antes de alterar taxonomia de tags, campos ou hierarquia de decks.
 
 ## Rastreabilidade
 

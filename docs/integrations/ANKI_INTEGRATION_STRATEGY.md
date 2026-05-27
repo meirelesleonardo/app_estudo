@@ -4,7 +4,15 @@
 
 Documentar a arquitetura logica da integracao com Anki sem implementar ainda.
 
-## Escopo futuro
+## Pre-requisitos
+
+- modelo de dados e rastreabilidade definidos;
+- curadoria validada;
+- escopo do MVP consolidado.
+
+## Passos
+
+### 1. Definir escopo futuro
 
 - criar cards automaticamente;
 - atualizar cards existentes;
@@ -12,7 +20,7 @@ Documentar a arquitetura logica da integracao com Anki sem implementar ainda.
 - associar audio e contexto;
 - sincronizar revisoes.
 
-## Componentes logicos
+### 2. Estruturar componentes logicos
 
 1. Camada de mapeamento de conteudo
 - transformar item de estudo em estrutura de nota.
@@ -26,13 +34,48 @@ Documentar a arquitetura logica da integracao com Anki sem implementar ainda.
 4. Camada de controle de sincronizacao
 - detectar divergencias e evitar duplicidade.
 
-## Estrategia de tags (proposta)
+### 3. Definir estrategia de tags
 
 - modulo:ingles
 - habilidade:listening
 - fenomeno:connected_speech
 - nivel:B1
 - origem:podcast
+
+### 4. Definir metricas de acompanhamento
+
+- taxa de duplicidade;
+- taxa de atualizacao bem sucedida;
+- tempo medio de sincronizacao;
+- impacto na retencao de revisao.
+
+## Validacao
+
+- escopo e componentes logicos descritos de ponta a ponta;
+- estrategia de tags publicada e consistente com E4;
+- metricas futuras definidas;
+- dependencias documentadas e verificaveis.
+
+## Troubleshooting
+
+### Risco: duplicidade de cards
+
+Acao recomendada:
+
+- reforcar regra de identificador logico unico em E4.S1;
+- validar reconciliacao explicita em E4.S2.
+
+### Risco: tags inconsistentes
+
+Acao recomendada:
+
+- centralizar taxonomia e revisar tags compostas antes da implementacao.
+
+### Risco: midia sem vinculo correto
+
+Acao recomendada:
+
+- exigir metadados minimos de midia e estado pendente reprocessavel.
 
 ## Riscos
 
@@ -41,21 +84,13 @@ Documentar a arquitetura logica da integracao com Anki sem implementar ainda.
 - midia sem vinculo correto;
 - divergencia entre fonte e card atualizado.
 
-## Metricas futuras
-
-- taxa de duplicidade;
-- taxa de atualizacao bem sucedida;
-- tempo medio de sincronizacao;
-- impacto na retencao de revisao.
-
-## Dependencias
-
-- modelo de dados e rastreabilidade definidos;
-- curadoria validada;
-- escopo do MVP consolidado.
-
 ## Expansao em E4
 
 - Modelo logico: [E4_LOGICAL_MODEL.md](E4_LOGICAL_MODEL.md)
 - Fluxos de sincronizacao: [E4_SYNC_FLOWS.md](E4_SYNC_FLOWS.md)
 - Tratamento de excecoes: [E4_EXCEPTION_HANDLING.md](E4_EXCEPTION_HANDLING.md)
+
+## Rastreabilidade
+
+- Etapa/Subetapa: E4 (visao estrategica)
+- Backlog relacionado: BLG-0010, BLG-0015, BLG-0016

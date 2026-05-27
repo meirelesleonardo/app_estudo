@@ -4,7 +4,15 @@
 
 Definir os fluxos documentais que orientarao a futura sincronizacao entre os artefatos curados do projeto e o Anki.
 
-## Fluxos principais
+## Pre-requisitos
+
+- modelo logico definido em E4.S1;
+- rastreabilidade de artefatos validada em E3;
+- politica de excecoes definida em E4.S3.
+
+## Passos
+
+### Fluxos principais
 
 ### 1. Criacao de nota nova
 
@@ -36,7 +44,7 @@ Definir os fluxos documentais que orientarao a futura sincronizacao entre os art
 3. Vinculo logico entre nota e midia e registrado.
 4. Falhas de anexo geram estado pendente, nao descarte silencioso.
 
-## Estados logicos de sincronizacao
+### Estados logicos de sincronizacao
 
 - pending
 - synced
@@ -44,12 +52,40 @@ Definir os fluxos documentais que orientarao a futura sincronizacao entre os art
 - conflict
 - blocked
 
-## Regras de consistencia
+### Regras de consistencia
 
 1. Nenhuma nota deve ser criada sem identificador unico.
 2. Nenhuma atualizacao deve sobrescrever origem sem trilha de mudanca.
 3. Nenhuma midia deve ser vinculada sem referencia validada.
 4. Conflitos devem gerar estado explicito e reprocessavel.
+
+## Validacao
+
+- fluxo de criacao, atualizacao, reconciliacao e midia documentados;
+- estados logicos de sincronizacao definidos;
+- regras de consistencia alinhadas com tratamento de excecoes;
+- dependencias de E3 e E4.S1 explicitadas.
+
+## Troubleshooting
+
+### Problema: nota criada em duplicidade
+
+Acao recomendada:
+
+- revisar calculo de identificador unico;
+- reforcar etapa de verificacao de existencia previa.
+
+### Problema: conflito sem tratamento
+
+Acao recomendada:
+
+- garantir transicao para estado conflict e fila de reprocessamento.
+
+### Problema: midia nao vinculada
+
+Acao recomendada:
+
+- validar referencia de midia antes da vinculacao e manter estado pending quando falhar.
 
 ## Metricas futuras
 

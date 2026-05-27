@@ -4,7 +4,15 @@
 
 Definir a estrutura logica de decks, notas, tags, campos e midia para futura integracao com AnkiConnect.
 
-## Escopo
+## Pre-requisitos
+
+- rastreabilidade de artefatos definida em E3;
+- escopo do MVP aprovado em E5.S1;
+- estrategia de integracao consolidada em ANKI_INTEGRATION_STRATEGY.
+
+## Passos
+
+### 1. Delimitar escopo do modelo
 
 - modelo logico de nota;
 - organizacao de decks e subdecks;
@@ -12,13 +20,13 @@ Definir a estrutura logica de decks, notas, tags, campos e midia para futura int
 - associacao de audio e contexto;
 - regras de identificacao unica.
 
-## Fora do escopo
+### 2. Registrar fora do escopo
 
 - chamadas reais para AnkiConnect;
 - schema tecnico definitivo;
 - automacao de importacao/exportacao.
 
-## Entidades logicas
+### 3. Definir entidades logicas
 
 ### Deck
 
@@ -94,6 +102,33 @@ Cada nota deve possuir um identificador logico unico baseado em:
 Objetivo:
 - evitar duplicidade;
 - permitir reconciliacao futura em sincronizacoes.
+
+## Validacao
+
+- todas as entidades logicas principais definidas;
+- campos minimos da nota descritos;
+- taxonomia inicial de tags documentada;
+- regra de identificacao unica publicada e rastreavel.
+
+## Troubleshooting
+
+### Problema: inflacao de tags
+
+Acao recomendada:
+
+- revisar e consolidar categorias de tags antes da implementacao real.
+
+### Problema: notas duplicadas
+
+Acao recomendada:
+
+- reforcar calculo de identificador unico e validacao previa no fluxo de sincronizacao.
+
+### Problema: audio sem correspondencia
+
+Acao recomendada:
+
+- exigir metadados minimos de midia e bloqueio de envio em caso de referencia invalida.
 
 ## Riscos
 

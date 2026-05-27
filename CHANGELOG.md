@@ -44,6 +44,15 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Testes unitarios do cliente para cenarios de synced, updated, conflict, pending e blocked.
 - Ajuste de compatibilidade do cliente para criar automaticamente modelo e deck antes da sincronizacao.
 - Smoke test real com Anki aberto validando fluxo create/update com sucesso.
+- Script de padronizacao de deck legacy para migrar cards ao padrao Ingles::Listening::<nivel>.
+- Migracao aplicada no deck English com consolidacao dos cards em Ingles::Listening::B1 e remocao do deck vazio.
+- Script de saneamento qualitativo para normalizar tags e metadados das notas migradas.
+- Saneamento aplicado em 45 notas com remocao de marcadores legacy e padrao pending_review.
+- Guia de instalacao e preparacao do Anki/AnkiConnect ampliado com passo a passo para Linux Mint e Windows 11.
+- Guia de usabilidade do app com jornada operacional, checklist e boas praticas de execucao.
+- Guia rapido de onboarding (Quick Start) para validacao minima do ambiente e execucao inicial.
+- Padronizacao dos docs de integracao no template comum: Objetivo, Pre-requisitos, Passos, Validacao, Troubleshooting e Rastreabilidade.
+- Template reutilizavel para novas docs de integracao em docs/integrations/INTEGRATION_DOC_TEMPLATE.md.
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.
