@@ -9,8 +9,8 @@ Este roadmap organiza a evolucao do projeto em etapas controladas, com foco em q
 | Etapa | Nome | Status | Prioridade | Dependencias | Marco de Conclusao |
 |---|---|---|---|---|---|
 | E0 | Fundacao documental e governanca | Em andamento | Alta | Nenhuma | Repositorio com estrutura base e padroes definidos |
-| E1 | Refinamento do modulo de ingles | Planejada | Alta | E0 | Escopo completo de listening e curadoria validado |
-| E2 | Estrategia de fontes e avaliacao de conteudo | Planejada | Alta | E1 | Matriz de avaliacao e criterio de selecao prontos |
+| E1 | Refinamento do modulo de ingles | Concluida | Alta | E0 | Escopo completo de listening e curadoria validado |
+| E2 | Estrategia de fontes e avaliacao de conteudo | Em andamento | Alta | E1 | Matriz de avaliacao e criterio de selecao prontos |
 | E3 | Arquitetura de dados e rastreabilidade | Planejada | Alta | E0, E1, E2 | Modelo de entidades e trilha de decisao aprovados |
 | E4 | Planejamento de integracao AnkiConnect | Planejada | Media | E3 | Contratos logicos e estrategia de tags revisados |
 | E5 | Planejamento do MVP implementavel | Planejada | Alta | E1-E4 | Backlog de implementacao priorizado e refinado |

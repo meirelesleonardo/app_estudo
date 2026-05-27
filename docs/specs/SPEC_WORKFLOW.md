@@ -10,7 +10,8 @@ SPEC nao nasce automaticamente.
 2. Refinar subetapas.
 3. Definir objetivo, conteudo, fontes, estrategia, dificuldade, tipo de midia, metricas e criterio de sucesso.
 4. Validar escopo e nao escopo.
-5. So entao criar SPEC.
+5. Aprovar gate formal pre-SPEC.
+6. So entao criar SPEC.
 
 ## Checklist antes da SPEC
 
@@ -20,6 +21,7 @@ SPEC nao nasce automaticamente.
 - Dependencias estao declaradas.
 - Riscos estao mapeados.
 - Metricas estao definidas.
+- Gate pre-SPEC registrado como aprovado.
 
 ## Qualidade da SPEC
 
