@@ -35,12 +35,30 @@ def _build_note() -> LogicalAnkiNote:
 
 
 class AnkiConnectClientTests(unittest.TestCase):
+    def test_ensure_model_exists_creates_model_when_missing(self) -> None:
+        client = AnkiConnectClient(model_name="AppEstudoListening")
+
+        with patch.object(client, "_invoke", side_effect=[[], None]) as invoke_mock:
+            client._ensure_model_exists()
+
+        self.assertEqual(invoke_mock.call_count, 2)
+
+    def test_ensure_deck_exists_calls_create_deck(self) -> None:
+        client = AnkiConnectClient()
+
+        with patch.object(client, "_invoke", return_value=1) as invoke_mock:
+            client._ensure_deck_exists("Ingles::Listening::B1")
+
+        invoke_mock.assert_called_once_with("createDeck", {"deck": "Ingles::Listening::B1"})
+
     def test_sync_creates_note_when_not_found(self) -> None:
         client = AnkiConnectClient()
         note = _build_note()
 
-        with patch.object(client, "_invoke", side_effect=[[], 101]) as invoke_mock:
-            result = client.sync_logical_note(note)
+        with patch.object(client, "_ensure_model_exists", return_value=None):
+            with patch.object(client, "_ensure_deck_exists", return_value=None):
+                with patch.object(client, "_invoke", side_effect=[[], 101]) as invoke_mock:
+                    result = client.sync_logical_note(note)
 
         self.assertEqual(result.state, "synced")
         self.assertEqual(result.action, "created")
@@ -51,8 +69,10 @@ class AnkiConnectClientTests(unittest.TestCase):
         client = AnkiConnectClient()
         note = _build_note()
 
-        with patch.object(client, "_invoke", side_effect=[[88], None, None]):
-            result = client.sync_logical_note(note)
+        with patch.object(client, "_ensure_model_exists", return_value=None):
+            with patch.object(client, "_ensure_deck_exists", return_value=None):
+                with patch.object(client, "_invoke", side_effect=[[88], None, None]):
+                    result = client.sync_logical_note(note)
 
         self.assertEqual(result.state, "updated")
         self.assertEqual(result.action, "updated")
@@ -61,8 +81,10 @@ class AnkiConnectClientTests(unittest.TestCase):
     def test_sync_returns_conflict_when_multiple_notes_are_found(self) -> None:
         client = AnkiConnectClient()
 
-        with patch.object(client, "_invoke", side_effect=[[10, 11]]):
-            result = client.sync_logical_note(_build_note())
+        with patch.object(client, "_ensure_model_exists", return_value=None):
+            with patch.object(client, "_ensure_deck_exists", return_value=None):
+                with patch.object(client, "_invoke", side_effect=[[10, 11]]):
+                    result = client.sync_logical_note(_build_note())
 
         self.assertEqual(result.state, "conflict")
         self.assertEqual(result.error_type, "conflict")
@@ -70,8 +92,10 @@ class AnkiConnectClientTests(unittest.TestCase):
     def test_sync_returns_pending_on_connectivity_failure(self) -> None:
         client = AnkiConnectClient()
 
-        with patch.object(client, "_invoke", side_effect=AnkiConnectConnectivityError("timeout")):
-            result = client.sync_logical_note(_build_note())
+        with patch.object(client, "_ensure_model_exists", return_value=None):
+            with patch.object(client, "_ensure_deck_exists", return_value=None):
+                with patch.object(client, "_invoke", side_effect=AnkiConnectConnectivityError("timeout")):
+                    result = client.sync_logical_note(_build_note())
 
         self.assertEqual(result.state, "pending")
         self.assertEqual(result.error_type, "connectivity")

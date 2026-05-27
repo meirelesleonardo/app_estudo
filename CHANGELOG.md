@@ -42,6 +42,8 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - SPEC-E4-S2-001 para cliente base de sincronizacao com AnkiConnect.
 - Cliente AnkiConnect com fluxo basico de sync (create/update) e estados logicos de retorno.
 - Testes unitarios do cliente para cenarios de synced, updated, conflict, pending e blocked.
+- Ajuste de compatibilidade do cliente para criar automaticamente modelo e deck antes da sincronizacao.
+- Smoke test real com Anki aberto validando fluxo create/update com sucesso.
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.

@@ -111,3 +111,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: implementar cliente base de AnkiConnect com sync create/update e mapeamento de estados pending, synced, updated, conflict e blocked
 - Riscos identificados: sem politica formal de deduplicacao completa, conflitos multiplos permanecem dependentes do proximo incremento
 - Proximo passo: evoluir para politica de deduplicacao e reconciliacao (CSP-004)
+
+## Decima segunda entrada
+
+- Data: 2026-05-26
+- Etapa/Subetapa: E4.S2
+- Itens de backlog trabalhados: BLG-0015
+- Decisoes tomadas: ajustar cliente para criar modelo e deck automaticamente antes do sync e executar smoke test real com create/update bem sucedido
+- Riscos identificados: manter padrao de nomes de deck e modelo para evitar proliferacao de estruturas no Anki
+- Proximo passo: implementar CSP-004 para deduplicacao e reconciliacao de conflitos

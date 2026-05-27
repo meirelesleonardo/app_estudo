@@ -24,6 +24,23 @@ _REQUIRED_FIELDS = {
     "audio_reference",
     "created_from_stage",
 }
+_MODEL_FIELDS = [
+    "source_id",
+    "source_type",
+    "title",
+    "transcript_excerpt",
+    "target_expression",
+    "explanation_ptbr",
+    "listening_context",
+    "level",
+    "accent",
+    "tags_context",
+    "audio_reference",
+    "created_from_stage",
+    "logical_key",
+    "evaluation_score",
+    "evaluation_classification",
+]
 
 
 class AnkiConnectError(Exception):
@@ -75,12 +92,30 @@ class AnkiConnectClient:
     def sync_logical_note(self, note: LogicalAnkiNote) -> AnkiSyncResult:
         try:
             self._validate_note(note)
+            self._ensure_model_exists()
+            self._ensure_deck_exists(note.deck_name)
         except AnkiConnectValidationError as exc:
             return AnkiSyncResult(
                 state="blocked",
                 action="validation",
                 note_id=None,
                 error_type="validation",
+                error_message=str(exc),
+            )
+        except AnkiConnectConnectivityError as exc:
+            return AnkiSyncResult(
+                state="pending",
+                action="setup_check",
+                note_id=None,
+                error_type="connectivity",
+                error_message=str(exc),
+            )
+        except AnkiConnectRemoteError as exc:
+            return AnkiSyncResult(
+                state="blocked",
+                action="setup_check",
+                note_id=None,
+                error_type="remote",
                 error_message=str(exc),
             )
 
@@ -224,6 +259,38 @@ class AnkiConnectClient:
             payload["audio"] = audio
 
         return payload
+
+    def _ensure_model_exists(self) -> None:
+        model_names = self._invoke("modelNames", {})
+        if not isinstance(model_names, list):
+            raise AnkiConnectRemoteError("modelNames retornou formato invalido")
+
+        if self.model_name in model_names:
+            return
+
+        self._invoke(
+            "createModel",
+            {
+                "modelName": self.model_name,
+                "inOrderFields": _MODEL_FIELDS,
+                "css": ".card { font-family: arial; font-size: 20px; }",
+                "isCloze": False,
+                "cardTemplates": [
+                    {
+                        "Name": "Card 1",
+                        "Front": "{{target_expression}}",
+                        "Back": "{{FrontSide}}<hr id=answer>{{explanation_ptbr}}<br><br>{{transcript_excerpt}}",
+                    }
+                ],
+            },
+        )
+
+    def _ensure_deck_exists(self, deck_name: str) -> None:
+        if not deck_name.strip():
+            raise AnkiConnectValidationError("deck_name e obrigatorio")
+
+        # createDeck e idempotente no AnkiConnect: cria se nao existir e nao falha se ja existir.
+        self._invoke("createDeck", {"deck": deck_name})
 
     def _build_audio(self, note: LogicalAnkiNote) -> list[dict[str, object]]:
         reference = note.media.get("reference_path_or_url")
