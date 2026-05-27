@@ -62,6 +62,10 @@ Detalhes completos em [ROADMAP.md](ROADMAP.md).
 - [docs/specs/E5_MVP_SCOPE.md](docs/specs/E5_MVP_SCOPE.md)
 - [docs/backlog/E5_TECHNICAL_BACKLOG.md](docs/backlog/E5_TECHNICAL_BACKLOG.md)
 - [docs/governance/E5_READY_FOR_IMPLEMENTATION.md](docs/governance/E5_READY_FOR_IMPLEMENTATION.md)
+- [docs/cybersec/E6_EXPANSION_PLAN.md](docs/cybersec/E6_EXPANSION_PLAN.md)
+- [docs/cybersec/E6_S1_CONTENT_CURATION.md](docs/cybersec/E6_S1_CONTENT_CURATION.md)
+- [docs/cybersec/E6_S2_QUESTIONS_AND_SIMULATIONS.md](docs/cybersec/E6_S2_QUESTIONS_AND_SIMULATIONS.md)
+- [docs/cybersec/E6_S3_ADAPTIVE_REVIEW_PATHS.md](docs/cybersec/E6_S3_ADAPTIVE_REVIEW_PATHS.md)
 - [docs/backlog/INITIAL_BACKLOG.md](docs/backlog/INITIAL_BACKLOG.md)
 
 ## Como Contribuir

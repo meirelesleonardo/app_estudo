@@ -22,6 +22,10 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Escopo minimo do MVP implementavel (E5.S1).
 - Backlog tecnico incremental com candidatos a SPEC (E5.S2).
 - Criterio formal de pronto para implementacao (E5.S3).
+- Plano de expansao para concursos e Defesa Cibernetica (E6).
+- Estrutura inicial de curadoria tecnica por edital e disciplina (E6.S1).
+- Blueprint inicial de questoes e simulados (E6.S2).
+- Modelo inicial de trilhas adaptativas e laboratorios (E6.S3).
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.
@@ -29,3 +33,4 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Status de E3 atualizado para concluida no roadmap.
 - Status de E4 atualizado para concluida no roadmap.
 - Status de E5 atualizado para concluida no roadmap.
+- Status de E6 atualizado para em andamento no roadmap.

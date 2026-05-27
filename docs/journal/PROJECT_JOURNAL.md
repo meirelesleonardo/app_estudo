@@ -66,3 +66,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: definir recorte minimo do MVP, quebrar em candidatos a SPEC e formalizar criterio de pronto para implementacao
 - Riscos identificados: iniciar desenvolvimento sem gate aprovado e sem recorte incremental
 - Proximo passo: planejar transicao de foco para E6
+
+## Setima entrada
+
+- Data: 2026-05-26
+- Etapa/Subetapa: E6
+- Itens de backlog trabalhados: BLG-0019, BLG-0020, BLG-0021
+- Decisoes tomadas: iniciar E6 com macroplano e detalhar S1-S3 mantendo incremento controlado
+- Riscos identificados: expansao ampla sem priorizacao por edital e sem limiares objetivos de adaptatividade
+- Proximo passo: fechar pendencias de S1-S3 e preparar criterios de conclusao de E6
