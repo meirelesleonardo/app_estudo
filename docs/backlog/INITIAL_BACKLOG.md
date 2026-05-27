@@ -29,6 +29,6 @@
 | BLG-0017 | Quebrar backlog tecnico em incrementos pequenos | E5.S2 | Alta | Done | Candidatos a SPEC priorizados e rastreaveis |
 | BLG-0018 | Definir criterio de pronto para implementacao | E5.S3 | Alta | Done | Checklist formal de autorizacao publicado |
 | BLG-0019 | Estruturar macroplano da expansao E6 | E6 | Alta | Done | Macroplano E6 publicado com escopo e subetapas |
-| BLG-0020 | Curadoria tecnica por edital e disciplina | E6.S1 | Alta | Doing | Taxonomia inicial e criterios de fonte definidos |
-| BLG-0021 | Definir blueprint de questoes e simulados | E6.S2 | Alta | Doing | Estrutura de questoes/simulados e metricas definidas |
-| BLG-0022 | Definir trilhas adaptativas e laboratorios | E6.S3 | Media | Todo | Regras de priorizacao e limiares de adaptatividade definidos |
+| BLG-0020 | Curadoria tecnica por edital e disciplina | E6.S1 | Alta | Done | Taxonomia inicial e criterios de fonte definidos |
+| BLG-0021 | Definir blueprint de questoes e simulados | E6.S2 | Alta | Done | Estrutura de questoes/simulados e metricas definidas |
+| BLG-0022 | Definir trilhas adaptativas e laboratorios | E6.S3 | Media | Done | Regras de priorizacao e limiares de adaptatividade definidos |

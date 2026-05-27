@@ -41,11 +41,56 @@ Cada questao deve possuir:
 - taxa de recorrencia de erro por topico;
 - evolucao de desempenho entre simulados.
 
-## Pendencias para fechamento de S2
+## Matriz inicial de distribuicao de questoes (definida)
 
-- definir matriz inicial de distribuicao de questoes;
-- definir regra de construcao de simulado parcial e completo;
-- consolidar padrao de feedback por erro.
+### Simulado parcial (30 questoes)
+
+- Seguranca da informacao: 6
+- Redes e protocolos: 6
+- Criptografia aplicada: 5
+- Gestao de riscos e normas: 5
+- Resposta a incidentes: 5
+- Legislacao e governanca publica: 3
+
+Distribuicao de dificuldade:
+- basico: 40%
+- intermediario: 40%
+- avancado: 20%
+
+### Simulado completo (80 questoes)
+
+- Seguranca da informacao: 16
+- Redes e protocolos: 16
+- Criptografia aplicada: 14
+- Gestao de riscos e normas: 12
+- Resposta a incidentes: 14
+- Legislacao e governanca publica: 8
+
+Distribuicao de dificuldade:
+- basico: 30%
+- intermediario: 45%
+- avancado: 25%
+
+## Regra de construcao de simulados (definida)
+
+1. Nenhum simulado pode ter disciplina com menos de 10% de cobertura.
+2. Simulado parcial deve priorizar topicos de maior recorrencia de erro.
+3. Simulado completo deve manter distribuicao balanceada por disciplina.
+4. Duas aplicacoes consecutivas nao devem repetir mais de 25% das questoes.
+
+## Padrao de feedback por erro (definido)
+
+Cada erro deve retornar:
+- causa principal;
+- referencia de estudo;
+- topico para revisao imediata;
+- nivel de urgencia (alta, media, baixa).
+
+## Fechamento de S2
+
+- matriz inicial de distribuicao publicada;
+- regra de construcao de simulados publicada;
+- padrao de feedback por erro definido.
 
 ## Rastreabilidade
 

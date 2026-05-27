@@ -46,11 +46,48 @@ Definir como selecionar, classificar e validar conteudo de concursos com foco em
 - criterios de aprovacao de fonte;
 - regra de revisao periodica da curadoria.
 
-## Pendencias para fechamento de S1
+## Edital referencia inicial (definido)
 
-- selecionar primeiro edital referencia;
-- registrar catalogo inicial de fontes por disciplina;
-- validar criterios com lote piloto de topicos.
+- ER-001: trilha-base de concurso de Defesa Cibernetica (edital de referencia interno para padronizacao inicial).
+
+## Taxonomia inicial por disciplina (definida)
+
+1. Seguranca da informacao
+- CIA, controles, politicas, gestao de acesso.
+
+2. Redes e protocolos
+- modelo TCP/IP, segmentacao, DNS, VPN, monitoramento.
+
+3. Criptografia aplicada
+- simetrica/assimetrica, PKI, assinatura digital, hash.
+
+4. Gestao de riscos e normas
+- ISO 27001/27002, NIST, LGPD, governanca e compliance.
+
+5. Resposta a incidentes
+- deteccao, triagem, contencao, erradicacao, licoes aprendidas.
+
+6. Legislacao e governanca publica
+- marco legal, responsabilidade administrativa, auditoria e controles.
+
+## Catalogo inicial minimo por disciplina (definido)
+
+- 3 fontes de teoria;
+- 2 fontes de revisao;
+- 2 bancos de questoes comentadas;
+- 1 referencia de laboratorio guiado.
+
+## Regra de revisao periodica da curadoria (definida)
+
+- revisao mensal de aderencia por disciplina;
+- revisao trimestral de qualidade de fonte;
+- descarte de fonte com score < 3.0 em duas avaliacoes consecutivas.
+
+## Fechamento de S1
+
+- edital referencia selecionado;
+- taxonomia inicial publicada;
+- regra de revisao periodica definida.
 
 ## Rastreabilidade
 

@@ -76,6 +76,15 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Riscos identificados: expansao ampla sem priorizacao por edital e sem limiares objetivos de adaptatividade
 - Proximo passo: fechar pendencias de S1-S3 e preparar criterios de conclusao de E6
 
+## Decima nona entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E6
+- Itens de backlog trabalhados: BLG-0020, BLG-0021, BLG-0022
+- Decisoes tomadas: consolidar edital referencia, taxonomia inicial, matriz de simulados, limiares adaptativos e catalogo inicial de laboratorios
+- Riscos identificados: necessidade de calibracao continua dos limiares com dados reais de execucao
+- Proximo passo: revisar governanca para ciclo operacional continuo
+
 ## Oitava entrada
 
 - Data: 2026-05-26

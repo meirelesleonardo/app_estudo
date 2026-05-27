@@ -71,6 +71,7 @@ Detalhes completos em [ROADMAP.md](ROADMAP.md).
 - [docs/cybersec/E6_S1_CONTENT_CURATION.md](docs/cybersec/E6_S1_CONTENT_CURATION.md)
 - [docs/cybersec/E6_S2_QUESTIONS_AND_SIMULATIONS.md](docs/cybersec/E6_S2_QUESTIONS_AND_SIMULATIONS.md)
 - [docs/cybersec/E6_S3_ADAPTIVE_REVIEW_PATHS.md](docs/cybersec/E6_S3_ADAPTIVE_REVIEW_PATHS.md)
+- [docs/roadmap/READINESS_REPORT_E0_E6.md](docs/roadmap/READINESS_REPORT_E0_E6.md)
 - [docs/backlog/INITIAL_BACKLOG.md](docs/backlog/INITIAL_BACKLOG.md)
 
 ## Como Contribuir

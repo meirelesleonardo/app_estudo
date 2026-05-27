@@ -56,6 +56,17 @@ Estruturar a evolucao do modulo de cybersec em tres frentes:
 - estrutura documental de S1, S2 e S3 criada;
 - backlog E6 iniciado com prioridades.
 
+## Criterios de conclusao de E6 (atingidos)
+
+- S1 com edital referencia e taxonomia inicial definidos;
+- S2 com matriz de simulados e padrao de feedback definidos;
+- S3 com limiares adaptativos e catalogo inicial de laboratorios definidos;
+- backlog da etapa atualizado para status final.
+
+## Status da etapa
+
+Concluida (documental).
+
 ## Rastreabilidade
 
 - Etapa/Subetapa: E6

@@ -26,6 +26,7 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Estrutura inicial de curadoria tecnica por edital e disciplina (E6.S1).
 - Blueprint inicial de questoes e simulados (E6.S2).
 - Modelo inicial de trilhas adaptativas e laboratorios (E6.S3).
+- Relatorio unico de prontidao e consistencia das etapas E0-E6.
 - Primeira SPEC de implementacao: SPEC-E5-S2-001 (CSP-001).
 - Estrutura inicial de codigo Python com pacote app_estudo.
 - Entidade de dominio CuratedStudyItem com validacoes de campos minimos e chave logica deterministica.
@@ -72,3 +73,4 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Status de E4 atualizado para concluida no roadmap.
 - Status de E5 atualizado para concluida no roadmap.
 - Status de E6 atualizado para em andamento no roadmap.
+- Status de E6 atualizado para concluida no roadmap.
