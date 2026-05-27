@@ -49,6 +49,7 @@ Detalhes completos em [ROADMAP.md](ROADMAP.md).
 - [docs/english/E1_REFINEMENT.md](docs/english/E1_REFINEMENT.md)
 - [docs/english/E1_LEVEL_TRACKS_A1_C1.md](docs/english/E1_LEVEL_TRACKS_A1_C1.md)
 - [docs/english/E2_INITIAL_SOURCE_CATALOG.md](docs/english/E2_INITIAL_SOURCE_CATALOG.md)
+- [docs/english/E2_SUBTITLE_TRANSCRIPT_VALIDATION.md](docs/english/E2_SUBTITLE_TRANSCRIPT_VALIDATION.md)
 - [docs/english/SOURCE_CURATION_STRATEGY.md](docs/english/SOURCE_CURATION_STRATEGY.md)
 - [docs/integrations/ANKI_INTEGRATION_STRATEGY.md](docs/integrations/ANKI_INTEGRATION_STRATEGY.md)
 - [docs/specs/SPEC_WORKFLOW.md](docs/specs/SPEC_WORKFLOW.md)

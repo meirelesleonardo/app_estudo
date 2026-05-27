@@ -10,7 +10,7 @@ Este roadmap organiza a evolucao do projeto em etapas controladas, com foco em q
 |---|---|---|---|---|---|
 | E0 | Fundacao documental e governanca | Em andamento | Alta | Nenhuma | Repositorio com estrutura base e padroes definidos |
 | E1 | Refinamento do modulo de ingles | Concluida | Alta | E0 | Escopo completo de listening e curadoria validado |
-| E2 | Estrategia de fontes e avaliacao de conteudo | Em andamento | Alta | E1 | Matriz de avaliacao e criterio de selecao prontos |
+| E2 | Estrategia de fontes e avaliacao de conteudo | Concluida | Alta | E1 | Matriz de avaliacao e criterio de selecao prontos |
 | E3 | Arquitetura de dados e rastreabilidade | Planejada | Alta | E0, E1, E2 | Modelo de entidades e trilha de decisao aprovados |
 | E4 | Planejamento de integracao AnkiConnect | Planejada | Media | E3 | Contratos logicos e estrategia de tags revisados |
 | E5 | Planejamento do MVP implementavel | Planejada | Alta | E1-E4 | Backlog de implementacao priorizado e refinado |
@@ -55,8 +55,8 @@ Este roadmap organiza a evolucao do projeto em etapas controladas, com foco em q
 
 ## Proximos 30 dias (planejamento)
 
-1. Consolidar E0 (sem codigo).
-2. Finalizar refinamento de E1 e E2.
+1. Consolidar fechamento formal de E0.
+2. Iniciar E3 com modelo de entidades e vinculos.
 3. Publicar primeira versao de arquitetura de rastreabilidade (E3).
 
 ## Criterio de Avanco entre Etapas

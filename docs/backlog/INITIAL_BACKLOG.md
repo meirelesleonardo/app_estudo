@@ -18,6 +18,6 @@
 | BLG-0006 | Definir criterios de sucesso por ciclo de estudo | E1.S3 | Alta | Done | Metricas por ciclo ouvir-conferir |
 | BLG-0007 | Curadoria inicial de fontes por tipo | E2.S1 | Alta | Done | Lista priorizada de fontes por categoria |
 | BLG-0008 | Criar matriz de avaliacao de listening | E2.S2 | Alta | Done | Rubric com pesos e limiares definidos |
-| BLG-0009 | Definir estrategia de validacao de legendas | E2.S3 | Media | Todo | Processo de validacao documentado |
+| BLG-0009 | Definir estrategia de validacao de legendas | E2.S3 | Media | Done | Processo de validacao documentado |
 | BLG-0010 | Definir arquitetura logica de Anki | E4.S1 | Media | Todo | Modelo deck/nota/tag documentado |
 | BLG-0011 | Definir plano de MVP implementavel | E5.S1 | Alta | Todo | Escopo minimo e dependencias fechados |
