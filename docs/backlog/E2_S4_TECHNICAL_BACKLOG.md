@@ -48,3 +48,11 @@ Um candidato so vira SPEC quando:
 - Etapa/Subetapa: E2.S4
 - Backlog: BLG-0032
 - Dependencias: BLG-0023, BLG-0024, BLG-0025, BLG-0026, BLG-0027, BLG-0028, BLG-0029
+
+## SPECs criadas neste ciclo (aguardando gate pre-SPEC)
+
+| Candidato | SPEC | Status | Evidencia |
+|---|---|---|---|
+| CSP-E2-S4-001 | SPEC-E2-S4-001 | Proposta pronta para gate pre-SPEC | Contrato SourceMedia/SourceMetadata documentado |
+| CSP-E2-S4-002 | SPEC-E2-S4-002 | Proposta pronta para gate pre-SPEC | Contrato RawTranscript/CuratedTranscript com lineage documentado |
+| CSP-E2-S4-003 | SPEC-E2-S4-003 | Proposta pronta para gate pre-SPEC | Pipeline de normalizacao textual versionada documentado |
