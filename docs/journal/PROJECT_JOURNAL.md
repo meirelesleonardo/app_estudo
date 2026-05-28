@@ -246,3 +246,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: implementar persistencia SQLite com schema de artefatos E2.S4, upsert por entidade e trilha de auditoria por operacao
 - Riscos identificados: alinhar politica de versionamento/reprocessamento para evitar crescimento sem controle no banco local
 - Proximo passo: iniciar SPEC-E2-S4-006 para politica formal de versionamento e reprocessamento
+
+## Vigesima sexta entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E2.S4
+- Itens de backlog trabalhados: BLG-0032 (CSP-E2-S4-006), BLG-0029, BLG-0031
+- Decisoes tomadas: implementar engine de decisao para update, substitute, reconcile, invalidate e reprocess com motivo explicito por transicao
+- Riscos identificados: calibrar regras de invalidacao/reprocess para evitar retrabalho desnecessario em lote
+- Proximo passo: iniciar SPEC-E2-S4-007 e adaptador de ingestao para primeiro video do YouTube

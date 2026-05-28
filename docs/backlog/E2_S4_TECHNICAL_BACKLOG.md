@@ -58,3 +58,4 @@ Um candidato so vira SPEC quando:
 | CSP-E2-S4-003 | SPEC-E2-S4-003 | Concluido | Pipeline de normalizacao textual versionada implementado + testes unitarios |
 | CSP-E2-S4-004 | SPEC-E2-S4-004 | Concluido | Estrategia de segmentacao pedagogica implementada + testes unitarios |
 | CSP-E2-S4-005 | SPEC-E2-S4-005 | Concluido | Persistencia SQLite de artefatos e auditoria implementada + testes unitarios |
+| CSP-E2-S4-006 | SPEC-E2-S4-006 | Concluido | Politica de versionamento/reprocessamento implementada + testes unitarios |

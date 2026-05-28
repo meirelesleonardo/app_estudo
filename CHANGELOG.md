@@ -94,6 +94,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Implementacao inicial da SPEC-E2-S4-005 com persistencia SQLite de artefatos de midia/transcricao.
 - Store SqliteMediaArtifactStore com schema relacional, upsert por artefato e tabela de auditoria implementado.
 - Testes unitarios da SPEC-E2-S4-005 adicionados para persistencia, upsert sem duplicacao e trilha de auditoria.
+- Implementacao inicial da SPEC-E2-S4-006 com politica executavel de versionamento e reprocessamento.
+- Engine decide_version_action adicionada para update, substitute, reconcile, invalidate e reprocess com motivo rastreavel.
+- Testes unitarios da SPEC-E2-S4-006 adicionados para cenarios de transicao e validacao de comparacao.
 - Nova subetapa E2.S5 (Governanca e Curadoria de Fontes) formalizada para fortalecer Trusted Knowledge Sources e Knowledge Governance.
 - Estrutura documental docs/sources criada com dominios english, cybersec, concursos, frameworks, labs, operational, experimental e governance.
 - Politica formal de governanca de fontes publicada com classificacao oficial, niveis de confiabilidade, atributos obrigatorios e matriz de uso por IA.
