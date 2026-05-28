@@ -201,3 +201,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: aprovar gate pre-SPEC unificado para SPEC-E2-S4-001, SPEC-E2-S4-002 e SPEC-E2-S4-003 com status GO sequencial
 - Riscos identificados: iniciar implementacao fora da ordem de dependencias pode comprometer lineage e auditoria de transcript
 - Proximo passo: iniciar implementacao da SPEC-E2-S4-001 e registrar evidencia incremental por SPEC
+
+## Vigesima primeira entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E2.S4
+- Itens de backlog trabalhados: BLG-0032 (CSP-E2-S4-001), BLG-0024, BLG-0025
+- Decisoes tomadas: implementar entidades SourceMedia e SourceMetadata com contrato minimo de origem/metadados e chave logica platform+external_id
+- Riscos identificados: manter neutralidade de contrato para futuras plataformas sem perder rigor nas validacoes atuais
+- Proximo passo: iniciar SPEC-E2-S4-002 com separacao formal de RawTranscript e CuratedTranscript

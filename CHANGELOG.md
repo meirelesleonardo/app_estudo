@@ -79,6 +79,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Matriz de rastreabilidade unificada de E2.S4 conectando BLGs, CSPs, artefatos, gates e evidencias.
 - Tres SPECs iniciais de implementacao da E2.S4 criadas para gate pre-SPEC: SPEC-E2-S4-001, SPEC-E2-S4-002 e SPEC-E2-S4-003.
 - Gate pre-SPEC unificado de E2.S4 publicado com decisao GO para SPEC-E2-S4-001, SPEC-E2-S4-002 e SPEC-E2-S4-003.
+- Implementacao inicial da SPEC-E2-S4-001 com entidades de dominio SourceMedia e SourceMetadata.
+- Validacoes de contrato de origem/metadados e chave logica `platform+external_id` adicionadas ao dominio.
+- Testes unitarios da SPEC-E2-S4-001 adicionados para cenarios validos e invalidos.
 - Nova subetapa E2.S5 (Governanca e Curadoria de Fontes) formalizada para fortalecer Trusted Knowledge Sources e Knowledge Governance.
 - Estrutura documental docs/sources criada com dominios english, cybersec, concursos, frameworks, labs, operational, experimental e governance.
 - Politica formal de governanca de fontes publicada com classificacao oficial, niveis de confiabilidade, atributos obrigatorios e matriz de uso por IA.

@@ -6,7 +6,7 @@
 - Etapa: E2
 - Subetapa: E2.S4
 - Backlog relacionado: BLG-0032 (CSP-E2-S4-001), BLG-0023, BLG-0024, BLG-0025
-- Status: Proposta pronta para gate pre-SPEC
+- Status: Concluida (implementacao inicial)
 
 ## 1. Contexto
 
@@ -85,3 +85,10 @@ regras de identificacao univoca, classificacao de fonte e vinculos minimos de li
 ## 12. Proximos passos
 
 - Evoluir para SPEC-E2-S4-002 com separacao raw/curated e lineage textual.
+
+## Evidencias de implementacao
+
+- Modulo de dominio com entidades `SourceMedia` e `SourceMetadata` implementado.
+- Regra de unicidade logica `platform + external_id` implementada via `source_key`.
+- Validacoes obrigatorias de contrato e metadados implementadas.
+- Testes unitarios adicionados para contratos e casos invalidos.

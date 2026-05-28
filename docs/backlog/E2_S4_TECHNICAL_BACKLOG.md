@@ -53,6 +53,6 @@ Um candidato so vira SPEC quando:
 
 | Candidato | SPEC | Status | Evidencia |
 |---|---|---|---|
-| CSP-E2-S4-001 | SPEC-E2-S4-001 | Proposta pronta para gate pre-SPEC | Contrato SourceMedia/SourceMetadata documentado |
+| CSP-E2-S4-001 | SPEC-E2-S4-001 | Concluido | Entidades SourceMedia/SourceMetadata implementadas + testes unitarios |
 | CSP-E2-S4-002 | SPEC-E2-S4-002 | Proposta pronta para gate pre-SPEC | Contrato RawTranscript/CuratedTranscript com lineage documentado |
 | CSP-E2-S4-003 | SPEC-E2-S4-003 | Proposta pronta para gate pre-SPEC | Pipeline de normalizacao textual versionada documentado |
