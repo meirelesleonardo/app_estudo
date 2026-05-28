@@ -1,6 +1,7 @@
 """Camada de dominio do projeto."""
 
 from .listening_evaluation import ListeningEvaluation, evaluate_listening_item
+from .segmentation import StudySegment, segment_curated_transcript
 from .source_media import SourceMedia, SourceMetadata
 from .study_item import CuratedStudyItem
 from .transcript_normalization import NormalizationResult, normalize_transcript_text
@@ -14,6 +15,8 @@ __all__ = [
 	"RawTranscript",
 	"SourceMedia",
 	"SourceMetadata",
+	"StudySegment",
 	"evaluate_listening_item",
+	"segment_curated_transcript",
 	"normalize_transcript_text",
 ]

@@ -88,6 +88,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Implementacao inicial da SPEC-E2-S4-003 com pipeline de normalizacao textual versionada no dominio.
 - Flags de transformacao e criterio de sentenca incompleta adicionados para auditoria da normalizacao.
 - Testes unitarios da SPEC-E2-S4-003 adicionados para cenarios validos e invalidos.
+- Implementacao inicial da SPEC-E2-S4-004 com estrategia de segmentacao pedagogica no dominio.
+- Entidade StudySegment com validacoes de contrato e faixa operacional de duracao adicionada.
+- Testes unitarios da SPEC-E2-S4-004 adicionados para particionamento, determinismo de hash e validacoes.
 - Nova subetapa E2.S5 (Governanca e Curadoria de Fontes) formalizada para fortalecer Trusted Knowledge Sources e Knowledge Governance.
 - Estrutura documental docs/sources criada com dominios english, cybersec, concursos, frameworks, labs, operational, experimental e governance.
 - Politica formal de governanca de fontes publicada com classificacao oficial, niveis de confiabilidade, atributos obrigatorios e matriz de uso por IA.

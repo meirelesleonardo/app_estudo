@@ -228,3 +228,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: implementar pipeline de normalizacao textual versionada com flags auditaveis de transformacao e criterio de sentenca incompleta
 - Riscos identificados: calibrar intensidade da normalizacao para evitar sobre-normalizacao e perda de oralidade relevante
 - Proximo passo: abrir bloco de SPEC de segmentacao pedagogica (CSP-E2-S4-004)
+
+## Vigesima quarta entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E2.S4
+- Itens de backlog trabalhados: BLG-0032 (CSP-E2-S4-004), BLG-0027
+- Decisoes tomadas: implementar entidade StudySegment e estrategia de segmentacao pedagogica com limites operacionais e hash deterministico por segmento
+- Riscos identificados: calibrar granularidade de segmentacao por nivel para evitar quebra de contexto ou segmentos longos
+- Proximo passo: iniciar SPEC-E2-S4-005 para persistencia de metadados e hashes

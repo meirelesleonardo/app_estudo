@@ -56,3 +56,4 @@ Um candidato so vira SPEC quando:
 | CSP-E2-S4-001 | SPEC-E2-S4-001 | Concluido | Entidades SourceMedia/SourceMetadata implementadas + testes unitarios |
 | CSP-E2-S4-002 | SPEC-E2-S4-002 | Concluido | Entidades RawTranscript/CuratedTranscript implementadas + testes unitarios |
 | CSP-E2-S4-003 | SPEC-E2-S4-003 | Concluido | Pipeline de normalizacao textual versionada implementado + testes unitarios |
+| CSP-E2-S4-004 | SPEC-E2-S4-004 | Concluido | Estrategia de segmentacao pedagogica implementada + testes unitarios |
