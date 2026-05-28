@@ -123,6 +123,25 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Backlog incremental ampliado com BLG-0033 a BLG-0044 para governanca de fontes, base confiavel de IA, expansao de concursos e rastreabilidade unificada.
 - Backlogs tecnicos incrementais publicados para E2.S5 e E6.S4/E6.S5 com candidatos a SPEC.
 - Matriz de rastreabilidade unificada publicada para E2.S5, E6.S4 e E6.S5 conectando BLGs, candidatos a SPEC, gates e evidencias.
+- Doc-base inicial para provas de concurso em cyberseguranca publicada com inventario, matriz prova-gabarito, checklist de extracao e template de banco de questoes curadas para futura criacao de cards.
+- Analise dos PDFs de concurso executada com identificacao de prova objetiva (Prova 2), prova discursiva (Prova 15) e gabarito final correspondente.
+- Extracao estruturada das 70 questoes objetivas da Prova 2 concluida com associacao de respostas corretas do gabarito final.
+- Base enriquecida por tema com referencias confiaveis gerada para estudo: JSON enriquecido, guia de estudo e CSV seed para futura criacao de cards.
+- Revisao manual de qualidade concluida para as questoes pendentes, com validacao final 70/70 de respostas contra gabarito oficial.
+- Lote final revisado de cards para Prova 2 gerado com 70 registros: data/sources/concursos/processed/bndes_2024_prova2_cards_final_reviewed.csv.
+- Relatorio formal de revisao atualizado com status sem pendencias textuais: docs/sources/concursos/CYBERSEC_BNDES_2024_REVIEW_REPORT.md.
+- Explicacoes direta e aprofundada geradas para as 70 questoes da Prova 2, com arquivo consolidado em data/sources/concursos/processed/bndes_2024_prova2_objetiva_q1_q70_explained.json.
+- Documento de explicacoes por questao publicado em docs/sources/concursos/CYBERSEC_BNDES_2024_EXPLANATIONS.md.
+- Lote final de cards atualizado para incluir explicacoes no verso antes da sincronizacao com Anki.
+- Script operacional de importacao de cards de concurso para Anki adicionado em scripts/import_concurso_cards_to_anki.py.
+- Sincronizacao executada com sucesso no deck Concursos::BNDES::Ciberseguranca::Prova2 com 70 cards criados e sem erros.
+- Relatorio de importacao salvo em data/sources/concursos/processed/bndes_2024_prova2_anki_import_report.json.
+- Deck principal atualizado com explicacoes reforcadas (incluindo analise das alternativas incorretas) para os 70 cards.
+- Deck tecnico dedicado criado com Q36-Q70 em Concursos::BNDES::Ciberseguranca::Tecnico_Q36_70 (35 cards).
+- Relatorios de update/import tecnico salvos em data/sources/concursos/processed/bndes_2024_prova2_anki_update_report.json e data/sources/concursos/processed/bndes_2024_prova2_anki_import_tecnico_report.json.
+- Reorganizacao aplicada dos cards da Prova2 para subdecks por materia/submateria em Concursos::BNDES::Ciberseguranca::Materias.
+- Script de importacao de concurso atualizado com suporte a roteamento automatico por Topic via parametro --deck-by-topic-root.
+- Documento de taxonomia de decks para concursos publicado em docs/sources/concursos/CONCURSOS_DECK_TAXONOMY.md.
 - Nova etapa futura E7 (Produto e Servico) adicionada ao roadmap para evolucao SaaS e demo publica.
 - Backlog tecnico incremental de E7 publicado com candidatos a SPEC para fluxo self-service, Demo Mode e operacao por cliente.
 - Backlog inicial ampliado com BLG-0045 a BLG-0050 para rastrear a evolucao de produto/mercado apos E0-E6.

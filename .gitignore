@@ -4,3 +4,10 @@ __pycache__/
 *.pyd
 .pytest_cache/
 data/audit/*.jsonl
+
+# Artefatos de ingestao de concursos (binarios e gerados)
+data/sources/concursos/raw/*.pdf
+data/sources/concursos/extracted/
+data/sources/concursos/processed/*_anki_import_report.json
+data/sources/concursos/processed/*_anki_update_report.json
+data/sources/concursos/processed/*_anki_import_tecnico_report.json
