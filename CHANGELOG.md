@@ -97,6 +97,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Implementacao inicial da SPEC-E2-S4-006 com politica executavel de versionamento e reprocessamento.
 - Engine decide_version_action adicionada para update, substitute, reconcile, invalidate e reprocess com motivo rastreavel.
 - Testes unitarios da SPEC-E2-S4-006 adicionados para cenarios de transicao e validacao de comparacao.
+- Implementacao inicial da SPEC-E2-S4-007 com gate de qualidade para entrada no fluxo E4.
+- Adaptador inicial de ingestao YouTube adicionado para persistir origem, transcript e segmentos no SQLite.
+- Testes unitarios da SPEC-E2-S4-007 adicionados para gate de qualidade e ingestao do primeiro video (modo controlado).
 - Nova subetapa E2.S5 (Governanca e Curadoria de Fontes) formalizada para fortalecer Trusted Knowledge Sources e Knowledge Governance.
 - Estrutura documental docs/sources criada com dominios english, cybersec, concursos, frameworks, labs, operational, experimental e governance.
 - Politica formal de governanca de fontes publicada com classificacao oficial, niveis de confiabilidade, atributos obrigatorios e matriz de uso por IA.

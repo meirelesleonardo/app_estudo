@@ -255,3 +255,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: implementar engine de decisao para update, substitute, reconcile, invalidate e reprocess com motivo explicito por transicao
 - Riscos identificados: calibrar regras de invalidacao/reprocess para evitar retrabalho desnecessario em lote
 - Proximo passo: iniciar SPEC-E2-S4-007 e adaptador de ingestao para primeiro video do YouTube
+
+## Vigesima setima entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E2.S4
+- Itens de backlog trabalhados: BLG-0032 (CSP-E2-S4-007), BLG-0027, BLG-0031
+- Decisoes tomadas: implementar gate de qualidade para entrada no fluxo E4 e adaptador inicial de ingestao YouTube com persistencia SQLite ponta a ponta
+- Riscos identificados: para uso em producao, reforcar resiliencia de rede e controles de origem/licenciamento por fonte
+- Proximo passo: executar smoke test com URL real do primeiro video YouTube e validar lote inicial
