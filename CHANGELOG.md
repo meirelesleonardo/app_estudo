@@ -109,6 +109,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Backlog incremental ampliado com BLG-0033 a BLG-0044 para governanca de fontes, base confiavel de IA, expansao de concursos e rastreabilidade unificada.
 - Backlogs tecnicos incrementais publicados para E2.S5 e E6.S4/E6.S5 com candidatos a SPEC.
 - Matriz de rastreabilidade unificada publicada para E2.S5, E6.S4 e E6.S5 conectando BLGs, candidatos a SPEC, gates e evidencias.
+- Nova etapa futura E7 (Produto e Servico) adicionada ao roadmap para evolucao SaaS e demo publica.
+- Backlog tecnico incremental de E7 publicado com candidatos a SPEC para fluxo self-service, Demo Mode e operacao por cliente.
+- Backlog inicial ampliado com BLG-0045 a BLG-0050 para rastrear a evolucao de produto/mercado apos E0-E6.
 
 ### Changed
 - Status de E2 atualizado para concluida no roadmap.

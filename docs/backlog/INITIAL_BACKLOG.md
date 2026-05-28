@@ -54,3 +54,9 @@
 | BLG-0042 | Definir E6.S5 Taxonomia e Ontologia de Cyber Seguranca | E6.S5 | Alta | Todo | Taxonomia de dominios/subdominios, dependencias, prerequisitos e relacoes semanticas publicada |
 | BLG-0043 | Estruturar entidades de conhecimento para RAG pedagogico | E6.S5 | Alta | Todo | Entidades KnowledgeNode, StudyTopic, QuestionBlueprint e AdaptiveReviewProfile com relacoes e riscos formalizadas |
 | BLG-0044 | Publicar matriz de rastreabilidade de E2.S5, E6.S4 e E6.S5 | E3.S2 | Media | Todo | Matriz unificada conectando backlog, artefatos, candidatos a SPEC, gates e evidencias publicada |
+| BLG-0045 | Formalizar etapa E7 de produto e servico | E7 | Alta | Todo | Escopo oficial da etapa E7 publicado no roadmap e backlog tecnico |
+| BLG-0046 | Definir fluxo self-service do cliente | E7 | Alta | Todo | Jornada completa objetivo->fonte->treino->sync Anki documentada com estados de falha |
+| BLG-0047 | Definir estrategia de operacao por cliente/perfil | E7 | Alta | Todo | Regras minimas de isolamento logico, historico e observabilidade por conta formalizadas |
+| BLG-0048 | Definir modo Demo para landing page | E7 | Alta | Todo | Fluxo de demonstracao guiado com dados controlados, CTA e metricas de conversao documentados |
+| BLG-0049 | Definir modelo comercial inicial do servico | E7 | Media | Todo | Planos iniciais, limites operacionais e eventos de upgrade publicados |
+| BLG-0050 | Definir baseline de operacao e suporte | E7 | Media | Todo | Runbook de suporte, eventos minimos e trilha de auditoria de produto publicados |

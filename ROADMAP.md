@@ -15,6 +15,7 @@ Este roadmap organiza a evolucao do projeto em etapas controladas, com foco em q
 | E4 | Planejamento de integracao AnkiConnect | Concluida | Media | E3 | Contratos logicos e estrategia de tags revisados |
 | E5 | Planejamento do MVP implementavel | Concluida | Alta | E1-E4 | Backlog de implementacao priorizado e refinado |
 | E6 | Expansao para concursos e cybersec | Concluida | Media | E5 | Macroescopo do novo modulo consolidado |
+| E7 | Produto e servico (SaaS + Demo) | Planejada | Alta | E2.S4, E4, E5, E2.S5 | Fluxo self-service com demo publica e onboarding inicial validado |
 
 ## Backlog Macro por Etapa
 
@@ -53,11 +54,17 @@ Este roadmap organiza a evolucao do projeto em etapas controladas, com foco em q
 - Definir simulados e revisao inteligente.
 - Definir laboratorios praticos e banco de questoes.
 
+### E7 - Produto e servico (SaaS + Demo)
+- Definir jornada self-service do cliente (objetivo, fonte, exercicios, sync Anki).
+- Definir arquitetura minima de operacao como servico com multitenancy basica.
+- Definir versao demo para landing page com fluxo guiado e CTA de conversao.
+
 ## Proximos 30 dias (planejamento)
 
 1. Consolidar fechamento formal de E0.
 2. Revisar governanca da fase de implementacao ativa.
 3. Planejar proximo ciclo de evolucao (E0 operacional + melhoria continua).
+4. Formalizar backlog incremental da E7 para validacao de produto/mercado.
 
 ## Criterio de Avanco entre Etapas
 
