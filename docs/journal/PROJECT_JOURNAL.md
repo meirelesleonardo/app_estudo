@@ -237,3 +237,12 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: implementar entidade StudySegment e estrategia de segmentacao pedagogica com limites operacionais e hash deterministico por segmento
 - Riscos identificados: calibrar granularidade de segmentacao por nivel para evitar quebra de contexto ou segmentos longos
 - Proximo passo: iniciar SPEC-E2-S4-005 para persistencia de metadados e hashes
+
+## Vigesima quinta entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E2.S4
+- Itens de backlog trabalhados: BLG-0032 (CSP-E2-S4-005), BLG-0028, BLG-0031
+- Decisoes tomadas: implementar persistencia SQLite com schema de artefatos E2.S4, upsert por entidade e trilha de auditoria por operacao
+- Riscos identificados: alinhar politica de versionamento/reprocessamento para evitar crescimento sem controle no banco local
+- Proximo passo: iniciar SPEC-E2-S4-006 para politica formal de versionamento e reprocessamento
