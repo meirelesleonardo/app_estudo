@@ -8,6 +8,7 @@ from .item_history import ItemHistoryEvent, JsonlItemHistoryStore, new_event
 from .media_sqlite_store import SqliteMediaArtifactStore
 from .media_quality_gate import QualityGateResult, evaluate_e4_quality_gate
 from .media_versioning import ArtifactSnapshot, VersionDecision, decide_version_action
+from .youtube_audio_extraction import YoutubeAudioExtractionResult, extract_youtube_audio
 from .youtube_transcript_provider import YoutubeTranscriptFetchResult, fetch_transcript_from_youtube
 from .youtube_ingestion import (
 	YoutubeIngestionResult,
@@ -38,6 +39,8 @@ __all__ = [
 	"ArtifactSnapshot",
 	"VersionDecision",
 	"decide_version_action",
+	"YoutubeAudioExtractionResult",
+	"extract_youtube_audio",
 	"YoutubeTranscriptFetchResult",
 	"fetch_transcript_from_youtube",
 	"YoutubeIngestionResult",

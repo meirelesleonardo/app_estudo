@@ -93,6 +93,21 @@ PYTHONDONTWRITEBYTECODE=1 /home/suporte/Projetos/app_estudo/.venv/bin/python scr
 
 Saida esperada: JSON com IDs dos artefatos gerados, quantidade de segmentos e status do gate de qualidade.
 
+Para extrair audio junto no mesmo fluxo:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /home/suporte/Projetos/app_estudo/.venv/bin/python scripts/smoke_youtube_ingestion.py \
+	--url "https://www.youtube.com/watch?v=<VIDEO_ID>" \
+	--title "Titulo do Video" \
+	--db-path "data/audit/media_artifacts.db" \
+	--languages "en" \
+	--extract-audio \
+	--audio-output-dir "data/media/audio"
+```
+
+Sugestao de links iniciais por nivel em:
+- [docs/english/YOUTUBE_STUDY_STARTER_LINKS.md](docs/english/YOUTUBE_STUDY_STARTER_LINKS.md)
+
 ## Licenca
 
 Este projeto esta sob a licenca MIT. Veja [LICENSE](LICENSE).

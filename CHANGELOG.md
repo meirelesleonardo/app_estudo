@@ -103,6 +103,9 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Provider real de transcript YouTube adicionado com `youtube-transcript-api` e carregamento lazy para ambiente sem dependencia instalada.
 - Nova API `ingest_first_youtube_video_from_source` adicionada para ingestao por URL sem payload manual de transcript.
 - Script de smoke test `scripts/smoke_youtube_ingestion.py` adicionado para validar ingestao ponta a ponta com SQLite.
+- Extracao opcional de audio YouTube adicionada via `yt-dlp`, integrada ao smoke test com flags `--extract-audio` e `--audio-output-dir`.
+- Testes unitarios de extracao de audio adicionados com contrato mockado para manter execucao offline.
+- Lista curada inicial de links YouTube para listening publicada em `docs/english/YOUTUBE_STUDY_STARTER_LINKS.md`.
 - Nova subetapa E2.S5 (Governanca e Curadoria de Fontes) formalizada para fortalecer Trusted Knowledge Sources e Knowledge Governance.
 - Estrutura documental docs/sources criada com dominios english, cybersec, concursos, frameworks, labs, operational, experimental e governance.
 - Politica formal de governanca de fontes publicada com classificacao oficial, niveis de confiabilidade, atributos obrigatorios e matriz de uso por IA.
