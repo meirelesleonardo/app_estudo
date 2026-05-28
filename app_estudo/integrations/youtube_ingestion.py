@@ -54,6 +54,9 @@ def ingest_first_youtube_video_from_source(
     speech_rate_profile: str = "medium_fast",
     context_tags: tuple[str, ...] = ("modulo:ingles", "origem:youtube"),
     media_type: str = "interview",
+    min_segment_seconds: int = 10,
+    max_segment_seconds: int = 45,
+    target_segment_seconds: int = 25,
 ) -> YoutubeIngestionResult:
     """Ingestao usando transcript real obtido do YouTube por provider externo."""
 
@@ -82,6 +85,9 @@ def ingest_first_youtube_video_from_source(
         speech_rate_profile=speech_rate_profile,
         context_tags=context_tags,
         media_type=media_type,
+        min_segment_seconds=min_segment_seconds,
+        max_segment_seconds=max_segment_seconds,
+        target_segment_seconds=target_segment_seconds,
     )
 
 
@@ -99,6 +105,9 @@ def ingest_first_youtube_video(
     speech_rate_profile: str = "medium_fast",
     context_tags: tuple[str, ...] = ("modulo:ingles", "origem:youtube"),
     media_type: str = "interview",
+    min_segment_seconds: int = 10,
+    max_segment_seconds: int = 45,
+    target_segment_seconds: int = 25,
 ) -> YoutubeIngestionResult:
     """Ingestao ponta a ponta de um unico video para o baseline operacional."""
 
@@ -184,6 +193,9 @@ def ingest_first_youtube_video(
             total_duration_seconds=source_media.duration_seconds,
             pedagogical_unit="listening_core",
             difficulty_band="B1",
+            min_segment_seconds=min_segment_seconds,
+            max_segment_seconds=max_segment_seconds,
+            target_segment_seconds=target_segment_seconds,
         )
         if curated_status == "approved"
         else []

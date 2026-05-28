@@ -37,6 +37,9 @@ def main() -> int:
     parser.add_argument("--languages", default="en")
     parser.add_argument("--extract-audio", action="store_true")
     parser.add_argument("--audio-output-dir", default="data/media/audio")
+    parser.add_argument("--min-segment-seconds", type=int, default=10)
+    parser.add_argument("--max-segment-seconds", type=int, default=45)
+    parser.add_argument("--target-segment-seconds", type=int, default=25)
     args = parser.parse_args()
 
     batch_file = Path(args.batch_file)
@@ -105,6 +108,9 @@ def main() -> int:
                 extract_audio_enabled=args.extract_audio,
                 audio_output_dir=args.audio_output_dir,
                 transcript_payload=transcript_payload,
+                min_segment_seconds=args.min_segment_seconds,
+                max_segment_seconds=args.max_segment_seconds,
+                target_segment_seconds=args.target_segment_seconds,
             )
             summaries.append(
                 {

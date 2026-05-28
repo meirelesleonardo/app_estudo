@@ -51,6 +51,9 @@ def ingest_youtube_video_and_sync_anki(
     extract_audio_enabled: bool = False,
     audio_output_dir: str = "data/media/audio",
     transcript_payload: YoutubeTranscriptPayload | None = None,
+    min_segment_seconds: int = 10,
+    max_segment_seconds: int = 45,
+    target_segment_seconds: int = 25,
 ) -> YoutubeAnkiSyncSummary:
     """Executa ingestao de um video e sincroniza segmentos como notas no Anki."""
 
@@ -64,6 +67,9 @@ def ingest_youtube_video_and_sync_anki(
             connected_speech_density=connected_speech_density,
             noise_level=noise_level,
             accent_profile=accent,
+            min_segment_seconds=min_segment_seconds,
+            max_segment_seconds=max_segment_seconds,
+            target_segment_seconds=target_segment_seconds,
         )
     else:
         ingestion = ingest_first_youtube_video(
@@ -74,6 +80,9 @@ def ingest_youtube_video_and_sync_anki(
             connected_speech_density=connected_speech_density,
             noise_level=noise_level,
             accent_profile=accent,
+            min_segment_seconds=min_segment_seconds,
+            max_segment_seconds=max_segment_seconds,
+            target_segment_seconds=target_segment_seconds,
         )
 
     segment_payloads = store.list_study_segment_payloads(ingestion.curated_transcript_id)

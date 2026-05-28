@@ -127,6 +127,16 @@ Fallback manual por item no lote: se um video falhar no provider de transcript, 
 `raw_text` (e opcionalmente `duration_seconds`, `raw_timestamps`, `locale`, `provider`)
 no JSON para forcar ingestao manual daquele video sem interromper o lote inteiro.
 
+Para aumentar a quantidade de cards por video, reduza a duracao alvo dos segmentos:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /home/suporte/Projetos/app_estudo/.venv/bin/python scripts/ingest_youtube_batch_to_anki.py \
+	--batch-file "docs/english/YOUTUBE_STARTER_BATCH.json" \
+	--target-segment-seconds 12 \
+	--min-segment-seconds 8 \
+	--max-segment-seconds 20
+```
+
 ## Licenca
 
 Este projeto esta sob a licenca MIT. Veja [LICENSE](LICENSE).
