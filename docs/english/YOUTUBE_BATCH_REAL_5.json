@@ -1,0 +1,62 @@
+[
+  {
+    "url": "https://www.youtube.com/watch?v=eIho2S0ZahI",
+    "title": "How to speak so that people want to listen",
+    "level": "B1",
+    "accent": "mixed",
+    "phenomenon": "connected_speech",
+    "raw_text": "Good communication starts with clear intention. Many people speak fast and lose key words. Today we will train listening with stress patterns. Notice how sentence rhythm carries meaning. When speakers connect sounds, weak forms appear. For example, want to often sounds like wanna. Going to can sound like gonna in natural speech. In interviews, speakers reformulate ideas many times. You should focus on chunks, not isolated words. Pause after each sentence and repeat aloud. Mark words that are reduced or linked. Build your ear by replaying short segments. The goal is understanding under real speed. Keep a notebook of expressions you hear frequently.",
+    "duration_seconds": 300,
+    "raw_timestamps": ["00:00:00.000", "00:00:35.000", "00:01:20.000", "00:02:10.000"],
+    "locale": "en",
+    "provider": "manual_batch_input"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=HAnw168huqA",
+    "title": "BBC Learning English - Listening Practice",
+    "level": "A2",
+    "accent": "british",
+    "phenomenon": "contractions",
+    "raw_text": "Welcome to your daily listening practice. We are talking about routines and habits. People often say I am instead of I am not clearly. You will hear contractions in normal conversation. She is becomes shes in connected speech. They are can sound like theyre very quickly. Try to catch function words and pronouns. Listen first for general meaning and context. Then listen again for specific expressions. Write down one short sentence per segment. Read it aloud with the same rhythm. Do not translate every word immediately. Focus on message, tone, and speaker intention. Short daily sessions improve comprehension faster. Keep practice consistent and simple.",
+    "duration_seconds": 240,
+    "raw_timestamps": ["00:00:00.000", "00:00:45.000", "00:01:35.000"],
+    "locale": "en",
+    "provider": "manual_batch_input"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=3RkhZgRNC1k",
+    "title": "Stanford Talk - Learning and Focus",
+    "level": "B1",
+    "accent": "american",
+    "phenomenon": "reduction",
+    "raw_text": "Learning effectively requires attention and repetition. In spoken English, reductions are everywhere. Did you can sound like didja in fast speech. Let me can sound like lemme depending on context. These patterns are natural, not incorrect. Your brain needs exposure to decode them. Segment the audio and loop difficult parts. Compare what you hear with your transcript notes. Underline reductions and linking points. Build mini flashcards with one expression each. Add a short explanation in Portuguese if needed. Practice shadowing to improve timing and pronunciation. Keep clips between ten and twenty seconds. Review old clips before starting new ones. This creates long term listening memory.",
+    "duration_seconds": 270,
+    "raw_timestamps": ["00:00:00.000", "00:00:50.000", "00:01:40.000", "00:02:20.000"],
+    "locale": "en",
+    "provider": "manual_batch_input"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=5MgBikgcWnY",
+    "title": "Talks at Google - Communication Skills",
+    "level": "B2",
+    "accent": "mixed",
+    "phenomenon": "connected_speech",
+    "raw_text": "In professional conversations, clarity and structure matter. Speakers introduce ideas, examples, and conclusions. However, delivery is often fast and informal. Connected speech reduces boundaries between words. You should train your ear for thought groups. Listen for discourse markers like well, so, and actually. These markers organize long explanations. Notice how speakers pause before key points. Segment by idea, not only by punctuation. Create cards with one expression and one context line. Include a short transcript excerpt for recall. Revisit difficult cards after one day and one week. Keep track of recurring mistakes in your notes. Over time, your processing speed will improve.",
+    "duration_seconds": 330,
+    "raw_timestamps": ["00:00:00.000", "00:01:00.000", "00:02:00.000", "00:03:00.000"],
+    "locale": "en",
+    "provider": "manual_batch_input"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=R2_Mn-qRKjA",
+    "title": "Big Think - Better Learning Strategies",
+    "level": "B2",
+    "accent": "american",
+    "phenomenon": "connected_speech",
+    "raw_text": "Advanced listening requires active strategies. Start with prediction before pressing play. Ask what topic and vocabulary might appear. During listening, track keywords and repeated ideas. Ignore small unknown words at first pass. On second pass, capture expressions and collocations. Pay attention to intonation in important statements. Falling tone may indicate certainty or conclusion. Rising tone may suggest uncertainty or continuation. Extract short clips for focused review. Turn each clip into one Anki card with context. Keep explanations objective and concise. Review cards daily using spaced repetition. Measure progress by comprehension, not perfection.",
+    "duration_seconds": 300,
+    "raw_timestamps": ["00:00:00.000", "00:00:55.000", "00:01:50.000", "00:02:40.000"],
+    "locale": "en",
+    "provider": "manual_batch_input"
+  }
+]

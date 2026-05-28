@@ -123,6 +123,9 @@ PYTHONDONTWRITEBYTECODE=1 /home/suporte/Projetos/app_estudo/.venv/bin/python scr
 
 Observacao: abra o Anki com AnkiConnect ativo antes de executar o comando.
 
+Arquivo pronto com 5 videos e fallback manual de transcript:
+- [docs/english/YOUTUBE_BATCH_REAL_5.json](docs/english/YOUTUBE_BATCH_REAL_5.json)
+
 Fallback manual por item no lote: se um video falhar no provider de transcript, inclua
 `raw_text` (e opcionalmente `duration_seconds`, `raw_timestamps`, `locale`, `provider`)
 no JSON para forcar ingestao manual daquele video sem interromper o lote inteiro.
