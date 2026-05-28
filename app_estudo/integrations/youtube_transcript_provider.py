@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from math import ceil
+from xml.etree.ElementTree import ParseError
 from typing import Any
 
 
@@ -34,7 +35,13 @@ def fetch_transcript_from_youtube(
         raise ValueError("preferred_languages deve conter ao menos um idioma")
 
     api = _load_transcript_api()
-    items = api.get_transcript(video_id.strip(), languages=list(language_codes))
+    try:
+        items = api.get_transcript(video_id.strip(), languages=list(language_codes))
+    except ParseError as exc:
+        raise RuntimeError(
+            "Falha ao interpretar transcript retornado pelo YouTube. "
+            "Tente outro video ou use fallback com raw_text no lote."
+        ) from exc
 
     if not items:
         raise ValueError("Transcript retornou vazio para o video informado")

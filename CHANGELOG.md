@@ -106,6 +106,10 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Extracao opcional de audio YouTube adicionada via `yt-dlp`, integrada ao smoke test com flags `--extract-audio` e `--audio-output-dir`.
 - Testes unitarios de extracao de audio adicionados com contrato mockado para manter execucao offline.
 - Lista curada inicial de links YouTube para listening publicada em `docs/english/YOUTUBE_STUDY_STARTER_LINKS.md`.
+- Orquestrador YouTube->Anki adicionado para criar cards a partir de segmentos e sincronizar com AnkiConnect.
+- Script operacional `scripts/ingest_youtube_batch_to_anki.py` adicionado para processamento em lote com JSON de entrada.
+- Template inicial de lote `docs/english/YOUTUBE_STARTER_BATCH.json` adicionado para iniciar com 5 videos.
+- Lote YouTube->Anki passou a tratar falhas por video sem abortar execucao completa e com suporte a fallback manual de transcript (`raw_text`).
 - Nova subetapa E2.S5 (Governanca e Curadoria de Fontes) formalizada para fortalecer Trusted Knowledge Sources e Knowledge Governance.
 - Estrutura documental docs/sources criada com dominios english, cybersec, concursos, frameworks, labs, operational, experimental e governance.
 - Politica formal de governanca de fontes publicada com classificacao oficial, niveis de confiabilidade, atributos obrigatorios e matriz de uso por IA.

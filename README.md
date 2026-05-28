@@ -108,6 +108,25 @@ PYTHONDONTWRITEBYTECODE=1 /home/suporte/Projetos/app_estudo/.venv/bin/python scr
 Sugestao de links iniciais por nivel em:
 - [docs/english/YOUTUBE_STUDY_STARTER_LINKS.md](docs/english/YOUTUBE_STUDY_STARTER_LINKS.md)
 
+Lote de videos para criar cards e sincronizar no Anki:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 /home/suporte/Projetos/app_estudo/.venv/bin/python scripts/ingest_youtube_batch_to_anki.py \
+	--batch-file "docs/english/YOUTUBE_STARTER_BATCH.json" \
+	--db-path "data/audit/media_artifacts.db" \
+	--endpoint "http://127.0.0.1:8765" \
+	--model-name "AppEstudoListening" \
+	--languages "en" \
+	--extract-audio \
+	--audio-output-dir "data/media/audio"
+```
+
+Observacao: abra o Anki com AnkiConnect ativo antes de executar o comando.
+
+Fallback manual por item no lote: se um video falhar no provider de transcript, inclua
+`raw_text` (e opcionalmente `duration_seconds`, `raw_timestamps`, `locale`, `provider`)
+no JSON para forcar ingestao manual daquele video sem interromper o lote inteiro.
+
 ## Licenca
 
 Este projeto esta sob a licenca MIT. Veja [LICENSE](LICENSE).

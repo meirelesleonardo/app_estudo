@@ -301,6 +301,31 @@ class SqliteMediaArtifactStore:
             )
         return result
 
+    def get_curated_transcript_payload(self, curated_transcript_id: str) -> dict[str, Any] | None:
+        with self._connect() as conn:
+            row = conn.execute(
+                "SELECT payload_json FROM curated_transcript WHERE curated_transcript_id = ?",
+                (curated_transcript_id,),
+            ).fetchone()
+
+        if row is None:
+            return None
+        return json.loads(row[0])
+
+    def list_study_segment_payloads(self, curated_transcript_id: str) -> list[dict[str, Any]]:
+        with self._connect() as conn:
+            rows = conn.execute(
+                """
+                SELECT payload_json
+                FROM study_segment
+                WHERE curated_transcript_id = ?
+                ORDER BY segment_index ASC
+                """,
+                (curated_transcript_id,),
+            ).fetchall()
+
+        return [json.loads(row[0]) for row in rows]
+
     def _append_audit_event(
         self,
         *,

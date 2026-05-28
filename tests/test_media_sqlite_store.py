@@ -131,6 +131,38 @@ class SqliteMediaArtifactStoreTests(unittest.TestCase):
             self.assertEqual(counts["source_media"], 1)
             self.assertEqual(counts["audit_event"], 2)
 
+    def test_reads_curated_and_segments_payloads(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            db_path = Path(tmp) / "media_artifacts.db"
+            store = SqliteMediaArtifactStore(db_path)
+
+            source_media = self._source_media()
+            source_metadata = self._source_metadata()
+            raw_transcript = self._raw_transcript()
+            curated_transcript = self._curated_transcript()
+            segments = segment_curated_transcript(
+                curated_transcript_id=curated_transcript.curated_transcript_id,
+                source_media_id=source_media.source_media_id,
+                curated_text=curated_transcript.curated_text,
+                total_duration_seconds=source_media.duration_seconds,
+                pedagogical_unit="listening_core",
+                difficulty_band="B1",
+            )
+
+            store.upsert_source_media(source_media)
+            store.upsert_source_metadata(source_metadata)
+            store.upsert_raw_transcript(raw_transcript)
+            store.upsert_curated_transcript(curated_transcript)
+            store.upsert_study_segments(segments)
+
+            curated_payload = store.get_curated_transcript_payload(curated_transcript.curated_transcript_id)
+            segment_payloads = store.list_study_segment_payloads(curated_transcript.curated_transcript_id)
+
+            self.assertIsNotNone(curated_payload)
+            self.assertEqual(curated_payload["curated_transcript_id"], curated_transcript.curated_transcript_id)
+            self.assertEqual(len(segment_payloads), len(segments))
+            self.assertEqual(segment_payloads[0]["segment_index"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()
