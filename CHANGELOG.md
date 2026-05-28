@@ -82,6 +82,12 @@ Formato inspirado em Keep a Changelog e versionamento semantico quando houver re
 - Implementacao inicial da SPEC-E2-S4-001 com entidades de dominio SourceMedia e SourceMetadata.
 - Validacoes de contrato de origem/metadados e chave logica `platform+external_id` adicionadas ao dominio.
 - Testes unitarios da SPEC-E2-S4-001 adicionados para cenarios validos e invalidos.
+- Implementacao inicial da SPEC-E2-S4-002 com entidades de dominio RawTranscript e CuratedTranscript.
+- Validacoes de lineage, status de curadoria, versao e timestamps adicionadas ao contrato de transcript.
+- Testes unitarios da SPEC-E2-S4-002 adicionados para cenarios validos e invalidos.
+- Implementacao inicial da SPEC-E2-S4-003 com pipeline de normalizacao textual versionada no dominio.
+- Flags de transformacao e criterio de sentenca incompleta adicionados para auditoria da normalizacao.
+- Testes unitarios da SPEC-E2-S4-003 adicionados para cenarios validos e invalidos.
 - Nova subetapa E2.S5 (Governanca e Curadoria de Fontes) formalizada para fortalecer Trusted Knowledge Sources e Knowledge Governance.
 - Estrutura documental docs/sources criada com dominios english, cybersec, concursos, frameworks, labs, operational, experimental e governance.
 - Politica formal de governanca de fontes publicada com classificacao oficial, niveis de confiabilidade, atributos obrigatorios e matriz de uso por IA.

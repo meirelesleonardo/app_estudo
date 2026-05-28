@@ -6,7 +6,7 @@
 - Etapa: E2
 - Subetapa: E2.S4
 - Backlog relacionado: BLG-0032 (CSP-E2-S4-002), BLG-0024, BLG-0028, BLG-0031
-- Status: Proposta pronta para gate pre-SPEC
+- Status: Concluida (implementacao inicial)
 
 ## 1. Contexto
 
@@ -85,3 +85,10 @@ status de curadoria, versionamento e evidencias minimas de rastreabilidade.
 ## 12. Proximos passos
 
 - Evoluir para SPEC-E2-S4-003 para normalizacao textual versionada.
+
+## Evidencias de implementacao
+
+- Modulo de dominio com entidades `RawTranscript` e `CuratedTranscript` implementado.
+- Separacao formal raw/curated com `lineage_key` para `source -> raw -> curated` implementada.
+- Validacoes de status de curadoria, versao e timestamps implementadas.
+- Testes unitarios adicionados para cenarios validos e invalidos do contrato de transcript.

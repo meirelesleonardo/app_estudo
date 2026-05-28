@@ -6,7 +6,7 @@
 - Etapa: E2
 - Subetapa: E2.S4
 - Backlog relacionado: BLG-0032 (CSP-E2-S4-003), BLG-0026, BLG-0029, BLG-0031
-- Status: Proposta pronta para gate pre-SPEC
+- Status: Concluida (implementacao inicial)
 
 ## 1. Contexto
 
@@ -85,3 +85,11 @@ versionamento de regra e criterios de qualidade para uso pedagogico.
 ## 12. Proximos passos
 
 - Encadear com SPEC de segmentacao pedagogica (CSP-E2-S4-004).
+
+## Evidencias de implementacao
+
+- Modulo de dominio `transcript_normalization` implementado com pipeline versionado.
+- Flags de transformacao para timestamps, contractions, fillers, ruido, duplicidade,
+  espacos e sentenca incompleta implementadas.
+- Regra de versao obrigatoria da normalizacao implementada.
+- Testes unitarios adicionados para cenarios validos e invalidos da normalizacao.

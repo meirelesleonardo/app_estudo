@@ -210,3 +210,21 @@ Registrar evolucao, decisoes e aprendizados por sessao.
 - Decisoes tomadas: implementar entidades SourceMedia e SourceMetadata com contrato minimo de origem/metadados e chave logica platform+external_id
 - Riscos identificados: manter neutralidade de contrato para futuras plataformas sem perder rigor nas validacoes atuais
 - Proximo passo: iniciar SPEC-E2-S4-002 com separacao formal de RawTranscript e CuratedTranscript
+
+## Vigesima segunda entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E2.S4
+- Itens de backlog trabalhados: BLG-0032 (CSP-E2-S4-002), BLG-0028, BLG-0031
+- Decisoes tomadas: implementar entidades RawTranscript e CuratedTranscript com separacao explicita raw/curated, lineage_key e estados de curadoria
+- Riscos identificados: uso inconsistente de status de curadoria pode gerar trilha de aprovacao ambigua sem checklist de transicao
+- Proximo passo: iniciar SPEC-E2-S4-003 para pipeline de normalizacao textual versionada
+
+## Vigesima terceira entrada
+
+- Data: 2026-05-27
+- Etapa/Subetapa: E2.S4
+- Itens de backlog trabalhados: BLG-0032 (CSP-E2-S4-003), BLG-0026, BLG-0029
+- Decisoes tomadas: implementar pipeline de normalizacao textual versionada com flags auditaveis de transformacao e criterio de sentenca incompleta
+- Riscos identificados: calibrar intensidade da normalizacao para evitar sobre-normalizacao e perda de oralidade relevante
+- Proximo passo: abrir bloco de SPEC de segmentacao pedagogica (CSP-E2-S4-004)
