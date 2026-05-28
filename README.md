@@ -78,6 +78,21 @@ Detalhes completos em [ROADMAP.md](ROADMAP.md).
 
 Veja [CONTRIBUTING.md](CONTRIBUTING.md) e [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
+## Smoke Test YouTube (E2.S4)
+
+Instale dependencias Python e execute o smoke test da ingestao inicial de um video YouTube:
+
+```bash
+pip install -r requirements.txt
+PYTHONDONTWRITEBYTECODE=1 /home/suporte/Projetos/app_estudo/.venv/bin/python scripts/smoke_youtube_ingestion.py \
+	--url "https://www.youtube.com/watch?v=<VIDEO_ID>" \
+	--title "Titulo do Video" \
+	--db-path "data/audit/media_artifacts.db" \
+	--languages "en"
+```
+
+Saida esperada: JSON com IDs dos artefatos gerados, quantidade de segmentos e status do gate de qualidade.
+
 ## Licenca
 
 Este projeto esta sob a licenca MIT. Veja [LICENSE](LICENSE).

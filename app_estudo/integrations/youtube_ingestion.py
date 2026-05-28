@@ -13,6 +13,7 @@ from app_estudo.domain.transcript import CuratedTranscript, RawTranscript
 from app_estudo.domain.transcript_normalization import normalize_transcript_text
 from app_estudo.integrations.media_quality_gate import evaluate_e4_quality_gate
 from app_estudo.integrations.media_sqlite_store import SqliteMediaArtifactStore
+from app_estudo.integrations.youtube_transcript_provider import fetch_transcript_from_youtube
 
 
 @dataclass(frozen=True)
@@ -36,6 +37,52 @@ class YoutubeIngestionResult:
     curated_transcript_id: str
     study_segments_created: int
     quality_gate_status: str
+
+
+def ingest_first_youtube_video_from_source(
+    *,
+    youtube_url: str,
+    store: SqliteMediaArtifactStore,
+    title: str,
+    preferred_languages: tuple[str, ...] = ("en",),
+    transcript_quality: float = 0.9,
+    connected_speech_density: float = 0.6,
+    noise_level: float = 0.2,
+    subtitle_type: str = "official",
+    pedagogical_category: str = "listening_authentic",
+    accent_profile: str = "mixed",
+    speech_rate_profile: str = "medium_fast",
+    context_tags: tuple[str, ...] = ("modulo:ingles", "origem:youtube"),
+    media_type: str = "interview",
+) -> YoutubeIngestionResult:
+    """Ingestao usando transcript real obtido do YouTube por provider externo."""
+
+    video_id = extract_youtube_video_id(youtube_url)
+    fetched = fetch_transcript_from_youtube(video_id=video_id, preferred_languages=preferred_languages)
+
+    payload = YoutubeTranscriptPayload(
+        title=title,
+        duration_seconds=fetched.estimated_duration_seconds,
+        raw_text=fetched.raw_text,
+        raw_timestamps=fetched.raw_timestamps,
+        locale=fetched.locale,
+        provider=fetched.provider,
+    )
+
+    return ingest_first_youtube_video(
+        youtube_url=youtube_url,
+        transcript_payload=payload,
+        store=store,
+        subtitle_type=subtitle_type,
+        transcript_quality=transcript_quality,
+        connected_speech_density=connected_speech_density,
+        noise_level=noise_level,
+        pedagogical_category=pedagogical_category,
+        accent_profile=accent_profile,
+        speech_rate_profile=speech_rate_profile,
+        context_tags=context_tags,
+        media_type=media_type,
+    )
 
 
 def ingest_first_youtube_video(

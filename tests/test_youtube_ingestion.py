@@ -1,12 +1,15 @@
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from app_estudo.integrations import SqliteMediaArtifactStore
+from app_estudo.integrations.youtube_transcript_provider import YoutubeTranscriptFetchResult
 from app_estudo.integrations.youtube_ingestion import (
     YoutubeTranscriptPayload,
     extract_youtube_video_id,
     ingest_first_youtube_video,
+    ingest_first_youtube_video_from_source,
 )
 
 
@@ -65,6 +68,31 @@ class YouTubeIngestionTests(unittest.TestCase):
 
             self.assertEqual(result.quality_gate_status, "rejected")
             self.assertEqual(result.study_segments_created, 0)
+
+    @patch("app_estudo.integrations.youtube_ingestion.fetch_transcript_from_youtube")
+    def test_ingests_video_from_real_provider_contract(self, fetch_mock) -> None:
+        fetch_mock.return_value = YoutubeTranscriptFetchResult(
+            video_id="abc123XYZ",
+            raw_text="hello there this is a short transcript",
+            raw_timestamps=("00:00:00.000", "00:00:02.100"),
+            locale="en",
+            provider="youtube_transcript_api",
+            estimated_duration_seconds=3,
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            db_path = Path(tmp) / "media.db"
+            store = SqliteMediaArtifactStore(db_path)
+
+            result = ingest_first_youtube_video_from_source(
+                youtube_url="https://www.youtube.com/watch?v=abc123XYZ",
+                title="Video real",
+                store=store,
+            )
+
+            self.assertEqual(result.quality_gate_status, "approved")
+            self.assertGreaterEqual(result.study_segments_created, 1)
+            fetch_mock.assert_called_once()
 
 
 if __name__ == "__main__":
