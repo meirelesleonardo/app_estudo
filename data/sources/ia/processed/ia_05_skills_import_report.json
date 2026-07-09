@@ -1,0 +1,12 @@
+{
+  "mode": "ia",
+  "csv_path": "data/sources/ia/ia_05_skills_cards.csv",
+  "model_name": "AppEstudoIA",
+  "created": 5,
+  "skipped": 0,
+  "created_by_deck": {
+    "IA::05 - Skills": 5
+  },
+  "skipped_by_deck": {},
+  "errors": []
+}

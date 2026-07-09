@@ -1,0 +1,8 @@
+{
+  "deck": "IA::05 - Skills",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["procedimento","checklist","criterios de qualidade","reuso","versionamento"],
+  "official_links": [],
+  "recommended_bibliography": ["Práticas de engenharia de conhecimento e playbooks internos"]
+}

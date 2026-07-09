@@ -1,0 +1,8 @@
+{
+  "deck": "IA::04 - Context Engineering",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["context windows","memory","knowledge base","compressao","contexto persistente","caching"],
+  "official_links": ["https://modelcontextprotocol.io/"],
+  "recommended_bibliography": ["Model Context Protocol - especificação"]
+}

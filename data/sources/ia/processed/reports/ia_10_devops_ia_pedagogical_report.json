@@ -1,0 +1,8 @@
+{
+  "deck": "IA::10 - DevOps IA",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["deploy","tracing","monitoramento","custos","versionamento","seguranca"],
+  "official_links": [],
+  "recommended_bibliography": ["Princípios de MLOps e observabilidade"]
+}

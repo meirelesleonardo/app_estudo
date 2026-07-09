@@ -1,0 +1,7 @@
+card_id,front,back,deck,tags
+CARD-IA-06-001,"O que é um cliente MCP?","Componente que solicita serviços do MCP e envia contexto e instruções ao modelo.",IA::06 - MCP,ia mcp cliente
+CARD-IA-06-002,"O que é um servidor MCP?","Componente que expõe ferramentas e recursos que o modelo pode invocar via protocolo.",IA::06 - MCP,ia mcp servidor
+CARD-IA-06-003,"O que são tools?","Interfaces que executam ações externas (ex: APIs, comandos, consultas) chamadas pelo modelo.",IA::06 - MCP,ia mcp tools
+CARD-IA-06-004,"O que são resources?","Dados e serviços acessíveis pelo MCP para enriquecer o contexto e as respostas.",IA::06 - MCP,ia mcp resources
+CARD-IA-06-005,"Quais cuidados de segurança são necessários?","Autenticação, autorização, validação de entradas e limites de uso para prevenir abuso.",IA::06 - MCP,ia mcp seguranca
+CARD-IA-06-006,"O que são permissões no MCP?","Controles que definem quais actions e dados cada cliente pode acessar.",IA::06 - MCP,ia mcp permissoes

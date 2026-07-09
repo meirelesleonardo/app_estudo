@@ -1,0 +1,8 @@
+{
+  "deck": "IA::09 - Multiagentes",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["roteador","supervisor","handoff","paralelismo","memoria compartilhada"],
+  "official_links": [],
+  "recommended_bibliography": ["Arquiteturas multiagentes e estudos de caso"]
+}

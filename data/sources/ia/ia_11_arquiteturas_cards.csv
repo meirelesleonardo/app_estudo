@@ -1,0 +1,7 @@
+card_id,front,back,deck,tags
+CARD-IA-11-001,"O que são copilots?","Assistentes que ajudam usuários em tarefas específicas integrando modelos e ferramentas.",IA::11 - Arquiteturas,ia arquiteturas copilots
+CARD-IA-11-002,"O que são assistants?","Sistemas conversacionais orientados a tarefas que combinam modelo, contexto e ferramentas.",IA::11 - Arquiteturas,ia arquiteturas assistants
+CARD-IA-11-003,"O que é orquestração?","Coordenação entre componentes e serviços para executar pipelines e fluxos com dependências.",IA::11 - Arquiteturas,ia arquiteturas orquestracao
+CARD-IA-11-004,"O que são pipelines?","Sequências automatizadas de transformação e processamento de dados e inferências.",IA::11 - Arquiteturas,ia arquiteturas pipelines
+CARD-IA-11-005,"O que é policy layer?","Camada que define regras e políticas de decisão para controlar comportamento dos sistemas.",IA::11 - Arquiteturas,ia arquiteturas policy-layer
+CARD-IA-11-006,"O que é tool layer?","Camada que abstrai integrações com ferramentas externas usadas pelo sistema.",IA::11 - Arquiteturas,ia arquiteturas tool-layer

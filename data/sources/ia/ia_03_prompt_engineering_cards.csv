@@ -1,0 +1,8 @@
+card_id,front,back,deck,tags
+CARD-IA-03-001,"O que é zero-shot?","Técnica em que o modelo resolve uma tarefa sem exemplos prévios específicos na entrada.",IA::03 - Prompt Engineering,ia prompt zero-shot
+CARD-IA-03-002,"O que é one-shot?","Fornecer exatamente um exemplo na entrada para orientar o comportamento do modelo.",IA::03 - Prompt Engineering,ia prompt one-shot
+CARD-IA-03-003,"O que é few-shot?","Fornecer alguns exemplos (poucos) na entrada para demonstrar o formato ou estilo desejado.",IA::03 - Prompt Engineering,ia prompt few-shot
+CARD-IA-03-004,"O que é delimitação (scoping) no prompt?","Definir limites claros sobre o que incluir ou excluir na resposta do modelo.",IA::03 - Prompt Engineering,ia prompt delimitacao
+CARD-IA-03-005,"O que são templates de prompt?","Estruturas reutilizáveis que padronizam instruções e placeholders para entrada de dados.",IA::03 - Prompt Engineering,ia prompt templates
+CARD-IA-03-006,"O que é saída estruturada?","Pedir ao modelo para responder em um formato específico (JSON, CSV, bullets) para facilitar parsing.",IA::03 - Prompt Engineering,ia prompt saida-estruturada
+CARD-IA-03-007,"Como avaliar um prompt?","Medir precisão, robustez a variações, custo e facilidade de automatização das saídas.",IA::03 - Prompt Engineering,ia prompt avaliacao

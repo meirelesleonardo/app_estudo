@@ -1,0 +1,8 @@
+{
+  "deck": "IA::03 - Prompt Engineering",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["zero-shot","one-shot","few-shot","delimitacao","templates","saida estruturada","avaliacao de prompts"],
+  "official_links": ["https://developers.openai.com/learn/guides/prompting"],
+  "recommended_bibliography": ["OpenAI - Prompting guide"]
+}

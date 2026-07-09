@@ -1,0 +1,6 @@
+card_id,front,back,deck,tags
+CARD-IA-09-001,"O que é um roteador em multiagentes?","Componente que direciona tarefas para agentes especializados conforme responsabilidade.",IA::09 - Multiagentes,ia multiagentes roteador
+CARD-IA-09-002,"O que é um supervisor?","Agente que monitora e coordena outros agentes para garantir objetivos globais.",IA::09 - Multiagentes,ia multiagentes supervisor
+CARD-IA-09-003,"O que é handoff?","Transferência de contexto e responsabilidade entre agentes durante um fluxo de trabalho.",IA::09 - Multiagentes,ia multiagentes handoff
+CARD-IA-09-004,"O que é paralelismo entre agentes?","Execução simultânea de tarefas por diferentes agentes para ganho de performance.",IA::09 - Multiagentes,ia multiagentes paralelismo
+CARD-IA-09-005,"O que é memória compartilhada?","Repositório acessível por múltiplos agentes para sincronização de estado e dados.",IA::09 - Multiagentes,ia multiagentes memoria-compartilhada

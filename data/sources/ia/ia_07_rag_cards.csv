@@ -1,0 +1,7 @@
+card_id,front,back,deck,tags
+CARD-IA-07-001,"O que são embeddings (RAG)?","Representações vetoriais usadas para localizar trechos semanticamente relevantes em uma base.",IA::07 - RAG,ia rag embeddings
+CARD-IA-07-002,"O que é chunking?","Dividir documentos em pedaços menores para indexação e recuperação eficientes.",IA::07 - RAG,ia rag chunking
+CARD-IA-07-003,"O que é indexação?","Organizar e armazenar representações para permitir buscas rápidas por similaridade.",IA::07 - RAG,ia rag indexacao
+CARD-IA-07-004,"O que é recuperação (retrieval)?","Processo de buscar trechos relevantes em uma base externa para compor o contexto de entrada.",IA::07 - RAG,ia rag recuperacao
+CARD-IA-07-005,"O que é reranking?","Reordenar resultados recuperados usando critérios adicionais ou modelos para melhorar relevância.",IA::07 - RAG,ia rag reranking
+CARD-IA-07-006,"O que são bases vetoriais?","Sistemas especializados em armazenar e buscar vetores por similaridade; ex: FAISS, Milvus.",IA::07 - RAG,ia rag bases-vetoriais

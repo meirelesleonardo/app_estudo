@@ -1,0 +1,7 @@
+card_id,front,back,deck,tags
+CARD-IA-10-001,"O que é deploy de modelos?","Processo de colocar um modelo em produção com infraestrutura adequada e endpoints.",IA::10 - DevOps IA,ia devops deploy
+CARD-IA-10-002,"O que é tracing?","Rastreamento de execuções para diagnosticar latência, falhas e comportamento do sistema.",IA::10 - DevOps IA,ia devops tracing
+CARD-IA-10-003,"O que é monitoramento?","Coleta de métricas e alertas para observar saúde, desempenho e deriva de modelos.",IA::10 - DevOps IA,ia devops monitoramento
+CARD-IA-10-004,"Como controlar custos?","Otimizar chamadas ao modelo, usar caches, otimizar batch sizes e escolher infra adequada.",IA::10 - DevOps IA,ia devops custos
+CARD-IA-10-005,"O que é versionamento?","Manter versões do modelo, dados e infra para reprodutibilidade e rollback.",IA::10 - DevOps IA,ia devops versionamento
+CARD-IA-10-006,"Quais as preocupações de segurança?","Acesso adequado, proteção de dados sensíveis, validação e políticas de uso.",IA::10 - DevOps IA,ia devops seguranca

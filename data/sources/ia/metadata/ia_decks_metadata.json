@@ -1,0 +1,103 @@
+{
+  "track_id": "ia-main-track",
+  "version": "2026-07-08",
+  "description": "Trilha principal de estudo de Inteligencia Artificial aplicada com Anki.",
+  "decks": [
+    {
+      "deck": "IA::01 - Fundamentos",
+      "order": 1,
+      "min_cards": 15,
+      "goal": "Estabelecer o vocabulario essencial de IA moderna e suas relacoes basicas.",
+      "prerequisites": [],
+      "core_concepts": ["ia", "ia generativa", "machine learning", "deep learning", "redes neurais", "llm", "token", "prompt", "contexto", "skill", "mcp", "agente"]
+    },
+    {
+      "deck": "IA::02 - LLMs",
+      "order": 2,
+      "min_cards": 20,
+      "goal": "Explicar o funcionamento interno e os principais mecanismos dos LLMs.",
+      "prerequisites": ["IA::01 - Fundamentos"],
+      "core_concepts": ["tokenizacao", "embeddings", "transformers", "self-attention", "janela de contexto", "inferencia", "treinamento", "fine-tuning", "temperature", "top-p", "alucinacoes"]
+    },
+    {
+      "deck": "IA::03 - Prompt Engineering",
+      "order": 3,
+      "min_cards": 20,
+      "goal": "Ensinar a estruturar instrucoes e exemplos para obter resultados confiaveis.",
+      "prerequisites": ["IA::01 - Fundamentos", "IA::02 - LLMs"],
+      "core_concepts": ["zero-shot", "one-shot", "few-shot", "delimitacao", "templates", "saida estruturada", "avaliacao de prompts"]
+    },
+    {
+      "deck": "IA::04 - Context Engineering",
+      "order": 4,
+      "min_cards": 20,
+      "goal": "Organizar o conhecimento que entra no sistema para melhorar grounding e execucao.",
+      "prerequisites": ["IA::01 - Fundamentos", "IA::02 - LLMs"],
+      "core_concepts": ["context windows", "memory", "knowledge base", "compressao", "contexto persistente", "caching"]
+    },
+    {
+      "deck": "IA::05 - Skills",
+      "order": 5,
+      "min_cards": 15,
+      "goal": "Definir, estruturar e reutilizar procedimentos especializados para tarefas recorrentes.",
+      "prerequisites": ["IA::03 - Prompt Engineering", "IA::04 - Context Engineering"],
+      "core_concepts": ["procedimento", "checklist", "criterios de qualidade", "reuso", "versionamento"]
+    },
+    {
+      "deck": "IA::06 - MCP",
+      "order": 6,
+      "min_cards": 20,
+      "goal": "Explicar o protocolo MCP e sua funcao na conexao entre modelos, ferramentas e sistemas externos.",
+      "prerequisites": ["IA::05 - Skills"],
+      "core_concepts": ["clientes", "servidores", "tools", "resources", "seguranca", "permissoes"]
+    },
+    {
+      "deck": "IA::07 - RAG",
+      "order": 7,
+      "min_cards": 25,
+      "goal": "Ensinar como recuperar contexto relevante de bases externas para responder melhor.",
+      "prerequisites": ["IA::02 - LLMs", "IA::04 - Context Engineering"],
+      "core_concepts": ["embeddings", "chunking", "indexacao", "recuperacao", "reranking", "bases vetoriais"]
+    },
+    {
+      "deck": "IA::08 - Agentes",
+      "order": 8,
+      "min_cards": 25,
+      "goal": "Modelar sistemas orientados a objetivo com planejamento, ferramentas, memoria e guardrails.",
+      "prerequisites": ["IA::05 - Skills", "IA::06 - MCP", "IA::07 - RAG"],
+      "core_concepts": ["objetivo", "planejamento", "ferramentas", "memoria", "observabilidade", "guardrails"]
+    },
+    {
+      "deck": "IA::09 - Multiagentes",
+      "order": 9,
+      "min_cards": 20,
+      "goal": "Coordenar agentes especializados com separacao de responsabilidades e fluxo controlado.",
+      "prerequisites": ["IA::08 - Agentes"],
+      "core_concepts": ["roteador", "supervisor", "handoff", "paralelismo", "memoria compartilhada"]
+    },
+    {
+      "deck": "IA::10 - DevOps IA",
+      "order": 10,
+      "min_cards": 20,
+      "goal": "Cobrir operacao de sistemas de IA em producao com observabilidade, custo e seguranca.",
+      "prerequisites": ["IA::07 - RAG", "IA::08 - Agentes"],
+      "core_concepts": ["deploy", "tracing", "monitoramento", "custos", "versionamento", "seguranca"]
+    },
+    {
+      "deck": "IA::11 - Arquiteturas",
+      "order": 11,
+      "min_cards": 25,
+      "goal": "Ensinar padroes de arquitetura para sistemas AI-native e workflows com IA.",
+      "prerequisites": ["IA::07 - RAG", "IA::08 - Agentes", "IA::10 - DevOps IA"],
+      "core_concepts": ["copilots", "assistants", "orquestracao", "pipelines", "policy layer", "tool layer"]
+    },
+    {
+      "deck": "IA::12 - Casos Reais",
+      "order": 12,
+      "min_cards": 20,
+      "goal": "Mostrar aplicacoes reais por setor, destacando problema, arquitetura e trade-offs.",
+      "prerequisites": ["IA::11 - Arquiteturas"],
+      "core_concepts": ["marketing", "crm", "erp", "saude", "juridico", "educacao", "saas", "devops"]
+    }
+  ]
+}

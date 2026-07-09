@@ -1,0 +1,8 @@
+{
+  "deck": "IA::11 - Arquiteturas",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["copilots","assistants","orquestracao","pipelines","policy layer","tool layer"],
+  "official_links": [],
+  "recommended_bibliography": ["Arquitetura de sistemas AI-native"]
+}

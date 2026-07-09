@@ -1,0 +1,12 @@
+{
+  "mode": "ia",
+  "csv_path": "data/sources/ia/ia_07_rag_cards.csv",
+  "model_name": "AppEstudoIA",
+  "created": 6,
+  "skipped": 0,
+  "created_by_deck": {
+    "IA::07 - RAG": 6
+  },
+  "skipped_by_deck": {},
+  "errors": []
+}

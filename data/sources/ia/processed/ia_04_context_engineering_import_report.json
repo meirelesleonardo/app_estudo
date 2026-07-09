@@ -1,0 +1,12 @@
+{
+  "mode": "ia",
+  "csv_path": "data/sources/ia/ia_04_context_engineering_cards.csv",
+  "model_name": "AppEstudoIA",
+  "created": 6,
+  "skipped": 0,
+  "created_by_deck": {
+    "IA::04 - Context Engineering": 6
+  },
+  "skipped_by_deck": {},
+  "errors": []
+}

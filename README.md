@@ -78,6 +78,11 @@ Detalhes completos em [ROADMAP.md](ROADMAP.md).
 
 O repositorio gerencia uma trilha de estudos sobre Inteligencia Artificial com 12 modulos:
 
+Referencias internas da trilha:
+
+- [docs/sources/ia/IA_LEARNING_BLUEPRINT.md](docs/sources/ia/IA_LEARNING_BLUEPRINT.md)
+- [data/sources/ia/metadata/ia_decks_metadata.json](data/sources/ia/metadata/ia_decks_metadata.json)
+
 | Deck | Tema |
 |------|------|
 | `IA::01 - Fundamentos` | Conceitos base, LLM, Prompt, Context, Skill, MCP, Agentes |
@@ -108,7 +113,7 @@ Para importa-los no Anki (necessario Anki aberto com AnkiConnect instalado):
 source /home/suporte/Projetos/app_estudo/.venv/bin/activate
 
 # Importar cards IA
-python scripts/import_concurso_cards_to_anki.py \
+/home/suporte/Projetos/app_estudo/.venv/bin/python scripts/import_concurso_cards_to_anki.py \
     --mode ia \
     --csv data/sources/ia/ia_fundamentos_cards.csv \
     --report data/sources/ia/processed/ia_fundamentos_import_report.json

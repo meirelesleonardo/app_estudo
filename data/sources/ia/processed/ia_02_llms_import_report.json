@@ -1,0 +1,12 @@
+{
+  "mode": "ia",
+  "csv_path": "data/sources/ia/ia_02_llms_cards.csv",
+  "model_name": "AppEstudoIA",
+  "created": 11,
+  "skipped": 0,
+  "created_by_deck": {
+    "IA::02 - LLMs": 11
+  },
+  "skipped_by_deck": {},
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "deck": "IA::08 - Agentes",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["objetivo","planejamento","ferramentas","memoria","observabilidade","guardrails"],
+  "official_links": ["https://developers.openai.com/tracks/building-agents"],
+  "recommended_bibliography": ["OpenAI - Building Agents guide"]
+}

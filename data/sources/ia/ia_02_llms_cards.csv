@@ -1,0 +1,12 @@
+card_id,front,back,deck,tags
+CARD-IA-02-001,"O que é tokenização?","Processo de dividir texto em unidades chamadas tokens, que são a representação básica que modelos de linguagem processam.",IA::02 - LLMs,ia llms tokenizacao
+CARD-IA-02-002,"O que são embeddings?","Vetores numéricos que representam semanticamente palavras ou trechos de texto, usados para calcular similaridade e recuperar contexto.",IA::02 - LLMs,ia llms embeddings
+CARD-IA-02-003,"O que é a arquitetura Transformer?","Arquitetura baseada em mecanismos de atenção que permite modelar dependências entre tokens em sequências longas eficientemente.",IA::02 - LLMs,ia llms transformers
+CARD-IA-02-004,"O que é self-attention?","Mecanismo que permite ao modelo ponderar partes diferentes da entrada ao calcular representações de cada token.",IA::02 - LLMs,ia llms self-attention
+CARD-IA-02-005,"O que é janela de contexto?","Quantidade máxima de tokens que o modelo considera de uma só vez para gerar uma resposta; limites impactam o uso prático.",IA::02 - LLMs,ia llms janela-de-contexto
+CARD-IA-02-006,"O que é inferência?","Processo de usar um modelo já treinado para gerar respostas ou previsões a partir de uma entrada.",IA::02 - LLMs,ia llms inferencia
+CARD-IA-02-007,"O que é treinamento?","Fase em que os parâmetros do modelo são ajustados a partir de grandes volumes de dados para aprender padrões.",IA::02 - LLMs,ia llms treinamento
+CARD-IA-02-008,"O que é fine-tuning?","Ajuste adicional do modelo usando um conjunto de dados específico para especializá-lo em uma tarefa ou domínio.",IA::02 - LLMs,ia llms fine-tuning
+CARD-IA-02-009,"O que é 'temperature' na geração?","Parâmetro que controla a aleatoriedade da saída: valores maiores geram respostas mais diversas; menores tornam a saída mais determinística.",IA::02 - LLMs,ia llms temperature
+CARD-IA-02-010,"O que é top-p?","Técnica de amostragem que seleciona o menor conjunto de tokens cuja probabilidade acumulada atinge um limiar p, reduzindo opções improváveis.",IA::02 - LLMs,ia llms top-p
+CARD-IA-02-011,"O que são alucinações?","Respostas incorretas ou inventadas pelo modelo mesmo quando aparentam plausíveis; resultado de limitações nos dados ou no grounding.",IA::02 - LLMs,ia llms alucinacoes

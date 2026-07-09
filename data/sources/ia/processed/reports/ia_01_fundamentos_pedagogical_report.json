@@ -1,0 +1,46 @@
+{
+  "deck": "IA::01 - Fundamentos",
+  "version": "2026-07-08",
+  "status": "ready_for_review",
+  "concepts_covered": [
+    "ia",
+    "ia generativa",
+    "machine learning",
+    "deep learning",
+    "redes neurais",
+    "llm",
+    "token",
+    "prompt",
+    "contexto",
+    "skill",
+    "mcp",
+    "agente",
+    "limites de llm",
+    "diferenca entre treinamento e inferencia"
+  ],
+  "concepts_pending": [
+    "diferenca entre modelo e base de dados"
+  ],
+  "official_links": [
+    "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/",
+    "https://huggingface.co/learn/llm-course/chapter1/1",
+    "https://developers.openai.com/tracks/building-agents",
+    "https://modelcontextprotocol.io/introduction"
+  ],
+  "recommended_bibliography": [
+    "Microsoft Learn - Introduction to generative AI and agents",
+    "Hugging Face LLM Course - Introduction",
+    "Stanford CS224N - course overview and reading list"
+  ],
+  "ordering_rationale": [
+    "O deck comeca em conceitos amplos de IA antes de entrar em LLMs e sistemas de capacidade.",
+    "Prompt e contexto aparecem cedo porque estruturam a interacao com modelos.",
+    "MCP e agentes aparecem como conceitos de superficie, sem ainda entrar em detalhes arquiteturais.",
+    "Os limites do LLM aparecem no inicio para evitar modelos mentais errados durante toda a trilha."
+  ],
+  "suggested_deepening": [
+    "Avancar para IA::02 - LLMs para mecanismos internos do modelo.",
+    "Usar IA::03 - Prompt Engineering para transformar definicoes em tecnica operacional.",
+    "Usar IA::04 - Context Engineering para ligar teoria a sistemas reais."
+  ]
+}

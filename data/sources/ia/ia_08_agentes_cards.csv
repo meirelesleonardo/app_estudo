@@ -1,0 +1,7 @@
+card_id,front,back,deck,tags
+CARD-IA-08-001,"O que é um objetivo em um agente?","Meta que orienta o planejamento e as ações do agente.",IA::08 - Agentes,ia agentes objetivo
+CARD-IA-08-002,"O que é planejamento?","Processo de decompor um objetivo em passos executáveis e priorizá-los.",IA::08 - Agentes,ia agentes planejamento
+CARD-IA-08-003,"O que são ferramentas para agentes?","Recursos externos que o agente chama para executar tarefas (APIs, DBs, CLI).",IA::08 - Agentes,ia agentes ferramentas
+CARD-IA-08-004,"O que é memória em agentes?","Mecanismos que permitem ao agente lembrar estado, histórico ou fatos relevantes.",IA::08 - Agentes,ia agentes memoria
+CARD-IA-08-005,"O que é observabilidade?","Instrumentação para monitorar decisões, ações e resultados do agente.",IA::08 - Agentes,ia agentes observabilidade
+CARD-IA-08-006,"O que são guardrails?","Regras e restrições que limitam ações do agente para evitar danos ou comportamento indesejado.",IA::08 - Agentes,ia agentes guardrails

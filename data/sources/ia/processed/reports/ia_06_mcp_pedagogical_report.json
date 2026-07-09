@@ -1,0 +1,8 @@
+{
+  "deck": "IA::06 - MCP",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["clientes","servidores","tools","resources","seguranca","permissoes"],
+  "official_links": ["https://modelcontextprotocol.io/"],
+  "recommended_bibliography": ["Model Context Protocol docs"]
+}

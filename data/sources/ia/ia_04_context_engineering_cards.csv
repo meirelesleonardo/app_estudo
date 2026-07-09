@@ -1,0 +1,7 @@
+card_id,front,back,deck,tags
+CARD-IA-04-001,"O que são context windows?","Janelas de contexto representam o trecho de entrada que o modelo pode processar simultaneamente.",IA::04 - Context Engineering,ia context windows
+CARD-IA-04-002,"O que é 'memory' em sistemas de IA?","Mecanismos para armazenar e recuperar informação entre interações, podendo ser curta ou longa duração.",IA::04 - Context Engineering,ia memory knowledge
+CARD-IA-04-003,"O que é uma knowledge base?","Repositório estruturado de conhecimento que pode ser consultado para fornecer grounding aos modelos.",IA::04 - Context Engineering,ia knowledge-base
+CARD-IA-04-004,"O que é compressão de contexto?","Técnicas para reduzir texto mantendo informações essenciais antes de inserir no modelo.",IA::04 - Context Engineering,ia compressao
+CARD-IA-04-005,"O que é contexto persistente?","Informação que se mantém entre sessões e que ajuda a manter coerência em conversas longas.",IA::04 - Context Engineering,ia contexto-persistente
+CARD-IA-04-006,"O que é caching de contexto?","Armazenar resultados de consultas para evitar recomputação e reduzir custo e latência.",IA::04 - Context Engineering,ia caching

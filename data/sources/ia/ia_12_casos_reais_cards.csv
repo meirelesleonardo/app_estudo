@@ -1,0 +1,7 @@
+card_id,front,back,deck,tags
+CARD-IA-12-001,"Aplicação: marketing — qual o foco?","Automatizar segmentação, personalização e geração de campanhas com IA para aumentar conversão.",IA::12 - Casos Reais,ia casos marketing
+CARD-IA-12-002,"Aplicação: CRM — uso típico?","Melhorar atendimento, resumir interações e priorizar leads usando modelos e RAG.",IA::12 - Casos Reais,ia casos crm
+CARD-IA-12-003,"Aplicação: ERP — como a IA ajuda?","Automatizar classificação de transações, previsão de demanda e roteamento de workflows.",IA::12 - Casos Reais,ia casos erp
+CARD-IA-12-004,"Aplicação: Saúde — risco e cautelas?","Uso responsável com privacidade, validação clínica e explicabilidade é crítico.",IA::12 - Casos Reais,ia casos saude
+CARD-IA-12-005,"Aplicação: Jurídico — desafios?","Garantir precisão, responsabilidade e fontes verificáveis ao gerar pareceres ou resumos legais.",IA::12 - Casos Reais,ia casos juridico
+CARD-IA-12-006,"Aplicação: Educação — oportunidades?","Personalizar trilhas de aprendizagem, gerar exercícios e feedback adaptativo.",IA::12 - Casos Reais,ia casos educacao

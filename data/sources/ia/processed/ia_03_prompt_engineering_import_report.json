@@ -1,0 +1,12 @@
+{
+  "mode": "ia",
+  "csv_path": "data/sources/ia/ia_03_prompt_engineering_cards.csv",
+  "model_name": "AppEstudoIA",
+  "created": 7,
+  "skipped": 0,
+  "created_by_deck": {
+    "IA::03 - Prompt Engineering": 7
+  },
+  "skipped_by_deck": {},
+  "errors": []
+}

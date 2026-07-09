@@ -1,0 +1,15 @@
+{
+  "deck": "IA::02 - LLMs",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["tokenizacao","embeddings","transformers","self-attention","janela de contexto","inferencia","treinamento","fine-tuning","temperature","top-p","alucinacoes"],
+  "official_links": [
+    "https://huggingface.co/learn/llm-course/",
+    "https://developers.openai.com/"
+  ],
+  "recommended_bibliography": [
+    "Hugging Face - LLM course",
+    "OpenAI - Models documentation"
+  ],
+  "ordering_rationale": ["Apresenta mecanismos internos dos LLMs após fundamentos para suportar prompt e contexto." ]
+}

@@ -1,0 +1,6 @@
+card_id,front,back,deck,tags
+CARD-IA-05-001,"O que é um procedimento (skill)?","Sequência definida de passos para executar uma tarefa específica de forma reprodutível.",IA::05 - Skills,ia skills procedimento
+CARD-IA-05-002,"O que é um checklist?","Lista de verificação de critérios e etapas que garante qualidade e completude na execução.",IA::05 - Skills,ia skills checklist
+CARD-IA-05-003,"O que são critérios de qualidade?","Requisitos objetivos que definem quando uma tarefa está bem executada.",IA::05 - Skills,ia skills criterios
+CARD-IA-05-004,"O que é reuso de skills?","Capacidade de aplicar o mesmo procedimento em diferentes contextos sem reescrever instruções.",IA::05 - Skills,ia skills reuso
+CARD-IA-05-005,"O que é versionamento de skills?","Manter histórico e compatibilidade entre versões de um procedimento para auditoria e evolução.",IA::05 - Skills,ia skills versionamento

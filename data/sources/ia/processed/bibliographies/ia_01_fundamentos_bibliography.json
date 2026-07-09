@@ -1,0 +1,51 @@
+{
+  "deck": "IA::01 - Fundamentos",
+  "version": "2026-07-08",
+  "references": [
+    {
+      "id": "ia01-ref-001",
+      "title": "Introduction to generative AI and agents",
+      "source": "Microsoft Learn",
+      "type": "official-training",
+      "url": "https://learn.microsoft.com/en-us/training/modules/fundamentals-generative-ai/",
+      "relevance": "high",
+      "topics": ["generative ai", "llm", "prompts", "agents"]
+    },
+    {
+      "id": "ia01-ref-002",
+      "title": "The Hugging Face LLM Course - Introduction",
+      "source": "Hugging Face",
+      "type": "official-course",
+      "url": "https://huggingface.co/learn/llm-course/chapter1/1",
+      "relevance": "high",
+      "topics": ["nlp", "llm", "transformers", "foundations"]
+    },
+    {
+      "id": "ia01-ref-003",
+      "title": "Building agents",
+      "source": "OpenAI Developers",
+      "type": "official-guide",
+      "url": "https://developers.openai.com/tracks/building-agents",
+      "relevance": "medium",
+      "topics": ["agents", "tools", "guardrails", "orchestration"]
+    },
+    {
+      "id": "ia01-ref-004",
+      "title": "What is the Model Context Protocol (MCP)?",
+      "source": "Model Context Protocol",
+      "type": "official-spec-intro",
+      "url": "https://modelcontextprotocol.io/introduction",
+      "relevance": "medium",
+      "topics": ["mcp", "tools", "resources", "protocol"]
+    },
+    {
+      "id": "ia01-ref-005",
+      "title": "CS224N: Natural Language Processing with Deep Learning",
+      "source": "Stanford",
+      "type": "academic-course",
+      "url": "https://web.stanford.edu/class/cs224n/",
+      "relevance": "medium",
+      "topics": ["nlp", "deep learning", "transformers", "llms"]
+    }
+  ]
+}

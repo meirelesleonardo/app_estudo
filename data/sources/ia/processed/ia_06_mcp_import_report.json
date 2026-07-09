@@ -1,0 +1,12 @@
+{
+  "mode": "ia",
+  "csv_path": "data/sources/ia/ia_06_mcp_cards.csv",
+  "model_name": "AppEstudoIA",
+  "created": 6,
+  "skipped": 0,
+  "created_by_deck": {
+    "IA::06 - MCP": 6
+  },
+  "skipped_by_deck": {},
+  "errors": []
+}

@@ -1,0 +1,12 @@
+{
+  "mode": "ia",
+  "csv_path": "data/sources/ia/ia_09_multiagentes_cards.csv",
+  "model_name": "AppEstudoIA",
+  "created": 5,
+  "skipped": 0,
+  "created_by_deck": {
+    "IA::09 - Multiagentes": 5
+  },
+  "skipped_by_deck": {},
+  "errors": []
+}

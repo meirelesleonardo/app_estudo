@@ -1,0 +1,8 @@
+{
+  "deck": "IA::07 - RAG",
+  "version": "2026-07-08",
+  "status": "draft",
+  "concepts_covered": ["embeddings","chunking","indexacao","recuperacao","reranking","bases vetoriais"],
+  "official_links": ["https://www.deeplearning.ai/"],
+  "recommended_bibliography": ["DeepLearning.AI - Retrieval-Augmented Generation materials"]
+}
