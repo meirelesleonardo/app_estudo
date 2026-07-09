@@ -74,6 +74,61 @@ Detalhes completos em [ROADMAP.md](ROADMAP.md).
 - [docs/roadmap/READINESS_REPORT_E0_E6.md](docs/roadmap/READINESS_REPORT_E0_E6.md)
 - [docs/backlog/INITIAL_BACKLOG.md](docs/backlog/INITIAL_BACKLOG.md)
 
+## Trilha de Estudos IA
+
+O repositorio gerencia uma trilha de estudos sobre Inteligencia Artificial com 12 modulos:
+
+| Deck | Tema |
+|------|------|
+| `IA::01 - Fundamentos` | Conceitos base, LLM, Prompt, Context, Skill, MCP, Agentes |
+| `IA::02 - LLMs` | Arquitetura de Large Language Models |
+| `IA::03 - Prompt Engineering` | Tecnicas avancadas de construcao de prompts |
+| `IA::04 - Context Engineering` | Gerenciamento de contexto em interacoes |
+| `IA::05 - Skills` | Procedimentos especializados reutilizaveis |
+| `IA::06 - MCP` | Model Context Protocol e ferramentas |
+| `IA::07 - RAG` | Retrieval-Augmented Generation |
+| `IA::08 - Agentes` | Sistemas autonimos com IA |
+| `IA::09 - Multiagentes` | Orquestracao de multiplos agentes |
+| `IA::10 - DevOps IA` | CI/CD, MLflow, prompt versioning |
+| `IA::11 - Arquiteturas` | Padroes de design para sistemas com IA |
+| `IA::12 - Casos Reais` | Projetos praticos e estudos de caso |
+
+### Importacao Inicial
+
+Os 13 cards conceituais da trilha (todos em `IA::01 - Fundamentos`) estao em:
+
+```
+data/sources/ia/ia_fundamentos_cards.csv
+```
+
+Para importa-los no Anki (necessario Anki aberto com AnkiConnect instalado):
+
+```bash
+# Ativar ambiente virtual
+source /home/suporte/Projetos/app_estudo/.venv/bin/activate
+
+# Importar cards IA
+python scripts/import_concurso_cards_to_anki.py \
+    --mode ia \
+    --csv data/sources/ia/ia_fundamentos_cards.csv \
+    --report data/sources/ia/processed/ia_fundamentos_import_report.json
+```
+
+O comando e idempotente: na segunda execucao os cards existentes sao ignorados (skipped) e nenhuma duplicata e criada.
+
+### Estrutura do CSV de Cards IA
+
+```
+card_id,front,back,deck,tags
+CARD-IA-001,O que e um LLM?,Resposta...,IA::01 - Fundamentos,ia fundamentos llm
+```
+
+- `card_id`: identificador unico para deduplicacao
+- `front`: texto da frente do card
+- `back`: texto do verso (resposta/explicacao)
+- `deck` (opcional): subdeck destino; padrao: `IA::01 - Fundamentos`
+- `tags`: palavras-chave separadas por espaco
+
 ## Como Contribuir
 
 Veja [CONTRIBUTING.md](CONTRIBUTING.md) e [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).

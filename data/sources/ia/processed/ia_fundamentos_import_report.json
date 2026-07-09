@@ -1,0 +1,12 @@
+{
+  "mode": "ia",
+  "csv_path": "data/sources/ia/ia_fundamentos_cards.csv",
+  "model_name": "AppEstudoIA",
+  "created": 0,
+  "skipped": 13,
+  "created_by_deck": {},
+  "skipped_by_deck": {
+    "IA::01 - Fundamentos": 13
+  },
+  "errors": []
+}

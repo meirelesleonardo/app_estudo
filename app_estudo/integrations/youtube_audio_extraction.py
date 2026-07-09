@@ -43,6 +43,13 @@ def extract_youtube_audio(
         "quiet": True,
         "noprogress": True,
         "no_warnings": True,
+        "postprocessors": [
+            {
+                "key": "FFmpegExtractAudio",
+                "preferredcodec": "mp3",
+                "preferredquality": "128",
+            }
+        ],
     }
 
     with yt_dlp.YoutubeDL(options) as client:
@@ -60,17 +67,37 @@ def extract_youtube_audio(
 
 
 def _resolve_audio_path(info: dict[str, Any]) -> str:
+    """Resolve o caminho do arquivo de audio apos extracao/conversao.
+
+    Quando um postprocessor FFmpegExtractAudio e usado, o yt-dlp pode retornar
+    o caminho original (ex: .webm) antes da conversao. Nesse caso, verifica se
+    o arquivo .mp3 correspondente foi gerado e o usa como fallback.
+    """
+    candidates: list[str] = []
+
     requested = info.get("requested_downloads")
     if isinstance(requested, list) and requested:
         candidate = requested[0]
         if isinstance(candidate, dict):
             path = candidate.get("filepath")
             if path:
-                return str(path)
+                candidates.append(str(path))
 
     filename = info.get("_filename")
     if filename:
-        return str(filename)
+        candidates.append(str(filename))
+
+    for path in candidates:
+        p = Path(path)
+        if p.exists():
+            return str(p)
+        # Fallback: postprocessor pode ter convertido para .mp3
+        mp3_path = p.with_suffix(".mp3")
+        if mp3_path.exists():
+            return str(mp3_path)
+
+    if candidates:
+        return candidates[0]
 
     raise RuntimeError("Nao foi possivel resolver o caminho do audio extraido")
 

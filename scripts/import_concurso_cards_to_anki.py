@@ -16,6 +16,24 @@ DEFAULT_ENDPOINT = "http://127.0.0.1:8765"
 DEFAULT_DECK = "Concursos::BNDES::Ciberseguranca::Prova2"
 DEFAULT_MODEL = "AppEstudoConcurso"
 
+# --- Constantes da trilha IA ---
+IA_DECK_ROOT = "IA"
+IA_MODEL = "AppEstudoIA"
+IA_SUBDECKS = [
+    "IA::01 - Fundamentos",
+    "IA::02 - LLMs",
+    "IA::03 - Prompt Engineering",
+    "IA::04 - Context Engineering",
+    "IA::05 - Skills",
+    "IA::06 - MCP",
+    "IA::07 - RAG",
+    "IA::08 - Agentes",
+    "IA::09 - Multiagentes",
+    "IA::10 - DevOps IA",
+    "IA::11 - Arquiteturas",
+    "IA::12 - Casos Reais",
+]
+
 
 def invoke(endpoint: str, action: str, params: dict | None = None) -> object:
     payload = {"action": action, "version": 6, "params": params or {}}
@@ -116,6 +134,137 @@ def find_by_question_id(endpoint: str, deck_name: str, question_id: str) -> list
     return [item for item in result if isinstance(item, int)]
 
 
+# --- Funcoes da trilha IA ---
+
+def ensure_ia_model(endpoint: str) -> None:
+    """Cria o modelo AppEstudoIA (Frente/Verso + CardID interno) de forma idempotente."""
+    names = invoke(endpoint, "modelNames", {})
+    if isinstance(names, list) and IA_MODEL in names:
+        return
+
+    invoke(
+        endpoint,
+        "createModel",
+        {
+            "modelName": IA_MODEL,
+            "inOrderFields": ["CardID", "Front", "Back"],
+            "css": ".card { font-family: Arial; font-size: 18px; text-align: left; color: black; background-color: white; }",
+            "isCloze": False,
+            "cardTemplates": [
+                {
+                    "Name": "Card 1",
+                    "Front": "{{Front}}",
+                    "Back": "{{FrontSide}}<hr id=answer>{{Back}}",
+                }
+            ],
+        },
+    )
+
+
+def ensure_ia_deck_hierarchy(endpoint: str) -> None:
+    """Cria todos os subdecks da trilha IA de forma idempotente."""
+    for deck_name in IA_SUBDECKS:
+        ensure_deck(endpoint, deck_name)
+
+
+def find_by_card_id(endpoint: str, deck_name: str, card_id: str) -> list[int]:
+    """Busca notas existentes por card_id no deck destino."""
+    query = f'deck:"{deck_name}" "CardID:{card_id}"'
+    result = invoke(endpoint, "findNotes", {"query": query})
+    if not isinstance(result, list):
+        return []
+    return [item for item in result if isinstance(item, int)]
+
+
+def _row_has_extra_columns(row: dict[str | None, str]) -> bool:
+    extra_columns = row.get(None)
+    if not extra_columns:
+        return False
+    if isinstance(extra_columns, list):
+        return any(str(value).strip() for value in extra_columns)
+    return bool(str(extra_columns).strip())
+
+
+def import_ia_cards(
+    endpoint: str,
+    csv_path: Path,
+    allow_duplicate: bool,
+) -> dict[str, object]:
+    """Importa cards da trilha IA para o Anki.
+
+    O CSV deve ter colunas: card_id, front, back, deck, tags.
+    A coluna deck pode omitida; o padrao e IA::01 - Fundamentos.
+    """
+    ensure_ia_model(endpoint)
+    ensure_ia_deck_hierarchy(endpoint)
+
+    created = 0
+    skipped = 0
+    errors: list[dict[str, str]] = []
+    created_by_deck: Counter[str] = Counter()
+    skipped_by_deck: Counter[str] = Counter()
+
+    with csv_path.open("r", encoding="utf-8", newline="") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            card_id = (row.get("card_id") or "").strip()
+
+            if _row_has_extra_columns(row):
+                errors.append(
+                    {
+                        "card_id": card_id or "<sem-card-id>",
+                        "error": "Linha CSV malformada: campos com virgula devem estar entre aspas.",
+                    }
+                )
+                continue
+
+            if not card_id:
+                skipped += 1
+                continue
+
+            deck = (row.get("deck") or IA_SUBDECKS[0]).strip()
+            if not allow_duplicate:
+                existing = find_by_card_id(endpoint, deck, card_id)
+                if existing:
+                    skipped += 1
+                    skipped_by_deck[deck] += 1
+                    continue
+
+            tags = [tag for tag in (row.get("tags") or "").split() if tag]
+            note = {
+                "deckName": deck,
+                "modelName": IA_MODEL,
+                "fields": {
+                    "CardID": card_id,
+                    "Front": row.get("front") or "",
+                    "Back": row.get("back") or "",
+                },
+                "tags": tags,
+                "options": {"allowDuplicate": allow_duplicate},
+            }
+
+            try:
+                result = invoke(endpoint, "addNote", {"note": note})
+                if isinstance(result, int):
+                    created += 1
+                    created_by_deck[deck] += 1
+                else:
+                    errors.append({"card_id": card_id, "error": "Retorno invalido do addNote"})
+            except RuntimeError as exc:
+                errors.append({"card_id": card_id, "error": str(exc)})
+
+    return {
+        "mode": "ia",
+        "csv_path": str(csv_path),
+        "model_name": IA_MODEL,
+        "created": created,
+        "skipped": skipped,
+        "created_by_deck": dict(sorted(created_by_deck.items())),
+        "skipped_by_deck": dict(sorted(skipped_by_deck.items())),
+        "errors": errors,
+    }
+
+
 def import_cards(
     endpoint: str,
     csv_path: Path,
@@ -194,7 +343,15 @@ def import_cards(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Importa cards de concurso para o Anki")
+    parser = argparse.ArgumentParser(
+        description="Importa cards de concurso ou IA para o Anki via AnkiConnect"
+    )
+    parser.add_argument(
+        "--mode",
+        choices=["concurso", "ia"],
+        default="concurso",
+        help="Modo de importacao: concurso (default) ou ia",
+    )
     parser.add_argument(
         "--csv",
         default="data/sources/concursos/processed/bndes_2024_prova2_cards_final_reviewed.csv",
@@ -211,7 +368,7 @@ def main() -> int:
     parser.add_argument(
         "--allow-duplicate",
         action="store_true",
-        help="Permite duplicidade de QuestionID para criar decks paralelos de treino.",
+        help="Permite duplicidade de identificador do card.",
     )
     parser.add_argument(
         "--report",
@@ -219,15 +376,22 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    report = import_cards(
-        endpoint=args.endpoint,
-        csv_path=Path(args.csv),
-        deck_name=args.deck,
-        model_name=args.model,
-        source_label=args.source,
-        allow_duplicate=args.allow_duplicate,
-        deck_by_topic_root=args.deck_by_topic_root,
-    )
+    if args.mode == "ia":
+        report = import_ia_cards(
+            endpoint=args.endpoint,
+            csv_path=Path(args.csv),
+            allow_duplicate=args.allow_duplicate,
+        )
+    else:
+        report = import_cards(
+            endpoint=args.endpoint,
+            csv_path=Path(args.csv),
+            deck_name=args.deck,
+            model_name=args.model,
+            source_label=args.source,
+            allow_duplicate=args.allow_duplicate,
+            deck_by_topic_root=args.deck_by_topic_root,
+        )
 
     report_path = Path(args.report)
     report_path.parent.mkdir(parents=True, exist_ok=True)

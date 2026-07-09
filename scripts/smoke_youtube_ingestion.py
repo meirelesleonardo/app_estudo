@@ -35,8 +35,9 @@ def main() -> None:
     )
     parser.add_argument(
         "--extract-audio",
-        action="store_true",
-        help="Quando presente, extrai audio do video para uso em listening",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="Extrai audio do video para uso em listening (padrao: desabilitado; TTS cuida do audio)",
     )
     parser.add_argument(
         "--audio-output-dir",

@@ -35,7 +35,12 @@ def main() -> int:
     parser.add_argument("--timeout", type=float, default=3.0)
     parser.add_argument("--model-name", default="AppEstudoListening")
     parser.add_argument("--languages", default="en")
-    parser.add_argument("--extract-audio", action="store_true")
+    parser.add_argument(
+        "--extract-audio",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="Extrai audio do YouTube para anexar nos cards (padrao: desabilitado; TTS cuida do audio)",
+    )
     parser.add_argument("--audio-output-dir", default="data/media/audio")
     parser.add_argument("--min-segment-seconds", type=int, default=10)
     parser.add_argument("--max-segment-seconds", type=int, default=45)
